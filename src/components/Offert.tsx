@@ -3,6 +3,7 @@ import Image from "next/image";
 import Tile1 from "../../public/Balkon.webp";
 import Tile2 from "../../public/image 2.png";
 import Tile3 from "../../public/Pojazd.webp";
+import Link from "next/link";
 const Offert = () => {
   return (
     <>
@@ -11,11 +12,15 @@ const Offert = () => {
 
         <div className="offert_tiles">
           <div className="offert_tile">
-            <Image
-              className="offert_image"
-              src={Tile1}
-              alt="Efekt wykonania oklejania balkonu"
-            />
+            <Link href="/Offert/Oklejanie">
+              {" "}
+              <Image
+                className="offert_image"
+                src={Tile1}
+                alt="Efekt wykonania oklejania balkonu"
+              />
+            </Link>
+
             <a>
               <br />
               Oklejanie <br />

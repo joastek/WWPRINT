@@ -11,6 +11,7 @@ const NavBar = () => {
           <p>Strona główna</p>
           <p>Oferta</p>
           <p>O nas</p>
+          <p>Kontakt</p>
         </div>
 
         <button className="navigationbar_button">
