@@ -1,7 +1,12 @@
+import NavBar from "@/components/NavBar/NavBar";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import Head from "next/head";
+import { Poppins } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Poppins({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 export const metadata = {
   title: "WWPrint",
@@ -15,8 +20,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl">
-      <head></head>
-      <body className={inter.className}>{children}</body>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <body className={inter.className}>
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }
