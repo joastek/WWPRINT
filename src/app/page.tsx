@@ -3,6 +3,7 @@ import Image1 from "../../public/image 2.png";
 import Image2 from "../../public/image 3.png";
 import Image3 from "../../public/image 4.png";
 import "../styles/Mainpage.scss";
+import Offert from "@/components/Offert";
 export default function Home() {
   return (
     <>
@@ -39,6 +40,7 @@ export default function Home() {
           />
         </div>
       </div>
+      <Offert />
     </>
   );
 }
