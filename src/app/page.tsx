@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import Image1 from "../../public/image 2.png";
 import Image2 from "../../public/image 3.png";
@@ -20,7 +21,9 @@ export default function Home() {
             precyzji wykonania, wnętrza nabiorą stylowego i efektownego
             charakteru.
           </div>
-          <button className="mainpage_button">Skontaktuj się!</button>
+          <Link href="/Contact">
+            <button className="mainpage_button">Skontaktuj się!</button>
+          </Link>
         </div>
         <div className="mainpage_imageContainer">
           <Image
@@ -57,10 +60,11 @@ export default function Home() {
         <div className="mainpage_about_Aboutfontcontainer">
           100% gwarantowanej <a>satysfakcji.</a>
         </div>
-
-        <button className="mainpage_button">
-          Zaplanuj spotaknie już dziś!
-        </button>
+        <Link href="/Contact" style={{ textDecoration: "none" }}>
+          <button className="mainpage_button">
+            Zaplanuj spotaknie już dziś!
+          </button>{" "}
+        </Link>
       </div>
     </>
   );

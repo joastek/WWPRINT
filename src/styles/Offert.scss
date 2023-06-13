@@ -16,9 +16,11 @@
   }
 
   .offert_tiles {
-    padding: 10rem;
     display: flex; /* Dodaj tę linię */
-    justify-content: space-between; /* Dodaj tę linię */
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10rem;
+    justify-content: center;
+    padding: 10rem;
     .offert_tile {
       cursor: pointer;
       background: rgba(239, 245, 255, 0.72);

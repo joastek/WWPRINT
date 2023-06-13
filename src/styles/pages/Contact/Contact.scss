@@ -1,0 +1,89 @@
+.contact_container {
+  margin-top: 10rem;
+  .contact_description {
+    padding: 10rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    justify-content: center;
+  }
+  .contact_description_deal {
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 5.6rem;
+    line-height: 8.4rem;
+    margin-bottom: 10rem;
+    .contact_description_deal_contrast {
+      color: #0d43ce;
+    }
+  }
+  .contact_email_position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .contact_email_container {
+      position: relative;
+      width: 80rem;
+      height: 65rem;
+      background: #ffffff;
+      border: 1px solid #5b5b5b;
+      justify-content: center;
+      padding: 3rem;
+      border-radius: 56px;
+      .contact_Htext {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 72px;
+
+        .contact_Htext_contrast {
+          color: #0d43ce;
+          font-weight: 700;
+          font-size: 48px;
+          line-height: 72px;
+        }
+      }
+      .contact_textarea {
+        background: #ffffff;
+        border-style: solid;
+        font-size: 32px;
+        width: 664px;
+        height: 86px;
+      }
+      .contact_button {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 48px;
+
+        color: #fffafa;
+      }
+    }
+    a {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 48px;
+    }
+    input {
+      font-size: 32px;
+      background: #ffffff;
+      border-style: solid;
+
+      width: 664px;
+      height: 44px;
+    }
+    button {
+      background: #0d43ce;
+      border: 0.5px solid #0d43ce;
+      border-radius: 97px;
+      width: 178px;
+      height: 72px;
+      filter: drop-shadow(-4px 4px 9px rgba(0, 0, 0, 0.25))
+        drop-shadow(9px 8px 11px rgba(0, 0, 0, 0.25));
+    }
+  }
+}
