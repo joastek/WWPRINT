@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import Image1 from "../../public/image 2.png";
-import Image2 from "../../public/image 3.png";
-import Image3 from "../../public/image 4.png";
+import Image1 from "../../public/image2.png";
+import Image2 from "../../public/image3.png";
+import Image3 from "../../public/image4.png";
 import "../styles/Mainpage.scss";
 import Offert from "@/components/Offert";
 export default function Home() {
