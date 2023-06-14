@@ -1,8 +1,27 @@
+"use client";
+
 import "../../styles/NavBar.scss";
 import logo from "../../../public/Logo.png";
 import Image from "next/image";
 import Link from "next/link";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { useState, useEffect } from "react";
+
 const NavBar = () => {
+  const [click, setClick] = useState(false);
+  const closeMenu = () => setClick(false);
+
+  const handleClick = () => {
+    setClick(false);
+  };
+  const isHomePage =
+    typeof window !== "undefined" && window.location.pathname === "/";
+
+  const [isHomePageActive, setIsHomePageActive] = useState(isHomePage);
+  useEffect(() => {
+    setIsHomePageActive(window.location.pathname === "/");
+  }, []);
+
   return (
     <>
       <div className="navigationbar_container">
@@ -10,11 +29,40 @@ const NavBar = () => {
           <Image className="navigationbar_logo" src={logo} alt="Logo firmy" />
         </Link>
         <div className="navigationbar_content">
-          <Link href="/" style={{ textDecoration: "none" }}>
-            <p>Strona główna</p>
-          </Link>
-          <p>Oferta</p>
-          <p>O nas</p>
+          {isHomePage && isHomePageActive ? (
+            <ScrollLink
+              to="MainPage"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              onClick={handleClick}
+            >
+              <p>Strona główna</p>
+            </ScrollLink>
+          ) : (
+            <Link href="/" style={{ textDecoration: "none" }}>
+              <p onClick={() => scroll.scrollToTop()}>Strona główna</p>
+            </Link>
+          )}
+          {/* ///////////////////////////////////////// */}
+          <ScrollLink
+            to="Offert"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            onClick={closeMenu}
+          >
+            <p>Oferta</p>
+          </ScrollLink>
+          <ScrollLink
+            to="About"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            onClick={closeMenu}
+          >
+            <p>O nas</p>
+          </ScrollLink>
           <Link href="/Contact" style={{ textDecoration: "none" }}>
             <p>Kontakt</p>
           </Link>

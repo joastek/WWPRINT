@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import Image1 from "../../public/image2.png";
 import Image2 from "../../public/image3.png";
 import Image3 from "../../public/image4.png";
@@ -8,7 +10,7 @@ import Offert from "@/components/Offert";
 export default function Home() {
   return (
     <>
-      <div className="mainpage_container">
+      <div className="mainpage_container" id="MainPage">
         <div className="mainpage_fontcontainer">
           <div className="mainpage_Aboutfontcontainer">
             O naklejkach
@@ -21,9 +23,7 @@ export default function Home() {
             precyzji wykonania, wnętrza nabiorą stylowego i efektownego
             charakteru.
           </div>
-          <Link href="/Contact">
-            <button className="mainpage_button">Skontaktuj się!</button>
-          </Link>
+          <button className="mainpage_button">Skontaktuj się!</button>
         </div>
         <div className="mainpage_imageContainer">
           <Image
@@ -45,7 +45,7 @@ export default function Home() {
       </div>
       <Offert />
       <div className="mainpage_about_container">
-        <h2>O nas</h2>
+        <h2 id="About">O nas</h2>
         <div className="mainpage_about_description">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
@@ -62,8 +62,8 @@ export default function Home() {
         </div>
         <Link href="/Contact" style={{ textDecoration: "none" }}>
           <button className="mainpage_button">
-            Zaplanuj spotaknie już dziś!
-          </button>{" "}
+            Zaplanuj spotkanie już dziś!
+          </button>
         </Link>
       </div>
     </>

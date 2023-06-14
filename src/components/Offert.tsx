@@ -7,7 +7,7 @@ import Link from "next/link";
 const Offert = () => {
   return (
     <>
-      <div className="offert_container">
+      <div className="offert_container" id="Offert">
         <h2>Oferta</h2>
 
         <div className="offert_tiles">
