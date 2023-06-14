@@ -3,7 +3,7 @@ import "../../styles/pages/Contact/Contact.scss";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 const Contact = () => {
-  const form = useRef();
+  const form = useRef<HTMLFormElement | null>(null);
 
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -12,7 +12,7 @@ const Contact = () => {
       .sendForm(
         "service_los0ify",
         "template_j8mzea2",
-        form.current,
+        form.current!,
         "aWToZai0hlr-ICeFx"
       )
       .then(
