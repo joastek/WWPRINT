@@ -10,16 +10,16 @@ import { useState, useEffect } from "react";
 const NavBar = () => {
   const [click, setClick] = useState(false);
   const closeMenu = () => setClick(false);
-
+  const [activeSection, setActiveSection] = useState("");
   const handleClick = () => {
     setClick(false);
   };
   const isHomePage =
-    typeof window !== "undefined" && window.location.pathname === "/";
+    typeof window !== "undefined" && window.location.href === "/#Offert";
 
   const [isHomePageActive, setIsHomePageActive] = useState(isHomePage);
   useEffect(() => {
-    setIsHomePageActive(window.location.pathname === "/");
+    setIsHomePageActive(window.location.href === "/#Offert");
   }, []);
 
   return (
@@ -45,15 +45,19 @@ const NavBar = () => {
             </Link>
           )}
           {/* ///////////////////////////////////////// */}
-          <ScrollLink
-            to="Offert"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            onClick={closeMenu}
-          >
-            <p>Oferta</p>
-          </ScrollLink>
+
+          <p>
+            <ScrollLink
+              to="Offert"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              onClick={closeMenu}
+            >
+              Oferta{" "}
+            </ScrollLink>
+          </p>
+
           <ScrollLink
             to="About"
             spy={true}

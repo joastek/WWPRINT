@@ -1,6 +1,29 @@
+"use client";
 import "../../styles/pages/Contact/Contact.scss";
-
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_los0ify",
+        "template_j8mzea2",
+        form.current,
+        "aWToZai0hlr-ICeFx"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <>
       <div className="contact_container">
@@ -24,25 +47,17 @@ const Contact = () => {
             <div className="contact_Htext">
               Napisz do <a className="contact_Htext_contrast"> nas!</a>
             </div>
-            <a>Imię</a>
-            <br />
-            <input type="text" id="name" />
-            <br />
-            <a>Email</a>
-            <br />
-            <input type="email" id="email" />
-            <br />
-            <a>Wiadomość</a>
-            <br />
-            <textarea
-              className="contact_textarea"
-             
-              id="message"
-            />
-            <br />
-            <button>
-              <a className="contact_button">Wyślij!</a>
-            </button>
+            <form ref={form} onSubmit={sendEmail}>
+              <label>Name</label>
+              <input type="text" name="user_name" />
+              <label>Telefon</label>
+              <input type="text" name="user_phone" />
+              <label>Email</label>
+              <input type="email" name="user_email" />
+              <label>Message</label>
+              <textarea name="message" />
+              <input type="submit" value="Send" />
+            </form>
           </div>
         </div>
       </div>

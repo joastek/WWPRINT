@@ -1,3 +1,5 @@
+"use client";
+import { useEffect } from "react";
 import "../styles/Offert.scss";
 import Image from "next/image";
 import Tile1 from "../../public/Balkon.webp";
@@ -5,6 +7,15 @@ import Tile2 from "../../public/image5.png";
 import Tile3 from "../../public/Pojazd.png";
 import Link from "next/link";
 const Offert = () => {
+  // useEffect(() => {
+  //   const hash = window.location.hash;
+  //   if (hash === "#Offert") {
+  //     const offertSection = document.getElementById("Offert");
+  //     if (offertSection) {
+  //       offertSection.scrollIntoView({ behavior: "smooth" });
+  //     }
+  //   }
+  // }, []);
   return (
     <>
       <div className="offert_container" id="Offert">
