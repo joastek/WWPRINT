@@ -62,7 +62,8 @@
         color: #fffafa;
       }
     }
-    a {
+    label {
+      margin-top: 2rem;
       font-style: normal;
       font-weight: 700;
       font-size: 32px;
@@ -76,7 +77,16 @@
       width: 664px;
       height: 44px;
     }
+    textarea {
+      font-size: 32px;
+      background: #ffffff;
+      border-style: solid;
+
+      width: 664px;
+      height: 120px;
+    }
     button {
+      cursor: pointer;
       background: #0d43ce;
       border: 0.5px solid #0d43ce;
       border-radius: 97px;

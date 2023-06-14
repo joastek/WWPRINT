@@ -1,6 +1,6 @@
 "use client";
 
-import "../../styles/NavBar.scss";
+import "../../styles/components/NavBar.scss";
 import logo from "../../../public/Logo.png";
 import Image from "next/image";
 import Link from "next/link";

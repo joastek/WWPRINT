@@ -1,5 +1,5 @@
 import NavBar from "@/components/NavBar/NavBar";
-import "./globals.css";
+import "../styles/globals.scss";
 import Head from "next/head";
 import { Poppins } from "next/font/google";
 import Footer from "@/components/Footer/Footer";

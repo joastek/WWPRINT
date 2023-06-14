@@ -1,6 +1,5 @@
+@import "../abstracts/mixins";
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
@@ -13,6 +12,21 @@
 }
 html {
   font-size: 62.5%;
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+  @include respond(phone) {
+    font-size: 50%;
+  }
+  @include respond(desktop) {
+    font-size: 75%;
+  }
+  @include respond(big-desktop) {
+    font-size: 90%;
+  }
 }
 html,
 body {

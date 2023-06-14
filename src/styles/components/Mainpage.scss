@@ -1,3 +1,4 @@
+@import "../abstracts/mixins";
 .mainpage_container {
   margin-top: 15rem;
   display: flex;
@@ -45,6 +46,10 @@
       position: absolute;
       z-index: 2;
       margin-left: 22rem;
+      @include respond(tab-land) {
+        width: 35rem;
+        height: 35rem;
+      }
     }
     .mainpage_image2 {
       position: absolute;

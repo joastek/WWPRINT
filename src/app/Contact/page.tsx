@@ -48,15 +48,23 @@ const Contact = () => {
               Napisz do <a className="contact_Htext_contrast"> nas!</a>
             </div>
             <form ref={form} onSubmit={sendEmail}>
-              <label>Name</label>
+              <label>Imię</label>
+              <br />
               <input type="text" name="user_name" />
-              <label>Telefon</label>
+              <br />
+              <label>Telefon (opcjonalne)</label>
               <input type="text" name="user_phone" />
+              <br />
               <label>Email</label>
+              <br />
               <input type="email" name="user_email" />
-              <label>Message</label>
-              <textarea name="message" />
-              <input type="submit" value="Send" />
+              <br />
+              <label>Wiadomość</label>
+              <br />
+              <textarea name="message" style={{ resize: "vertical" }} /> <br />
+              <button type="submit" value="Send">
+                <div className="contact_button">Wyślij!</div>
+              </button>
             </form>
           </div>
         </div>

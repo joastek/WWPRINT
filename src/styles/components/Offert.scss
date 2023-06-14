@@ -1,3 +1,4 @@
+@import "../abstracts/mixins";
 .offert_container {
   margin-top: 20rem;
 
@@ -17,10 +18,15 @@
 
   .offert_tiles {
     display: flex; /* Dodaj tę linię */
-    grid-template-columns: auto auto auto auto;
+
     grid-gap: 10rem;
     justify-content: center;
     padding: 10rem;
+    @include respond(tab-land) {
+      background-color: red;
+      flex-direction: column;
+      width: 100vw;
+    }
     .offert_tile {
       cursor: pointer;
       background: rgba(239, 245, 255, 0.72);

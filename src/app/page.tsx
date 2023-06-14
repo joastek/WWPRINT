@@ -5,7 +5,7 @@ import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import Image1 from "../../public/image2.png";
 import Image2 from "../../public/image3.png";
 import Image3 from "../../public/image4.png";
-import "../styles/Mainpage.scss";
+import "../styles/components/Mainpage.scss";
 import Offert from "@/components/Offert";
 export default function Home() {
   return (

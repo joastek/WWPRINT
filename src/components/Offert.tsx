@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import "../styles/Offert.scss";
+import "../styles/components/Offert.scss";
 import Image from "next/image";
 import Tile1 from "../../public/Balkon.webp";
 import Tile2 from "../../public/image5.png";

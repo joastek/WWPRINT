@@ -1,4 +1,4 @@
-import "../../styles/Footer.scss";
+import "../../styles/components/Footer.scss";
 import Image from "next/image";
 import FacebookIcon from "../../styles/icons/facebook.png";
 import InstagramIcon from "../../styles/icons/instagram.png";
