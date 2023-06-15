@@ -25,7 +25,7 @@ const NavBar = () => {
         </Link>
         <div className="navigationbar_content">
           <Link href="/" style={{ textDecoration: "none" }}>
-            <p onClick={() => scroll.scrollToTop()}>Strona główna</p>
+            <p onClick={() => scroll.scrollToTop()}>Main Page</p>
           </Link>
 
           {/* ///////////////////////////////////////// */}
@@ -37,7 +37,7 @@ const NavBar = () => {
             offset={-100}
             onClick={handleClick}
           >
-            <p>Oferta</p>
+            <p>Offert</p>
           </ScrollLink>
 
           {/* <Link href="/#Offert" style={{ textDecoration: "none" }}>
@@ -51,7 +51,7 @@ const NavBar = () => {
             offset={-100}
             onClick={closeMenu}
           >
-            <p>O nas</p>
+            <p>About</p>
           </ScrollLink>
           <Link href="/Contact" style={{ textDecoration: "none" }}>
             <p>Kontakt</p>
@@ -59,7 +59,7 @@ const NavBar = () => {
         </div>
         <Link href="/Contact">
           <button className="navigationbar_button">
-            <p>Zamów teraz!</p>
+            <p>Order now !</p>
           </button>
         </Link>
       </div>

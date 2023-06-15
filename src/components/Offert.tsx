@@ -22,7 +22,7 @@ const Offert = () => {
         <h2>Oferta</h2>
 
         <div className="offert_tiles">
-          <div className="offert_tile">
+          <div className="offert_tile1">
             <Link href="/Offert/Oklejanie">
               {" "}
               <Image
@@ -40,7 +40,7 @@ const Offert = () => {
               <a className="offert_Bluefont">płaskich.</a>
             </a>
           </div>
-          <div className="offert_tile">
+          <div className="offert_tile2">
             <Image
               className="offert_image"
               src={Tile2}
@@ -55,7 +55,7 @@ const Offert = () => {
               </a>
             </a>
           </div>
-          <div className="offert_tile">
+          <div className="offert_tile3">
             <Image
               className="offert_image"
               src={Tile3}
