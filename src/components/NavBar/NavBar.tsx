@@ -5,7 +5,7 @@ import logo from "../../../public/Logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
 
 const NavBar = () => {
   const [click, setClick] = useState(false);
@@ -15,12 +15,9 @@ const NavBar = () => {
     setClick(false);
   };
   const isHomePage =
-    typeof window !== "undefined" && window.location.href === "/#Offert";
-
-  const [isHomePageActive, setIsHomePageActive] = useState(isHomePage);
-  useEffect(() => {
-    setIsHomePageActive(window.location.href === "/#Offert");
-  }, []);
+    typeof window !== "undefined" && window.location.href === "/";
+  const isHomePage1 =
+    typeof window !== "undefined" && window.location.href === "/Contact";
 
   return (
     <>
@@ -29,7 +26,7 @@ const NavBar = () => {
           <Image className="navigationbar_logo" src={logo} alt="Logo firmy" />
         </Link>
         <div className="navigationbar_content">
-          {isHomePage && isHomePageActive ? (
+          {isHomePage ? (
             <ScrollLink
               to="MainPage"
               spy={true}
@@ -46,18 +43,21 @@ const NavBar = () => {
           )}
           {/* ///////////////////////////////////////// */}
 
-          <p>
+          {isHomePage1 ? (
             <ScrollLink
               to="Offert"
               spy={true}
               smooth={true}
               offset={-100}
-              onClick={closeMenu}
+              onClick={handleClick}
             >
-              Oferta{" "}
+              <p>Oferta</p>
             </ScrollLink>
-          </p>
-
+          ) : (
+            <Link href="/" style={{ textDecoration: "none" }}>
+              <p onClick={() => scroll.scrollToTop()}>Oferta</p>
+            </Link>
+          )}
           <ScrollLink
             to="About"
             spy={true}
