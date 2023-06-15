@@ -14,14 +14,9 @@ const NavBar = () => {
   const handleClick = () => {
     setClick(false);
   };
-  const isHomePage =
-    typeof window !== "undefined" && window.location.href === "/";
-  const isHomePage1 =
-    typeof window !== "undefined" && window.location.href === "/Contact";
-  const divElement = document.getElementById("Offert");
-  function scrollToDiv() {
-    divElement!.scrollIntoView({ behavior: "smooth" });
-  }
+  // const isHomePage =
+  //   typeof window !== "undefined" && window.location.href === "/";
+
   return (
     <>
       <div className="navigationbar_container">
@@ -29,21 +24,10 @@ const NavBar = () => {
           <Image className="navigationbar_logo" src={logo} alt="Logo firmy" />
         </Link>
         <div className="navigationbar_content">
-          {isHomePage ? (
-            <ScrollLink
-              to="MainPage"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              onClick={handleClick}
-            >
-              <p>Strona główna</p>
-            </ScrollLink>
-          ) : (
-            <Link href="/" style={{ textDecoration: "none" }}>
-              <p onClick={() => scroll.scrollToTop()}>Strona główna</p>
-            </Link>
-          )}
+          <Link href="/" style={{ textDecoration: "none" }}>
+            <p onClick={() => scroll.scrollToTop()}>Strona główna</p>
+          </Link>
+
           {/* ///////////////////////////////////////// */}
 
           <ScrollLink
@@ -55,6 +39,10 @@ const NavBar = () => {
           >
             <p>Oferta</p>
           </ScrollLink>
+
+          {/* <Link href="/#Offert" style={{ textDecoration: "none" }}>
+            <p>Strona główna</p>
+          </Link> */}
 
           <ScrollLink
             to="About"
