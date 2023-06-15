@@ -18,7 +18,10 @@ const NavBar = () => {
     typeof window !== "undefined" && window.location.href === "/";
   const isHomePage1 =
     typeof window !== "undefined" && window.location.href === "/Contact";
-
+  const divElement = document.getElementById("Offert");
+  function scrollToDiv() {
+    divElement!.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <>
       <div className="navigationbar_container">
@@ -43,21 +46,16 @@ const NavBar = () => {
           )}
           {/* ///////////////////////////////////////// */}
 
-          {isHomePage1 ? (
-            <ScrollLink
-              to="Offert"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              onClick={handleClick}
-            >
-              <p>Oferta</p>
-            </ScrollLink>
-          ) : (
-            <Link href="/" style={{ textDecoration: "none" }}>
-              <p onClick={() => scroll.scrollToTop()}>Oferta</p>
-            </Link>
-          )}
+          <ScrollLink
+            to="Offert"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            onClick={handleClick}
+          >
+            <p>Oferta</p>
+          </ScrollLink>
+
           <ScrollLink
             to="About"
             spy={true}
