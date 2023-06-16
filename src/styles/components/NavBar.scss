@@ -1,3 +1,4 @@
+@import "../abstracts/mixins";
 .navigationbar_container {
   position: fixed;
   top: 0;
@@ -7,18 +8,58 @@
   background-color: rgba(253, 253, 253, 0.8);
   backdrop-filter: blur(0.3rem);
   z-index: 100;
-}
+  // @include respond(tab-port) {
 
-.navigationbar_logo {
-  padding: 0.3rem;
-  height: 8.5rem;
-  width: 12.5rem;
+  //   width: 100vw;
+  //   background-color: rgb(255, 255, 255);
+  //   height: 15em;
+  //   border-bottom: 0.2em solid black;
+  // }
+  .toggle-button {
+    position: absolute;
+    top: 3em;
+    right: 3em;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 5em;
+    height: 3em;
+    z-index: 999;
+    @include respond(tab-port) {
+      display: flex;
+    }
+    .bar {
+      height: 0.3em;
+      width: 100%;
+      background-color: rgb(3, 3, 3);
+      border-radius: 10px;
+    }
+  }
+  .navigationbar_logo {
+    position: absolute;
+    z-index: 999;
+    padding: 0.3rem;
+    height: 8.5rem;
+    width: 12.5rem;
+    @include respond(tab-port) {
+    }
+  }
 }
 
 .navigationbar_content {
   display: flex;
   justify-content: center;
   align-items: center;
+  @include respond(tab-port) {
+    padding-top: 4em;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-color: rgba(253, 253, 253, 0.8);
+    backdrop-filter: blur(0.3rem);
+    z-index: 55;
+    display: none;
+  }
 
   p {
     color: #837b7b;
@@ -27,12 +68,18 @@
     margin: 3.2rem;
     cursor: pointer;
     text-decoration: none; /* Usunięcie podkreślenia */
+    @include respond(tab-port) {
+      color: black;
+      font-weight: bolder;
+    }
   }
   p:hover {
     color: black;
   }
 }
-
+.navigationbar_content.active {
+  display: flex;
+}
 .navigationbar_button {
   background-color: white;
   cursor: pointer;
@@ -45,10 +92,15 @@
   border: 0.5px solid #dadada;
   filter: drop-shadow(-4px 4px 9px rgba(0, 0, 0, 0.25))
     drop-shadow(9px 8px 11px rgba(0, 0, 0, 0.25));
-
+  @include respond(tab-port) {
+    display: none;
+  }
   p {
     font-style: normal;
     font-weight: 600;
     font-size: 3.2rem;
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 }

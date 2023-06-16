@@ -14,12 +14,7 @@
       font-size: 7.2rem;
       margin-bottom: 1.5rem;
     }
-    a {
-      font-style: normal;
-      font-weight: 700;
-      font-size: 7.2rem;
-      color: #0d43ce;
-    }
+
     .mainpage_Whatfontcontainer {
       width: 90%;
       font-style: normal;
@@ -33,7 +28,7 @@
       margin-top: 7rem;
       width: 38rem;
       height: 10rem;
-      background: #0d43ce;
+      background: #000000;
       border-radius: 97px;
       filter: drop-shadow(0px 9px 12px rgba(0, 0, 0, 0.61));
       font-style: normal;
@@ -59,9 +54,11 @@
       position: absolute;
       z-index: 2;
       margin-left: 22rem;
+
       @include respond(tab-land) {
-        width: 35rem;
-        height: 35rem;
+        width: 25em;
+        height: 25em;
+        margin-left: 15em;
       }
     }
     .mainpage_image2 {
@@ -70,9 +67,10 @@
       margin-left: 10rem;
       z-index: 1;
       @include respond(tab-land) {
-        width: 35rem;
-        height: 35rem;
-        margin-top: 20rem;
+        width: 25em;
+        height: 20em;
+        margin-top: 21em;
+        margin-left: 7em;
       }
     }
     .mainpage_image3 {
@@ -80,8 +78,9 @@
       z-index: 3;
       margin-left: -5rem;
       @include respond(tab-land) {
-        width: 35rem;
-        height: 35rem;
+        width: 25rem;
+        height: 25rem;
+        margin-left: -1rem;
       }
     }
   }
@@ -109,6 +108,13 @@
     font-size: 24px;
     line-height: 36px;
     text-align: justify;
+    @include respond(tab-land) {
+      padding: 0.7em;
+    }
+    @include respond(phone) {
+      padding: 0;
+      margin-top: 2em;
+    }
   }
   .mainpage_about_Aboutfontcontainer {
     margin-top: 8rem;
@@ -117,8 +123,8 @@
     font-weight: 700;
     font-size: 7.2rem;
     margin-bottom: 1.5rem;
-    a {
-      color: #0d43ce;
+    @include respond(phone) {
+      font-size: 5em;
     }
   }
 
@@ -129,7 +135,7 @@
     margin-top: 7rem;
     width: 55rem;
     height: 10rem;
-    background: #0d43ce;
+    background: #000000;
     border-radius: 97px;
     filter: drop-shadow(0px 9px 12px rgba(0, 0, 0, 0.61));
     font-style: normal;
@@ -141,6 +147,13 @@
     margin-right: auto;
     @include respond(tab-land) {
       width: 17em;
+    }
+    @include respond(tab-port) {
+      width: 80%;
+    }
+    @include respond(phone) {
+      width: 12em;
+      font-size: 3em;
     }
   }
 }

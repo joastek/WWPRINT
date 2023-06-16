@@ -10,8 +10,8 @@ const Footer = () => {
   return (
     <>
       <div className="footer_container">
+        <Image src={Logo} alt="Logo firmy WWPrint" className="footer_logo" />
         <div className="footer_contactbox">
-          <Image src={Logo} alt="Logo firmy WWPrint" />
           <div className="footer_icon">
             <Image src={PhoneIcon} alt="Ikona telefonu" />
             <a>+48 517 258 986</a> <br />
