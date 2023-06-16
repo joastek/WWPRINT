@@ -88,6 +88,9 @@
 //////////////////////////////////
 .mainpage_about_container {
   padding: 7rem;
+  @include respond(phone) {
+    padding: 3em;
+  }
   h2 {
     margin-left: auto;
     margin-right: auto;
@@ -125,6 +128,7 @@
     margin-bottom: 1.5rem;
     @include respond(phone) {
       font-size: 5em;
+      padding: 0em;
     }
   }
 

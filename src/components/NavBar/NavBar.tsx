@@ -42,7 +42,7 @@ const NavBar = () => {
             style={{ textDecoration: "none" }}
             onClick={handleToggleClick}
           >
-            <p onClick={() => scroll.scrollToTop()}>Main Page</p>
+            <p onClick={() => scroll.scrollToTop()}>Strona główna</p>
           </Link>
 
           {/* ///////////////////////////////////////// */}
@@ -57,7 +57,7 @@ const NavBar = () => {
               handleToggleClick();
             }}
           >
-            <p>Offert</p>
+            <p>Oferta</p>
           </ScrollLink>
 
           {/* <Link href="/#Offert" style={{ textDecoration: "none" }}>
@@ -74,7 +74,7 @@ const NavBar = () => {
               handleToggleClick();
             }}
           >
-            <p>About</p>
+            <p>O nas</p>
           </ScrollLink>
           <Link
             href="/Contact"
@@ -89,7 +89,7 @@ const NavBar = () => {
         </div>
         <Link href="/Contact">
           <button className="navigationbar_button">
-            <p>Order now !</p>
+            <p>Zamów teraz!</p>
           </button>
         </Link>
       </div>

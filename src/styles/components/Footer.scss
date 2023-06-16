@@ -65,7 +65,7 @@
     @include respond(phone) {
       margin-right: 0em;
       margin-top: 0em;
-      display: flex;
+      display: block;
     }
     .footer_mediaicon {
       padding: 0.5rem;
