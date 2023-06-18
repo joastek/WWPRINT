@@ -13,16 +13,18 @@ const Footer = () => {
         <Image src={Logo} alt="Logo firmy WWPrint" className="footer_logo" />
         <div className="footer_contactbox">
           <div className="footer_icon">
-            <Image src={PhoneIcon} alt="Ikona telefonu" />
+          <div className="footer_icons">
+            <Image src={PhoneIcon} alt="Ikona telefonu" /></div>
             <a>+48 517 258 986</a> <br />
           </div>
 
           <div className="footer_icon">
+            <div className="footer_icons">
             <Image
               src={MailIcon}
               alt="Ikona wiadmości mail"
               className="footer_icon"
-            />{" "}
+            />{" "}</div>
             <a>biurowwprint@gmail.com</a>{" "}
           </div>
         </div>

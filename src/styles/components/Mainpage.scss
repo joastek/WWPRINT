@@ -197,7 +197,7 @@
       width: 17em;
     }
     @include respond(tab-port) {
-      width: 90%;
+      width: 100%;
     }
     @include respond(phone) {
       margin-left: auto;

@@ -4,8 +4,12 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
-
-  const sendEmail = (e: any) => {
+  const clearFields = () => {
+    if (form.current) {
+      form.current.reset(); // Resetowanie zawartości formularza
+    }
+  };
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     emailjs
@@ -18,6 +22,8 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          alert("wiadomość wysłana !");
+          clearFields();
         },
         (error) => {
           console.log(error.text);
