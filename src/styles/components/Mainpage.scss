@@ -1,21 +1,32 @@
 @import "../abstracts/mixins";
 .mainpage_container {
   margin-top: 15rem;
-  display: flex;
+
+  width: 100vw;
+  @include respond(big-desktop) {
+    max-width: 130.5em;
+    margin-left: auto;
+    margin-right: auto;
+  }
   @include respond(tab-port) {
     display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
-  @include respond(big-desktop) {
-    max-width: 130.5em;
-    margin-left: auto;
-    margin-right: auto;
+
+  @include respond(phone) {
+    width: 100%;
   }
   .mainpage_fontcontainer {
     padding: 5rem;
     width: 100%;
+    @include respond(phone) {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100vw;
+      padding: 2em;
+    }
     .mainpage_Aboutfontcontainer {
       font-style: normal;
       font-weight: 700;
@@ -184,11 +195,11 @@
       width: 80%;
     }
     @include respond(phone) {
-      margin-left: auto;
-      margin-right: auto;
+      // margin-left: auto;
+      // margin-right: auto;
       margin-top: 3em;
       margin-bottom: 3em;
-      max-width: 20em;
+      // width: 70%;
       font-size: 3em;
     }
   }

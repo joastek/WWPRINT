@@ -9,12 +9,17 @@
   backdrop-filter: blur(0.3rem);
   z-index: 100;
   @include respond(tab-port) {
+    width: 100vw;
+    border-bottom: 0.2em solid black;
+  }
+  @include respond(phone) {
+    width: 100%;
     border-bottom: 0.2em solid black;
   }
   .toggle-button {
     position: absolute;
     top: 3em;
-    right: 3em;
+    right: 1rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -26,7 +31,7 @@
     }
     .bar {
       height: 0.3em;
-      width: 100%;
+      // width: 100%;
       background-color: rgb(3, 3, 3);
       border-radius: 10px;
     }
@@ -50,7 +55,7 @@
     padding-top: 4em;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+
     background-color: rgba(253, 253, 253, 0.8);
     backdrop-filter: blur(0.3rem);
     z-index: 55;
