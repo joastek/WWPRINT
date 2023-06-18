@@ -8,13 +8,9 @@
   background-color: rgba(253, 253, 253, 0.8);
   backdrop-filter: blur(0.3rem);
   z-index: 100;
-  // @include respond(tab-port) {
-
-  //   width: 100vw;
-  //   background-color: rgb(255, 255, 255);
-  //   height: 15em;
-  //   border-bottom: 0.2em solid black;
-  // }
+  @include respond(tab-port) {
+    border-bottom: 0.2em solid black;
+  }
   .toggle-button {
     position: absolute;
     top: 3em;
@@ -80,6 +76,7 @@
 .navigationbar_content.active {
   display: flex;
 }
+
 .navigationbar_button {
   background-color: white;
   cursor: pointer;

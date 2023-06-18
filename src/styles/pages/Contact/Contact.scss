@@ -1,7 +1,8 @@
+@import "../../abstracts/mixins";
 .contact_container {
   margin-top: 10rem;
   .contact_description {
-    padding: 10rem;
+    padding: 5rem;
     font-style: normal;
     font-weight: 600;
     font-size: 2.4rem;
@@ -15,9 +16,6 @@
     font-size: 5.6rem;
     line-height: 8.4rem;
     margin-bottom: 10rem;
-    .contact_description_deal_contrast {
-      color: #0d43ce;
-    }
   }
   .contact_email_position {
     display: flex;
@@ -27,24 +25,28 @@
     .contact_email_container {
       position: relative;
       width: 80rem;
-      height: 65rem;
+      height: 70rem;
       background: #ffffff;
       border: 1px solid #5b5b5b;
       justify-content: center;
       padding: 3rem;
       border-radius: 56px;
+      @include respond(tab-land) {
+        height: 70em;
+      }
+      @include respond(tab-port) {
+        width: 55em;
+      }
+      @include respond(phone) {
+        width: 48em;
+        height: 85em;
+        margin-bottom: 7em;
+      }
       .contact_Htext {
         font-style: normal;
         font-weight: 700;
         font-size: 48px;
         line-height: 72px;
-
-        .contact_Htext_contrast {
-          color: #0d43ce;
-          font-weight: 700;
-          font-size: 48px;
-          line-height: 72px;
-        }
       }
       .contact_textarea {
         background: #ffffff;
@@ -74,24 +76,37 @@
       background: #ffffff;
       border-style: solid;
 
-      width: 664px;
-      height: 44px;
+      width: 66.4rem;
+      height: 4.4rem;
+      @include respond(tab-port) {
+        width: 12em;
+      }
+      @include respond(phone) {
+        width: 10em;
+      }
     }
     textarea {
       font-size: 32px;
       background: #ffffff;
       border-style: solid;
 
-      width: 664px;
-      height: 120px;
+      width: 66.4rem;
+      height: 4.4rem;
+      @include respond(tab-port) {
+        width: 12em;
+      }
+      @include respond(phone) {
+        width: 10em;
+      }
     }
     button {
+      margin-top: 2rem;
       cursor: pointer;
-      background: #0d43ce;
-      border: 0.5px solid #0d43ce;
+      background: #000000;
+      border: 0.5px solid #000000;
       border-radius: 97px;
-      width: 178px;
-      height: 72px;
+      width: 17.8rem;
+      height: 7.2rem;
       filter: drop-shadow(-4px 4px 9px rgba(0, 0, 0, 0.25))
         drop-shadow(9px 8px 11px rgba(0, 0, 0, 0.25));
     }

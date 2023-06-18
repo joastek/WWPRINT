@@ -4,6 +4,14 @@
   display: flex;
   @include respond(tab-port) {
     display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  @include respond(big-desktop) {
+    max-width: 130.5em;
+    margin-left: auto;
+    margin-right: auto;
   }
   .mainpage_fontcontainer {
     padding: 5rem;
@@ -60,6 +68,11 @@
         height: 25em;
         margin-left: 15em;
       }
+      @include respond(big-desktop) {
+        width: 35em;
+        height: 35em;
+        margin-left: 20em;
+      }
     }
     .mainpage_image2 {
       position: absolute;
@@ -68,7 +81,13 @@
       z-index: 1;
       @include respond(tab-land) {
         width: 25em;
-        height: 20em;
+        height: 25em;
+        margin-top: 21em;
+        margin-left: 7em;
+      }
+      @include respond(big-desktop) {
+        width: 35em;
+        height: 30em;
         margin-top: 21em;
         margin-left: 7em;
       }
@@ -82,12 +101,21 @@
         height: 25rem;
         margin-left: -1rem;
       }
+      @include respond(big-desktop) {
+        width: 35em;
+        height: 30em;
+      }
     }
   }
 }
 //////////////////////////////////
 .mainpage_about_container {
   padding: 7rem;
+  @include respond(big-desktop) {
+    max-width: 142.5em;
+    margin-left: auto;
+    margin-right: auto;
+  }
   @include respond(phone) {
     padding: 3em;
   }
@@ -156,7 +184,11 @@
       width: 80%;
     }
     @include respond(phone) {
-      width: 12em;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 3em;
+      margin-bottom: 3em;
+      max-width: 20em;
       font-size: 3em;
     }
   }
