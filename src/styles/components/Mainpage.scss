@@ -1,7 +1,7 @@
 @import "../abstracts/mixins";
 .mainpage_container {
   margin-top: 15rem;
-
+  display: flex;
   width: 100vw;
   @include respond(big-desktop) {
     max-width: 130.5em;
@@ -67,7 +67,7 @@
       width: 80%;
     }
     @include respond(tab-port) {
-      opacity: 0;
+      display: none;
     }
     .mainpage_image1 {
       position: absolute;
@@ -107,6 +107,11 @@
       position: absolute;
       z-index: 3;
       margin-left: -5rem;
+      @include respond(tab-land) {
+        width: 25rem;
+        height: 25rem;
+        margin-left: -1rem;
+      }
       @include respond(tab-land) {
         width: 25rem;
         height: 25rem;
@@ -192,11 +197,11 @@
       width: 17em;
     }
     @include respond(tab-port) {
-      width: 80%;
+      width: 90%;
     }
     @include respond(phone) {
-      // margin-left: auto;
-      // margin-right: auto;
+      margin-left: auto;
+      margin-right: auto;
       margin-top: 3em;
       margin-bottom: 3em;
       // width: 70%;
