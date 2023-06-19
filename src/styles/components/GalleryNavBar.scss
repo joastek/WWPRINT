@@ -1,0 +1,20 @@
+.GalleryNavBar_container {
+  margin-top: 15rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  .GalleryNavBar_element {
+    border-right: 2px solid black;
+    padding: 2rem;
+    font-size: 2rem;
+    color: black;
+  }
+  .GalleryNavBar_element2 {
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 2rem;
+    color: black;
+  }
+}
