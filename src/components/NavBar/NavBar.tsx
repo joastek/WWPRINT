@@ -4,7 +4,11 @@ import "../../styles/components/NavBar.scss";
 import logo from "../../../public/Logo.png";
 import Image from "next/image";
 import Link from "next/link";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import {
+  Link as ScrollLink,
+  animateScroll,
+  animateScroll as scroll,
+} from "react-scroll";
 import { useState, useEffect, useRef } from "react";
 
 const NavBar = () => {
@@ -57,7 +61,10 @@ const NavBar = () => {
               handleToggleClick();
             }}
           >
-            <p>Oferta</p>
+            <Link href="/#Offert" style={{ textDecoration: "none" }}>
+              {" "}
+              <p>Oferta</p>{" "}
+            </Link>
           </ScrollLink>
 
           {/* <Link href="/#Offert" style={{ textDecoration: "none" }}>
@@ -74,7 +81,10 @@ const NavBar = () => {
               handleToggleClick();
             }}
           >
-            <p>O nas</p>
+            <Link href="/#About" style={{ textDecoration: "none" }}>
+              {" "}
+              <p>O nas</p>{" "}
+            </Link>
           </ScrollLink>
           <Link
             href="/Contact"

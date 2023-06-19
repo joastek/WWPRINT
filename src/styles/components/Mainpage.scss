@@ -126,7 +126,10 @@
 }
 //////////////////////////////////
 .mainpage_about_container {
-  padding: 7rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  margin-top: 5rem;
+  padding-top: 5rem;
   @include respond(big-desktop) {
     max-width: 142.5em;
     margin-left: auto;
