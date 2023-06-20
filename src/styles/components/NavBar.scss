@@ -62,6 +62,7 @@
   }
 
   p {
+    position: relative;
     color: #837b7b;
     font-style: normal;
     font-size: 2.4rem;
@@ -73,35 +74,69 @@
       font-weight: bolder;
     }
   }
-  p:hover {
-    color: black;
+  p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.3rem;
+    background-color: black;
+    transition: transform 300ms ease-in-out;
+
+    transform: scaleX(0);
   }
+
+  p:hover::before,
+  p:focus::before {
+    transform: scaleX(1);
+  }
+}
+p:hover,
+p.active {
+  color: black;
 }
 .navigationbar_content.active {
   display: flex;
 }
 
 .navigationbar_button {
-  background-color: white;
+  background-color: rgb(0, 0, 0);
+  color: white;
   cursor: pointer;
   margin-top: 2rem;
   margin-right: 5rem;
   padding: 1.2rem;
   width: 25.4rem;
   height: 7.2rem;
-  border-radius: 9.7rem;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.2rem;
   border: 0.5px solid #dadada;
+  --border-size: 0.5rem;
   filter: drop-shadow(-4px 4px 9px rgba(0, 0, 0, 0.25))
     drop-shadow(9px 8px 11px rgba(0, 0, 0, 0.25));
   @include respond(tab-port) {
     display: none;
   }
-  p {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 3.2rem;
-    @include respond(tab-port) {
-      display: none;
-    }
-  }
+}
+
+.navigationbar_button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border: var(--border-size) solid rgb(0, 0, 0);
+  transition: top, left, right, bottom, 100ms ease-in-out;
+  color: white;
+}
+.navigationbar_button:hover::before,
+.navigationbar_button:focus::before {
+  top: calc(var(--border-size) * -1.5);
+  left: calc(var(--border-size) * -1.5);
+  right: calc(var(--border-size) * -1.5);
+  bottom: calc(var(--border-size) * -1.5);
 }

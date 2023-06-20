@@ -18,7 +18,11 @@ const Offert = () => {
   // }, []);
   return (
     <>
-      <div className="offert_container" id="Offert">
+      <div
+        className="offert_container"
+        id="Offert"
+        style={{ marginTop: "250px" }}
+      >
         <h2>Oferta</h2>
 
         <div className="offert_tiles">
