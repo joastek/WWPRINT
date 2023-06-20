@@ -3,22 +3,20 @@
 import "../../styles/components/NavBar.scss";
 import logo from "../../../public/Logo.png";
 import Image from "next/image";
-import NavLink from "next/link";
+import Link from "next/link";
 import {
   Link as ScrollLink,
   animateScroll,
   animateScroll as scroll,
 } from "react-scroll";
 import { useState, useEffect, useRef } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
-const NavBar = (): JSX.Element => {
-  const router = useRouter();
-  const pathname = usePathname();
+const NavBar = () => {
   const [click, setClick] = useState(false);
   const closeMenu = () => setClick(false);
   const [isActive, setIsActive] = useState(false);
-
+  const navBarRef = useRef(null);
   const handleToggleClick = () => {
     setIsActive(!isActive);
     console.log("ok");
@@ -28,32 +26,29 @@ const NavBar = (): JSX.Element => {
     setClick(false);
     console.log("ok");
   };
+
   return (
     <>
-      <div className="navigationbar_container">
-        <NavLink href="/">
+      <div
+        className={`navigationbar_container ${isActive ? "active" : ""}`}
+        ref={navBarRef}
+      >
+        <Link href="/" style={{ textDecoration: "none" }}>
           <Image className="navigationbar_logo" src={logo} alt="Logo firmy" />
-        </NavLink>{" "}
+        </Link>{" "}
         <div className="toggle-button" onClick={handleToggleClick}>
           <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
         </div>
-        <div className="navigationbar_content">
-          {" "}
-          <NavLink
+        <div className={`navigationbar_content ${isActive ? "active" : ""}`}>
+          <Link
             href="/"
+            style={{ textDecoration: "none" }}
             onClick={handleToggleClick}
-            style={{ textDecoration: "none", color: " #837b7b" }}
           >
-            <p
-              onClick={() => scroll.scrollToTop()}
-              // className={isActiva("/") ? "active" : ""}
-            >
-              {" "}
-              Strona główna{" "}
-            </p>
-          </NavLink>
+            <p onClick={() => scroll.scrollToTop()}>Strona główna</p>
+          </Link>
           {/* ///////////////////////////////////////// */}
           <ScrollLink
             to="Offert"
@@ -65,10 +60,10 @@ const NavBar = (): JSX.Element => {
               handleToggleClick();
             }}
           >
-            <NavLink href="/#Offert" style={{ textDecoration: "none" }}>
+            <Link href="/#Offert" style={{ textDecoration: "none" }}>
               {" "}
               <p>Oferta</p>{" "}
-            </NavLink>
+            </Link>
           </ScrollLink>
           {/* <Link href="/#Offert" style={{ textDecoration: "none" }}>
             <p>Strona główna</p>
@@ -83,12 +78,12 @@ const NavBar = (): JSX.Element => {
               handleToggleClick();
             }}
           >
-            <NavLink href="/#About" style={{ textDecoration: "none" }}>
+            <Link href="/#About" style={{ textDecoration: "none" }}>
               {" "}
               <p>O nas</p>{" "}
-            </NavLink>
+            </Link>
           </ScrollLink>
-          <NavLink
+          <Link
             href="/Contact"
             style={{ textDecoration: "none" }}
             onClick={() => {
@@ -97,8 +92,8 @@ const NavBar = (): JSX.Element => {
             }}
           >
             <p>Kontakt</p>
-          </NavLink>
-          <NavLink
+          </Link>
+          <Link
             href="/Offert"
             style={{ textDecoration: "none" }}
             onClick={() => {
@@ -107,13 +102,13 @@ const NavBar = (): JSX.Element => {
             }}
           >
             <p>Galeria</p>
-          </NavLink>
+          </Link>
         </div>
-        <NavLink href="/Contact">
+        <Link href="/Contact">
           <button className="navigationbar_button">
-            <div>Zamów teraz!</div>
+            <p>Zamów teraz!</p>
           </button>
-        </NavLink>
+        </Link>
       </div>
     </>
   );
