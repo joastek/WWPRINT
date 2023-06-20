@@ -8,6 +8,8 @@ const StickersAndLables = () => {
       <div className="Labels_container">
         <img src={IMAGES.LABELS.image1.src} alt="" />
         <img src={IMAGES.LABELS.image2.src} alt="" />
+        <img src={IMAGES.LABELS.image2.src} alt="" />
+        <img src={IMAGES.LABELS.image2.src} alt="" />
       </div>
     </>
   );
