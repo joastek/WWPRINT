@@ -65,11 +65,13 @@ const Offert = () => {
               src={Tile3}
               alt="Efekt wykonania oklejania pojazdów"
             />
-            <a>
-              <br />
-              Oklejanie <br />
-              <a className="offert_Bluefont">pojazdów.</a>
-            </a>
+            <div className="test">
+              <a>
+                <br />
+                Oklejanie <br />
+                <a className="offert_Bluefont">pojazdów.</a>
+              </a>
+            </div>
           </div>
         </div>
       </div>
