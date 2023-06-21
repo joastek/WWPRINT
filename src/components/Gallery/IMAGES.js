@@ -176,6 +176,12 @@ const IMAGES = {
       require("../../../public/gallery_images/Naklejki_i_etykiety/walentynki.png")
         .default,
   },
+  CARS:{
+    image1:require("../../../public/gallery_images/Oklejanie_samochodow/pojazd1_1 1.jpg"),
+    image2:require("../../../public/gallery_images/Oklejanie_samochodow/pojazd1_2 1.jpg"),
+    image3:require("../../../public/gallery_images/Oklejanie_samochodow/pojazd2_1 1.jpg"),
+    image4:require("../../../public/gallery_images/Oklejanie_samochodow/pojazd2_2 1.jpg")
+  }
 };
 
 export default IMAGES;

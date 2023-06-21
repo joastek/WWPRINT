@@ -23,7 +23,9 @@ export default function Home() {
             precyzji wykonania, wnętrza nabiorą stylowego i efektownego
             charakteru.
           </div>
-          <button className="mainpage_button">Skontaktuj się!</button>
+          <Link href="/Contact">
+            <button className="mainpage_button">Skontaktuj się!</button>
+          </Link>
         </div>
         <div className="mainpage_imageContainer">
           <Image

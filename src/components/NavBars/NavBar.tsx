@@ -94,7 +94,7 @@ const NavBar = () => {
             <p>Kontakt</p>
           </Link>
           <Link
-            href="/Offert"
+            href="/Offert/Naklejki_i_etykiety"
             style={{ textDecoration: "none" }}
             onClick={() => {
               handleClick();

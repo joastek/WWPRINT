@@ -1,6 +1,18 @@
 .Labels_container {
-  // .test {
-  //   width: 20rem;
-  //   height: 20rem;
-  // }
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+
+  .test {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding: 1rem;
+  }
+  .test:hover {
+    transform: scale(1.1);
+  }
 }
