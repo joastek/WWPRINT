@@ -100,8 +100,9 @@ const IMAGES = {
     image35:
       require("../../../public/gallery_images/Naklejki_i_etykiety/krzycz_tatoo_dino.png")
         .default,
-    image36: require("../../../../Naklejki_I_etykiety/krzycz_tatoo_hot.png")
-      .default,
+    image36:
+      require("../../../public/gallery_images/Naklejki_i_etykiety/krzycz_tatoo_hot.png")
+        .default,
     image37:
       require("../../../public/gallery_images/Naklejki_i_etykiety/krzycz_tatoo_koteł.png")
         .default,
