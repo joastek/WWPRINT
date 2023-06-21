@@ -16,3 +16,13 @@
     transform: scale(1.1);
   }
 }
+.progress-bar {
+  position: fixed;
+  top: 10rem;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
+  background: rgb(0, 0, 0);
+  transform-origin: 0%;
+  z-index: 999;
+}

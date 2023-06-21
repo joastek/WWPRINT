@@ -1,11 +1,18 @@
+"use client";
 import GalleryNavBar from "@/components/NavBars/GalleryNavBar";
 import "../../../styles/pages/Offert/Naklejki_i_etykiety/Naklejki_i_etykiety.scss";
 import IMAGES from "../../../components/Gallery/IMAGES";
 import Image from "next/image";
-import test from "../../../../public/gallery_images/anitrochepiercing-2.png";
+import { motion, useScroll } from "framer-motion";
 const StickersAndLables = () => {
+  const { scrollYProgress } = useScroll();
+
   return (
     <>
+      <motion.div
+        className="progress-bar"
+        style={{ scaleX: scrollYProgress }}
+      />
       <GalleryNavBar />
       <div className="Labels_container">
         <Image

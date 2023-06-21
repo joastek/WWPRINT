@@ -26,7 +26,10 @@ const Offert = () => {
         <h2>Oferta</h2>
 
         <div className="offert_tiles">
-          <Link href="/Offert/Oklejanie_powierzchni_plaskich">
+          <Link
+            href="/Offert/Oklejanie_powierzchni_plaskich"
+            style={{ textDecoration: "none", color: "black" }}
+          >
             <div className="offert_tile1">
               {" "}
               <Image
@@ -43,7 +46,10 @@ const Offert = () => {
               </a>{" "}
             </div>{" "}
           </Link>
-          <Link href="/Offert/Naklejki_i_etykiety">
+          <Link
+            href="/Offert/Naklejki_i_etykiety"
+            style={{ textDecoration: "none", color: "black" }}
+          >
             <div className="offert_tile2">
               <Image
                 className="offert_image"
@@ -60,7 +66,10 @@ const Offert = () => {
               </a>
             </div>{" "}
           </Link>
-          <Link href="/Offert/Oklejanie_pojazdow">
+          <Link
+            href="/Offert/Oklejanie_pojazdow"
+            style={{ textDecoration: "none", color: "black" }}
+          >
             <div className="offert_tile3">
               <Image
                 className="offert_image"

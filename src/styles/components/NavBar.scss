@@ -15,26 +15,40 @@
   @include respond(phone) {
     border-bottom: 0.2em solid black;
   }
-  .toggle-button {
-    cursor: pointer;
+  .toggle_button_box {
+    width: 5em;
+    height: 5em;
     position: absolute;
     top: 3em;
     right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 5em;
-    height: 3em;
-    z-index: 999;
-    @include respond(tab-port) {
-      display: flex;
+    border-radius: 50%;
+    background-color: red;
+    z-index: 90;
+
+    .toggle-button {
+      cursor: pointer;
+
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 5em;
+      height: 3em;
+      z-index: 1000;
+
+      @include respond(tab-port) {
+        display: flex;
+      }
+      .bar {
+        z-index: 1000;
+        height: 0.3em;
+        // width: 100%;
+        background-color: rgb(3, 3, 3);
+        border-radius: 10px;
+      }
     }
-    .bar {
-      height: 0.3em;
-      // width: 100%;
-      background-color: rgb(3, 3, 3);
-      border-radius: 10px;
-    }
+  }
+  .toggle_button_box.active {
+    transform: scale(80);
   }
   .navigationbar_logo {
     position: absolute;
@@ -43,11 +57,13 @@
     height: 8.5rem;
     width: 12.5rem;
     @include respond(tab-port) {
+      margin-top: 02em;
     }
   }
 }
 
 .navigationbar_content {
+  z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,13 +72,13 @@
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    background-color: rgba(253, 253, 253, 0.8);
-    backdrop-filter: blur(0.3rem);
+
     z-index: 55;
     display: none;
   }
 
   p {
+    z-index: 999;
     position: relative;
     color: #837b7b;
     font-style: normal;
@@ -84,7 +100,7 @@
     height: 0.3rem;
     background-color: black;
     transition: transform 300ms ease-in-out;
-
+    z-index: 999;
     transform: scaleX(0);
   }
 
@@ -98,6 +114,7 @@
 //   color: black;
 // }
 .navigationbar_content.active {
+  z-index: 999;
   display: flex;
 }
 

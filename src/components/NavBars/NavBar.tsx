@@ -36,10 +36,12 @@ const NavBar = () => {
         <Link href="/" style={{ textDecoration: "none" }}>
           <Image className="navigationbar_logo" src={logo} alt="Logo firmy" />
         </Link>{" "}
-        <div className="toggle-button" onClick={handleToggleClick}>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
+        <div className="toggle_button_box" onClick={handleToggleClick}>
+          {/* <div className="toggle-button">
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </div> */}
         </div>
         <div className={`navigationbar_content ${isActive ? "active" : ""}`}>
           <Link

@@ -1,6 +1,6 @@
 @import "../abstracts/mixins";
 .mainpage_container {
-  margin-top: 15rem;
+  margin-top: 10rem;
   display: flex;
   width: 100vw;
   @include respond(big-desktop) {
@@ -158,8 +158,9 @@
     margin-left: auto;
     margin-right: auto;
   }
-  @include respond(phone) {
-    padding: 3em;
+  @include respond(tab-port) {
+    padding: 1em;
+    margin: 0 0;
   }
   h2 {
     margin-left: auto;
@@ -196,7 +197,9 @@
     font-weight: 700;
     font-size: 7.2rem;
     margin-bottom: 1.5rem;
-    @include respond(phone) {
+    @include respond(tab-port) {
+      margin-top: 2em;
+      position: relative;
       font-size: 5em;
       padding: 0em;
     }
@@ -255,5 +258,19 @@
   }
   .mainpage_button:hover::before {
     transform: scaleX(1);
+  }
+}
+.progress-bar {
+  position: fixed;
+  top: 10rem;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
+  background: rgb(0, 0, 0);
+  transform-origin: 0%;
+  z-index: 999;
+  @include respond(tab-port) {
+    top: 0;
+    height: 1.5rem;
   }
 }
