@@ -9,13 +9,6 @@ const StickersAndLables = () => {
       <GalleryNavBar />
       <div className="Labels_container">
         <Image
-          src={IMAGES.LABELS.image1.src}
-          alt=""
-          className="test"
-          width={400}
-          height={400}
-        />
-        <Image
           src={IMAGES.LABELS.image2.src}
           alt=""
           className="test"
@@ -409,13 +402,6 @@ const StickersAndLables = () => {
         />
         <Image
           src={IMAGES.LABELS.image61.src}
-          alt=""
-          className="test"
-          width={400}
-          height={400}
-        />
-        <Image
-          src={IMAGES.LABELS.image62.src}
           alt=""
           className="test"
           width={400}
