@@ -16,13 +16,13 @@ const StickersAndLables = () => {
       <GalleryNavBar />
       <div className="Labels_container">
         <motion.div
-          whileTap={{
-            scale: 1.8,
-            width: 700,
-            height: 700,
-            originX: -0.7,
-            originY: -0.2,
-          }}
+        // whileTap={{
+        //   scale: 1.8,
+        //   width: 700,
+        //   height: 700,
+        //   originX: -0.7,
+        //   originY: -0.2,
+        // }}
         >
           <Image
             src={IMAGES.LABELS.image2.src}
@@ -32,15 +32,7 @@ const StickersAndLables = () => {
             height={400}
           />
         </motion.div>
-        <motion.div
-          whileTap={{
-            scale: 1.5,
-            width: 700,
-            height: 700,
-            originX: -0.7,
-            originY: -0.2,
-          }}
-        >
+        <motion.div>
           <Image
             src={IMAGES.LABELS.image3.src}
             alt=""

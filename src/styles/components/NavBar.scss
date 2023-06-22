@@ -7,33 +7,25 @@
   width: 100vw;
   background-color: rgba(253, 253, 253, 0.8);
   backdrop-filter: blur(0.3rem);
-  z-index: 100;
+  z-index: 200;
   @include respond(tab-port) {
     width: 100vw;
-    border-bottom: 0.2em solid black;
   }
   @include respond(phone) {
-    border-bottom: 0.2em solid black;
   }
   .toggle_button_box {
-    width: 5em;
-    height: 5em;
-    position: absolute;
-    top: 3em;
-    right: 1rem;
-    border-radius: 50%;
-    background-color: red;
-    z-index: 90;
-
+    // transform: scale(80);
     .toggle-button {
       cursor: pointer;
-
+      position: absolute;
+      top: 3em;
+      right: 1em;
       display: none;
       flex-direction: column;
       justify-content: space-between;
       width: 5em;
       height: 3em;
-      z-index: 1000;
+      z-index: 100;
 
       @include respond(tab-port) {
         display: flex;
@@ -46,10 +38,20 @@
         border-radius: 10px;
       }
     }
+    .bar1 {
+      @include respond(tab-port) {
+        width: 5em;
+        height: 5em;
+        position: absolute;
+        top: 3em;
+        right: 1rem;
+        border-radius: 50%;
+        background-color: red;
+        z-index: 90;
+      }
+    }
   }
-  .toggle_button_box.active {
-    transform: scale(80);
-  }
+
   .navigationbar_logo {
     position: absolute;
     z-index: 999;
@@ -68,11 +70,14 @@
   justify-content: center;
   align-items: center;
   @include respond(tab-port) {
-    padding-top: 4em;
+    position: fixed;
+    padding: 5em;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     width: 100vw;
-
+    height: 100vw;
     z-index: 55;
     display: none;
   }

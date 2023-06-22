@@ -20,12 +20,10 @@ const NavBar = () => {
   const navBarRef = useRef(null);
   const handleToggleClick = () => {
     setIsActive(!isActive);
-    console.log("ok");
   };
 
   const handleClick = () => {
     setClick(false);
-    console.log("ok");
   };
 
   return (
@@ -45,13 +43,19 @@ const NavBar = () => {
         <NavLink href="/" style={{ textDecoration: "none" }}>
           <Image className="navigationbar_logo" src={logo} alt="Logo firmy" />
         </NavLink>{" "}
-        <div className="toggle_button_box" onClick={handleToggleClick}>
-          {/* <div className="toggle-button">
+        <motion.div className={`toggle_button_box`}>
+          {" "}
+          <div className="toggle-button" onClick={isActive ? false : undefined}>
             <div className="bar"></div>
             <div className="bar"></div>
-            <div className="bar"></div>
-          </div> */}
-        </div>
+          </div>{" "}
+          <motion.div
+            className="bar1"
+            onClick={handleToggleClick}
+            animate={{ scale: isActive ? 80 : 1 }}
+            transition={{ duration: 1 }}
+          ></motion.div>
+        </motion.div>
         <div className={`navigationbar_content ${isActive ? "active" : ""}`}>
           <NavLink
             href="/"
