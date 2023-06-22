@@ -10,16 +10,16 @@ import {
   animateScroll as scroll,
 } from "react-scroll";
 import { useState, useEffect, useRef } from "react";
-
 import { motion } from "framer-motion";
-
+import { useMediaQuery } from "../hooks/useMediaQueryHook";
 const NavBar = () => {
   const [click, setClick] = useState(false);
   const closeMenu = () => setClick(false);
   const [isActive, setIsActive] = useState(false);
   const navBarRef = useRef(null);
+
   const handleToggleClick = () => {
-    setIsActive(!isActive);
+    setIsActive((active) => !active);
   };
 
   const handleClick = () => {
@@ -45,10 +45,22 @@ const NavBar = () => {
         </NavLink>{" "}
         <motion.div className={`toggle_button_box`}>
           {" "}
-          <div className="toggle-button" onClick={handleToggleClick}>
-            <div className="bar"></div>
-            <div className="bar"></div>
-          </div>{" "}
+          <motion.div className="toggle-button" onClick={handleToggleClick}>
+            <motion.div
+              className="bar"
+              animate={{ opacity: isActive ? 0 : 1 }}
+            ></motion.div>
+            <motion.div
+              animate={{ rotate: isActive ? 45 : 0, originY: 8 }}
+              transition={{ duration: 0.5 }}
+              className="bar"
+            ></motion.div>
+            <motion.div
+              animate={{ rotate: isActive ? -45 : 0, originY: -7 }}
+              transition={{ duration: 0.5 }}
+              className="bar"
+            ></motion.div>
+          </motion.div>{" "}
           <motion.div
             className="bar1"
             onClick={handleToggleClick}
@@ -56,13 +68,20 @@ const NavBar = () => {
             transition={{ duration: 1 }}
           ></motion.div>
         </motion.div>
-        <div className={`navigationbar_content ${isActive ? "active" : ""}`}>
+        <motion.div
+          className={`navigationbar_content ${isActive ? "active" : ""}`}
+        >
           <NavLink
             href="/"
             style={{ textDecoration: "none" }}
             onClick={handleToggleClick}
           >
-            <p onClick={() => scroll.scrollToTop()}>Strona główna</p>
+            <motion.p
+              onClick={() => scroll.scrollToTop()}
+              whileTap={{ scale: isActive ? 1.5 : 1 }}
+            >
+              Strona główna
+            </motion.p>
           </NavLink>
           {/* ///////////////////////////////////////// */}
           <ScrollLink
@@ -118,7 +137,7 @@ const NavBar = () => {
           >
             <p>Galeria</p>
           </NavLink>
-        </div>
+        </motion.div>
         <NavLink href="/Contact">
           <button className="navigationbar_button">
             <p>Zamów teraz!</p>
