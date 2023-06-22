@@ -34,7 +34,7 @@ const StickersAndLables = () => {
         </motion.div>
         <motion.div
           whileTap={{
-            scale: 1.8,
+            scale: 1.5,
             width: 700,
             height: 700,
             originX: -0.7,
