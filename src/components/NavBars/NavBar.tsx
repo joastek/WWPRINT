@@ -45,7 +45,7 @@ const NavBar = () => {
         </NavLink>{" "}
         <motion.div className={`toggle_button_box`}>
           {" "}
-          <div className="toggle-button" onClick={isActive ? false : undefined}>
+          <div className="toggle-button" onClick={handleToggleClick}>
             <div className="bar"></div>
             <div className="bar"></div>
           </div>{" "}
