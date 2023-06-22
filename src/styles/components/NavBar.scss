@@ -109,10 +109,10 @@
     transform: scaleX(1);
   }
 }
-// p:hover,
-// p.active {
-//   color: black;
-// }
+p:hover,
+p.activated {
+  color: black;
+}
 .navigationbar_content.active {
   z-index: 999;
   display: flex;

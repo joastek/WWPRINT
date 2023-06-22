@@ -15,20 +15,40 @@ const StickersAndLables = () => {
       />
       <GalleryNavBar />
       <div className="Labels_container">
-        <Image
-          src={IMAGES.LABELS.image2.src}
-          alt=""
-          className="test"
-          width={400}
-          height={400}
-        />
-        <Image
-          src={IMAGES.LABELS.image3.src}
-          alt=""
-          className="test"
-          width={400}
-          height={400}
-        />
+        <motion.div
+          whileTap={{
+            scale: 1.8,
+            width: 700,
+            height: 700,
+            originX: -0.7,
+            originY: -0.2,
+          }}
+        >
+          <Image
+            src={IMAGES.LABELS.image2.src}
+            alt=""
+            className="test"
+            width={400}
+            height={400}
+          />
+        </motion.div>
+        <motion.div
+          whileTap={{
+            scale: 1.8,
+            width: 700,
+            height: 700,
+            originX: -0.7,
+            originY: -0.2,
+          }}
+        >
+          <Image
+            src={IMAGES.LABELS.image3.src}
+            alt=""
+            className="test"
+            width={400}
+            height={400}
+          />
+        </motion.div>
         <Image
           src={IMAGES.LABELS.image4.src}
           alt=""

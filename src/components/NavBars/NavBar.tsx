@@ -3,14 +3,15 @@
 import "../../styles/components/NavBar.scss";
 import logo from "../../../public/Logo.png";
 import Image from "next/image";
-import Link from "next/link";
+import NavLink from "next/link";
 import {
   Link as ScrollLink,
   animateScroll,
   animateScroll as scroll,
 } from "react-scroll";
 import { useState, useEffect, useRef } from "react";
-import { useRouter } from "next/router";
+
+import { motion } from "framer-motion";
 
 const NavBar = () => {
   const [click, setClick] = useState(false);
@@ -29,13 +30,21 @@ const NavBar = () => {
 
   return (
     <>
-      <div
+      <motion.div
+        initial={{ y: -250 }}
+        animate={{ y: 0 }}
+        transition={{
+          delay: 1,
+          type: "spring",
+          stiffness: 120,
+          duration: 4.5,
+        }}
         className={`navigationbar_container ${isActive ? "active" : ""}`}
         ref={navBarRef}
       >
-        <Link href="/" style={{ textDecoration: "none" }}>
+        <NavLink href="/" style={{ textDecoration: "none" }}>
           <Image className="navigationbar_logo" src={logo} alt="Logo firmy" />
-        </Link>{" "}
+        </NavLink>{" "}
         <div className="toggle_button_box" onClick={handleToggleClick}>
           {/* <div className="toggle-button">
             <div className="bar"></div>
@@ -44,13 +53,13 @@ const NavBar = () => {
           </div> */}
         </div>
         <div className={`navigationbar_content ${isActive ? "active" : ""}`}>
-          <Link
+          <NavLink
             href="/"
             style={{ textDecoration: "none" }}
             onClick={handleToggleClick}
           >
             <p onClick={() => scroll.scrollToTop()}>Strona główna</p>
-          </Link>
+          </NavLink>
           {/* ///////////////////////////////////////// */}
           <ScrollLink
             to="Offert"
@@ -62,10 +71,10 @@ const NavBar = () => {
               handleToggleClick();
             }}
           >
-            <Link href="/#Offert" style={{ textDecoration: "none" }}>
+            <NavLink href="/#Offert" style={{ textDecoration: "none" }}>
               {" "}
               <p>Oferta</p>{" "}
-            </Link>
+            </NavLink>
           </ScrollLink>
           {/* <Link href="/#Offert" style={{ textDecoration: "none" }}>
             <p>Strona główna</p>
@@ -80,12 +89,12 @@ const NavBar = () => {
               handleToggleClick();
             }}
           >
-            <Link href="/#About" style={{ textDecoration: "none" }}>
+            <NavLink href="/#About" style={{ textDecoration: "none" }}>
               {" "}
               <p>O nas</p>{" "}
-            </Link>
+            </NavLink>
           </ScrollLink>
-          <Link
+          <NavLink
             href="/Contact"
             style={{ textDecoration: "none" }}
             onClick={() => {
@@ -94,8 +103,8 @@ const NavBar = () => {
             }}
           >
             <p>Kontakt</p>
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             href="/Offert/Naklejki_i_etykiety"
             style={{ textDecoration: "none" }}
             onClick={() => {
@@ -104,14 +113,14 @@ const NavBar = () => {
             }}
           >
             <p>Galeria</p>
-          </Link>
+          </NavLink>
         </div>
-        <Link href="/Contact">
+        <NavLink href="/Contact">
           <button className="navigationbar_button">
             <p>Zamów teraz!</p>
           </button>
-        </Link>
-      </div>
+        </NavLink>
+      </motion.div>
     </>
   );
 };

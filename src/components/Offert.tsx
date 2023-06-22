@@ -6,16 +6,8 @@ import Tile1 from "../../public/Balkon.webp";
 import Tile2 from "../../public/image5.png";
 import Tile3 from "../../public/Pojazd.png";
 import Link from "next/link";
+import { motion } from "framer-motion";
 const Offert = () => {
-  // useEffect(() => {
-  //   const hash = window.location.hash;
-  //   if (hash === "#Offert") {
-  //     const offertSection = document.getElementById("Offert");
-  //     if (offertSection) {
-  //       offertSection.scrollIntoView({ behavior: "smooth" });
-  //     }
-  //   }
-  // }, []);
   return (
     <>
       <div
@@ -30,7 +22,7 @@ const Offert = () => {
             href="/Offert/Oklejanie_powierzchni_plaskich"
             style={{ textDecoration: "none", color: "black" }}
           >
-            <div className="offert_tile1">
+            <motion.div className="offert_tile1" whileHover={{ scale: 1.1 }}>
               {" "}
               <Image
                 className="offert_image"
@@ -44,7 +36,7 @@ const Offert = () => {
                 <br />
                 <a className="offert_Bluefont">płaskich.</a>
               </a>{" "}
-            </div>{" "}
+            </motion.div>{" "}
           </Link>
           <Link
             href="/Offert/Naklejki_i_etykiety"
