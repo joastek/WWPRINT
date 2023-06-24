@@ -1,20 +1,66 @@
+@import "../../../abstracts/mixins";
 .container {
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  margin-top: 10rem;
   .box {
-    justify-content: center;
     align-items: center;
-    display: flex;
-    margin: 25rem auto;
+    width: 70%;
+    overflow: hidden;
+    overflow-x: scroll;
+    display: inline-flex;
+    // margin: 15rem auto;
     margin-bottom: 25rem;
-    width: 25rem;
-    height: 25rem;
-    .box1 {
-      padding: 2rem;
-      width: 100vw;
-      justify-content: center;
-      align-items: center;
-    }
-    .img {
-      border: solid 0.3rem black;
-    }
+    // width: 25rem;
+    // height: 25rem;
+    // @include respond(tab-port) {
+    //   width: 100vw;
+    //   padding: 5em;
+    //   display: grid;
+    //   position: relative;
+    // }
+    // .box1 {
+    //   padding: 2rem;
+    //   width: 100vw;
+    //   justify-content: center;
+    //   align-items: center;
+    //   @include respond(tab-port) {
+    //   }
+    // }
+    //   .vertical {
+    //     border: solid 0.1rem rgb(0, 0, 0);
+    //     @include respond(tab-land) {
+    //       width: 23.1em;
+    //       height: 49em;
+    //     }
+
+    //     @include respond(tab-port) {
+    //       margin-left: 20em;
+    //     }
+    //   }
+    //   .vertical_end {
+    //     border: solid 0.1rem rgb(0, 0, 0);
+    //     @include respond(tab-land) {
+    //       width: 23.1em;
+    //       height: 49em;
+    //     }
+    //     @include respond(tab-port) {
+    //       position: absolute;
+    //       top: 5em;
+    //       right: 20em;
+    //     }
+    //   }
+    //   .level {
+    //     border: solid 0.1rem black;
+    //     @include respond(tab-land) {
+    //       width: 49em;
+    //       height: 23.1em;
+    //     }
+    //     @include respond(tab-port) {
+    //     }
+    //   }
   }
 }

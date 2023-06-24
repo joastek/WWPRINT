@@ -13,30 +13,30 @@ const CarsStickers = () => {
             alt=""
             width={370}
             height={700}
-            className="img"
+            className="vertical"
           />
-          <div className="box1">
-            <Image
-              src={IMAGES.CARS.image1}
-              alt=""
-              width={700}
-              height={330}
-              className="img"
-            />
-            <Image
-              src={IMAGES.CARS.image3}
-              alt=""
-              width={700}
-              height={350}
-              className="img"
-            />
-          </div>{" "}
+
+          <Image
+            src={IMAGES.CARS.image1}
+            alt=""
+            width={700}
+            height={330}
+            className="level"
+          />
+          <Image
+            src={IMAGES.CARS.image3}
+            alt=""
+            width={700}
+            height={350}
+            className="level"
+          />
+
           <Image
             src={IMAGES.CARS.image4}
             alt=""
             width={370}
             height={700}
-            className="img"
+            className="vertical_end"
           />
         </div>
       </div>

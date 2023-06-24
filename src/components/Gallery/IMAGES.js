@@ -176,12 +176,22 @@ const IMAGES = {
       require("../../../public/gallery_images/Naklejki_i_etykiety/walentynki.png")
         .default,
   },
-  CARS:{
-    image1:require("../../../public/gallery_images/Oklejanie_samochodow/pojazd1_1 1.jpg"),
-    image2:require("../../../public/gallery_images/Oklejanie_samochodow/pojazd1_2 1.jpg"),
-    image3:require("../../../public/gallery_images/Oklejanie_samochodow/pojazd2_1 1.jpg"),
-    image4:require("../../../public/gallery_images/Oklejanie_samochodow/pojazd2_2 1.jpg")
-  }
+  CARS: {
+    image1: require("../../../public/gallery_images/Oklejanie_samochodow/pojazd1_1 1.jpg"),
+    image2: require("../../../public/gallery_images/Oklejanie_samochodow/pojazd1_2 1.jpg"),
+    image3: require("../../../public/gallery_images/Oklejanie_samochodow/pojazd2_1 1.jpg"),
+    image4: require("../../../public/gallery_images/Oklejanie_samochodow/pojazd2_2 1.jpg"),
+  },
+  FLATS: {
+    image1: require("../../../public/gallery_images/Powierzchnie_plaskie/gotowe.jpg"),
+    image2: require("../../../public/gallery_images/Powierzchnie_plaskie/przed1.jpg"),
+    image3: require("../../../public/gallery_images/Powierzchnie_plaskie/po1.jpg"),
+    image4: require("../../../public/gallery_images/Powierzchnie_plaskie/przed2.jpg"),
+    image5: require("../../../public/gallery_images/Powierzchnie_plaskie/po2.jpg"),
+    image6: require("../../../public/gallery_images/Powierzchnie_plaskie/przed3.jpg"),
+    image7: require("../../../public/gallery_images/Powierzchnie_plaskie/po3_1.jpg"),
+    image8: require("../../../public/gallery_images/Powierzchnie_plaskie/po3_2.jpg"),
+  },
 };
 
 export default IMAGES;

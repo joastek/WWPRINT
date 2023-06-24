@@ -1,20 +1,32 @@
+@import "../../../abstracts/mixins";
 .Labels_container {
-  max-width: 500px;
+  max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
-
-  .test {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    padding: 1rem;
+  @include respond(tab-land) {
   }
-  // .test:hover {
-  //   transform: scale(1.1);
-  // }
+  .test {
+    @include respond(tab-land) {
+      width: 30em;
+      height: 30em;
+    }
+    @include respond(tab-port) {
+      .test {
+        width: 20em;
+        height: 20em;
+      }
+    }
+  }
+  @include respond(phone) {
+    .test {
+      width: 16em;
+      height: 16em;
+    }
+  }
 }
 .progress-bar {
   position: fixed;

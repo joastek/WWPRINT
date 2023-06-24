@@ -1,0 +1,21 @@
+.container {
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  margin-top: 10rem;
+  .box {
+    align-items: center;
+    width: 80%;
+    overflow: hidden;
+    overflow-x: scroll;
+    display: inline-flex;
+    // margin: 15rem auto;
+    margin-bottom: 25rem;
+
+    .jpg {
+      padding: 2em;
+    }
+  }
+}
