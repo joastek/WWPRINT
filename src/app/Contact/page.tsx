@@ -1,6 +1,7 @@
 "use client";
 import "../../styles/pages/Contact/Contact.scss";
 import React, { useRef } from "react";
+import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -32,7 +33,16 @@ const Contact = () => {
   };
   return (
     <>
-      <div className="contact_container">
+      <motion.div
+        className="contact_container"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1,
+          delay: 0.2,
+          ease: [0.6, 0.92, 0.6, 1.01],
+        }}
+      >
         <div className="contact_description">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
@@ -74,7 +84,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

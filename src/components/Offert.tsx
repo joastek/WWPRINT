@@ -10,9 +10,9 @@ import { motion } from "framer-motion";
 const Offert = () => {
   return (
     <>
-      <div
+      <section
         className="offert_container"
-        id="Offert"
+        id="Oferta"
         style={{ marginTop: "250px" }}
       >
         <h2>Oferta</h2>
@@ -78,7 +78,7 @@ const Offert = () => {
             </div>{" "}
           </Link>
         </div>
-      </div>
+      </section>
     </>
   );
 };

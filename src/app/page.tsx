@@ -65,8 +65,18 @@ export default function Home() {
         </motion.div>
       </div>
       <Offert />
-      <div className="mainpage_about_container">
-        <h2 id="About">O nas</h2>
+      <motion.div
+        className="mainpage_about_container"
+        id="About"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1,
+          delay: 0.2,
+          ease: [0.6, 0.92, 0.6, 1.01],
+        }}
+      >
+        <h2>O nas</h2>
         <div className="mainpage_about_description">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
@@ -86,7 +96,7 @@ export default function Home() {
             Zaplanuj spotkanie już dziś!
           </button>
         </Link>
-      </div>
+      </motion.div>
     </>
   );
 }

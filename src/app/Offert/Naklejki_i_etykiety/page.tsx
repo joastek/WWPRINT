@@ -14,7 +14,16 @@ const StickersAndLables = () => {
         style={{ scaleX: scrollYProgress }}
       />
       <GalleryNavBar />
-      <div className="Labels_container">
+      <motion.div
+        className="Labels_container"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.2,
+          ease: [0.6, 0.92, 0.6, 1.01],
+        }}
+      >
         <motion.div
         // whileTap={{
         //   scale: 1.8,
@@ -426,7 +435,7 @@ const StickersAndLables = () => {
           width={400}
           height={400}
         />
-      </div>
+      </motion.div>
     </>
   );
 };

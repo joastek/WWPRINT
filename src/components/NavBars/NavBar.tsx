@@ -1,18 +1,17 @@
 "use client";
-
 import "../../styles/components/NavBar.scss";
 import logo from "../../../public/Logo.png";
 import Image from "next/image";
 import NavLink from "next/link";
-import {
-  Link as ScrollLink,
-  animateScroll,
-  animateScroll as scroll,
-} from "react-scroll";
-import { useState, useEffect, useRef } from "react";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { useMediaQuery } from "../hooks/useMediaQueryHook";
+import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+import PhoneToggle from "./PhoneToggle";
+
 const NavBar = () => {
+  const path = usePathname();
   const [click, setClick] = useState(false);
   const closeMenu = () => setClick(false);
   const [isActive, setIsActive] = useState(false);
@@ -43,78 +42,75 @@ const NavBar = () => {
         <NavLink href="/" style={{ textDecoration: "none" }}>
           <Image className="navigationbar_logo" src={logo} alt="Logo firmy" />
         </NavLink>{" "}
-        <motion.div className={`toggle_button_box`}>
-          {" "}
-          <motion.div className="toggle-button" onClick={handleToggleClick}>
-            <motion.div
-              className="bar"
-              animate={{ opacity: isActive ? 0 : 1 }}
-            ></motion.div>
-            <motion.div
-              animate={{ rotate: isActive ? 45 : 0, originY: 8 }}
-              transition={{ duration: 0.5 }}
-              className="bar"
-            ></motion.div>
-            <motion.div
-              animate={{ rotate: isActive ? -45 : 0, originY: -7 }}
-              transition={{ duration: 0.5 }}
-              className="bar"
-            ></motion.div>
-          </motion.div>{" "}
-          <motion.div
-            className="bar1"
-            onClick={handleToggleClick}
-            animate={{ scale: isActive ? 80 : 1 }}
-            transition={{ duration: 1 }}
-          ></motion.div>
-        </motion.div>
+        <PhoneToggle
+          isActive={isActive}
+          handleToggleClick={handleToggleClick}
+        />
         <motion.div
           className={`navigationbar_content ${isActive ? "active" : ""}`}
         >
-          <NavLink
-            href="/"
-            style={{ textDecoration: "none" }}
-            onClick={handleToggleClick}
-          >
-            <motion.p
-              onClick={() => scroll.scrollToTop()}
-              whileTap={{ scale: isActive ? 1.5 : 1 }}
-            >
-              Strona główna
-            </motion.p>
-          </NavLink>
-          {/* ///////////////////////////////////////// */}
           <ScrollLink
-            to="Offert"
+            activeClass={path === "/" ? "base-scroll" : ""}
+            to="MainPage"
             spy={true}
             smooth={true}
-            offset={-100}
-            onClick={() => {
-              handleClick();
-              handleToggleClick();
-            }}
           >
-            <NavLink href="/#Offert" style={{ textDecoration: "none" }}>
-              {" "}
-              <p>Oferta</p>{" "}
+            <NavLink
+              href="/"
+              style={{ textDecoration: "none" }}
+              onClick={handleToggleClick}
+            >
+              <motion.p
+                className="base-text"
+                onClick={() => scroll.scrollToTop()}
+              >
+                Strona główna
+              </motion.p>
             </NavLink>
           </ScrollLink>
-          {/* <Link href="/#Offert" style={{ textDecoration: "none" }}>
-            <p>Strona główna</p>
-          </Link> */}
+          {/* ///////////////////////////////////////// */}
+
+          <motion.div className="div" whileHover={{ scale: 1.2 }}>
+            <ScrollLink
+              activeClass={path === "/" ? "base-scroll" : ""}
+              to="Oferta"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              onClick={() => {
+                handleClick();
+                handleToggleClick();
+              }}
+            >
+              <NavLink href="/#Oferta" style={{ textDecoration: "none" }}>
+                {" "}
+                <p
+                  // whileHover={{ scale: 1.1, fontWeight: 700 }}
+                  className="base-text"
+                >
+                  Oferta
+                </p>{" "}
+              </NavLink>
+            </ScrollLink>
+          </motion.div>
           <ScrollLink
+            activeClass={path === "/" ? "base-scroll" : ""}
             to="About"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={-70}
             onClick={() => {
               handleClick();
               handleToggleClick();
             }}
           >
-            <NavLink href="/#About" style={{ textDecoration: "none" }}>
+            <NavLink
+              href="/#About"
+              style={{ textDecoration: "none" }}
+              // className={path === "/" ? "base-scroll" : "base-text"}
+            >
               {" "}
-              <p>O nas</p>{" "}
+              <p className="base-text">O nas</p>{" "}
             </NavLink>
           </ScrollLink>
           <NavLink
@@ -124,8 +120,9 @@ const NavBar = () => {
               handleClick();
               handleToggleClick();
             }}
+            className={path === "/Contact" ? "base-scroll" : ""}
           >
-            <p>Kontakt</p>
+            <p className="base-text">Kontakt</p>
           </NavLink>
           <NavLink
             href="/Offert/Naklejki_i_etykiety"
@@ -134,8 +131,15 @@ const NavBar = () => {
               handleClick();
               handleToggleClick();
             }}
+            className={
+              path === "/Offert/Oklejanie_powierzchni_plaskich" ||
+              path === "/Offert/Oklejanie_pojazdow" ||
+              path === "/Offert/Naklejki_i_etykiety"
+                ? "base-scroll"
+                : ""
+            }
           >
-            <p>Galeria</p>
+            <p className="base-text">Galeria</p>
           </NavLink>
         </motion.div>
         <NavLink href="/Contact">
