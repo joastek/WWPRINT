@@ -10,7 +10,14 @@ import { motion } from "framer-motion";
 const Offert = () => {
   return (
     <>
-      <section
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1,
+          delay: 0.2,
+          ease: [0.6, 0.92, 0.6, 1.01],
+        }}
         className="offert_container"
         id="Oferta"
         style={{ marginTop: "250px" }}
@@ -42,7 +49,7 @@ const Offert = () => {
             href="/Offert/Naklejki_i_etykiety"
             style={{ textDecoration: "none", color: "black" }}
           >
-            <div className="offert_tile2">
+            <motion.div className="offert_tile2" whileHover={{ scale: 1.1 }}>
               <Image
                 className="offert_image"
                 src={Tile2}
@@ -50,35 +57,33 @@ const Offert = () => {
               />
               <a>
                 <br />
-                Wykonanie <br />
+                Wykonaywanie <br />
                 <a className="offert_Bluefont">
                   naklejek i <br />
                   etykiet
                 </a>
               </a>
-            </div>{" "}
+            </motion.div>{" "}
           </Link>
           <Link
             href="/Offert/Oklejanie_pojazdow"
             style={{ textDecoration: "none", color: "black" }}
           >
-            <div className="offert_tile3">
+            <motion.div className="offert_tile3" whileHover={{ scale: 1.1 }}>
               <Image
                 className="offert_image"
                 src={Tile3}
-                alt="Efekt wykonania oklejania pojazdów"
+                alt="Efekt wykonania naklejek i etykiet"
               />
-              <div className="test">
-                <a>
-                  <br />
-                  Oklejanie <br />
-                  <a className="offert_Bluefont">pojazdów.</a>
-                </a>
-              </div>
-            </div>{" "}
+              <a>
+                <br />
+                Oklejanie <br />
+                <a className="offert_Bluefont">Samochodów</a>
+              </a>
+            </motion.div>{" "}
           </Link>
         </div>
-      </section>
+      </motion.div>
     </>
   );
 };

@@ -139,7 +139,9 @@ const NavBar = () => {
                 : ""
             }
           >
-            <p className="base-text">Galeria</p>
+            <p className="base-text" onClick={() => scroll.scrollToTop()}>
+              Galeria
+            </p>
           </NavLink>
         </motion.div>
         <NavLink href="/Contact">
