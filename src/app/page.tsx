@@ -5,11 +5,44 @@ import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import Image1 from "../../public/image2.png";
 import Image2 from "../../public/image3.png";
 import Image3 from "../../public/image4.png";
+import IMAGES from "@/components/Gallery/IMAGES";
 import "../styles/components/Mainpage.scss";
 import Offert from "@/components/Offert";
 import { motion, useScroll } from "framer-motion";
 
 export default function Home() {
+  const image1 = {
+    y: [0, -20, 0],
+    transition: {
+      y: {
+        duration: 2.5,
+        repeat: Infinity, // Powtarza animację w nieskończoność
+        ease: "easeInOut",
+      },
+    },
+  };
+  const image2 = {
+    y: [250, 220, 250],
+    x: -155,
+    transition: {
+      y: {
+        duration: 2.8,
+        repeat: Infinity, // Powtarza animację w nieskończoność
+        ease: "easeInOut",
+      },
+    },
+  };
+  const image3 = {
+    y: [0, -20, 0],
+    x: -325,
+    transition: {
+      y: {
+        duration: 3.5,
+        repeat: Infinity, // Powtarza animację w nieskończoność
+        ease: "easeInOut",
+      },
+    },
+  };
   const { scrollYProgress } = useScroll();
   return (
     <>
@@ -46,21 +79,27 @@ export default function Home() {
             </Link>
           </div>
           <div className="mainpage_imageContainer">
-            <Image
-              src={Image1}
-              alt="Design jednej z wykonanych naklejek"
-              className="mainpage_image1"
-            />
-            <Image
-              src={Image2}
-              alt="Design jednej z wykonanych naklejek"
-              className="mainpage_image2"
-            />
-            <Image
-              src={Image3}
-              alt="Design jednej z wykonanych naklejek"
-              className="mainpage_image3"
-            />
+            <motion.div className="div" animate={image1}>
+              <Image
+                src={IMAGES.LABELS.image32}
+                alt="Design jednej z wykonanych naklejek"
+                className="mainpage_image1"
+              />
+            </motion.div>
+            <motion.div className="div2" animate={image2}>
+              <Image
+                src={IMAGES.LABELS.image54}
+                alt="Design jednej z wykonanych naklejek"
+                className="mainpage_image2"
+              />
+            </motion.div>
+            <motion.div className="div1" animate={image3}>
+              <Image
+                src={IMAGES.LABELS.image55}
+                alt="Design jednej z wykonanych naklejek"
+                className="mainpage_image3"
+              />
+            </motion.div>
           </div>
         </motion.div>
       </div>
