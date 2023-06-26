@@ -29,7 +29,7 @@ const Offert = () => {
             href="/Offert/Oklejanie_powierzchni_plaskich"
             style={{ textDecoration: "none", color: "black" }}
           >
-            <motion.div className="offert_tile1" whileHover={{ scale: 1.1 }}>
+            <div className="offert_tile1 element">
               {" "}
               <Image
                 className="offert_image"
@@ -43,13 +43,13 @@ const Offert = () => {
                 <br />
                 <a className="offert_Bluefont">płaskich.</a>
               </a>{" "}
-            </motion.div>{" "}
+            </div>{" "}
           </Link>
           <Link
             href="/Offert/Naklejki_i_etykiety"
             style={{ textDecoration: "none", color: "black" }}
           >
-            <motion.div className="offert_tile2" whileHover={{ scale: 1.1 }}>
+            <div className="offert_tile2 element">
               <Image
                 className="offert_image"
                 src={Tile2}
@@ -63,13 +63,13 @@ const Offert = () => {
                   etykiet
                 </a>
               </a>
-            </motion.div>{" "}
+            </div>{" "}
           </Link>
           <Link
             href="/Offert/Oklejanie_pojazdow"
             style={{ textDecoration: "none", color: "black" }}
           >
-            <motion.div className="offert_tile3" whileHover={{ scale: 1.1 }}>
+            <div className="offert_tile3 element">
               <Image
                 className="offert_image"
                 src={Tile3}
@@ -80,7 +80,7 @@ const Offert = () => {
                 Oklejanie <br />
                 <a className="offert_Bluefont">Samochodów</a>
               </a>
-            </motion.div>{" "}
+            </div>{" "}
           </Link>
         </div>
       </motion.div>

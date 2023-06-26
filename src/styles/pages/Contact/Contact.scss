@@ -1,115 +1,126 @@
 @import "../../abstracts/mixins";
 .contact_container {
+  justify-content: center;
+  align-items: center;
   margin-top: 10rem;
-  .contact_description {
-    padding: 5rem;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 2.4rem;
-    line-height: 3.6rem;
-    justify-content: center;
-    text-align: justify;
-  }
-  .contact_description_deal {
-    text-align: center;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 5.6rem;
-    line-height: 8.4rem;
-    margin-bottom: 10rem;
-  }
-  .contact_email_position {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    .contact_email_container {
-      position: relative;
-      width: 80rem;
-      height: 70rem;
-      background: #ffffff;
-      border: 1px solid #5b5b5b;
+
+  .container {
+    margin: auto;
+    width: 70vw;
+
+    @include respond(tab-land) {
+      width: 95vw;
+    }
+    .contact_description {
+      padding: 5rem;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 2.4rem;
+      line-height: 3.6rem;
       justify-content: center;
-      padding: 3rem;
-      border-radius: 56px;
-      @include respond(tab-land) {
-        height: 70em;
+      text-align: justify;
+    }
+    .contact_description_deal {
+      text-align: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 5.6rem;
+      line-height: 8.4rem;
+      margin-bottom: 10rem;
+    }
+    .contact_email_position {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      .contact_email_container {
+        position: relative;
+        width: 80rem;
+        height: 70rem;
+        background: #ffffff;
+        border: 1px solid #5b5b5b;
+        justify-content: center;
+        padding: 3rem;
+        border-radius: 56px;
+        @include respond(tab-land) {
+          height: 70em;
+        }
+        @include respond(tab-port) {
+          width: 55em;
+        }
+        @include respond(phone) {
+          width: 45em;
+          height: 85em;
+          margin-bottom: 7em;
+        }
+        .contact_Htext {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 48px;
+          line-height: 72px;
+        }
+        .contact_textarea {
+          background: #ffffff;
+          border-style: solid;
+          font-size: 32px;
+          width: 664px;
+          height: 86px;
+        }
+        .contact_button {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 48px;
+
+          color: #fffafa;
+        }
       }
-      @include respond(tab-port) {
-        width: 55em;
-      }
-      @include respond(phone) {
-        width: 45em;
-        height: 85em;
-        margin-bottom: 7em;
-      }
-      .contact_Htext {
+      label {
+        margin-top: 2rem;
         font-style: normal;
         font-weight: 700;
-        font-size: 48px;
-        line-height: 72px;
-      }
-      .contact_textarea {
-        background: #ffffff;
-        border-style: solid;
-        font-size: 32px;
-        width: 664px;
-        height: 86px;
-      }
-      .contact_button {
-        font-style: normal;
-        font-weight: 600;
         font-size: 32px;
         line-height: 48px;
+      }
+      input {
+        font-size: 32px;
+        background: #ffffff;
+        border-style: solid;
 
-        color: #fffafa;
+        width: 66.4rem;
+        height: 4.4rem;
+        @include respond(tab-port) {
+          width: 12em;
+        }
+        @include respond(phone) {
+          width: 10em;
+        }
       }
-    }
-    label {
-      margin-top: 2rem;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 48px;
-    }
-    input {
-      font-size: 32px;
-      background: #ffffff;
-      border-style: solid;
+      textarea {
+        font-size: 32px;
+        background: #ffffff;
+        border-style: solid;
 
-      width: 66.4rem;
-      height: 4.4rem;
-      @include respond(tab-port) {
-        width: 12em;
+        width: 66.4rem;
+        height: 4.4rem;
+        @include respond(tab-port) {
+          width: 12em;
+        }
+        @include respond(phone) {
+          width: 10em;
+        }
       }
-      @include respond(phone) {
-        width: 10em;
+      button {
+        margin-top: 2rem;
+        cursor: pointer;
+        background: #000000;
+        border: 0.5px solid #000000;
+        border-radius: 97px;
+        width: 17.8rem;
+        height: 7.2rem;
+        filter: drop-shadow(-4px 4px 9px rgba(0, 0, 0, 0.25))
+          drop-shadow(9px 8px 11px rgba(0, 0, 0, 0.25));
       }
-    }
-    textarea {
-      font-size: 32px;
-      background: #ffffff;
-      border-style: solid;
-
-      width: 66.4rem;
-      height: 4.4rem;
-      @include respond(tab-port) {
-        width: 12em;
-      }
-      @include respond(phone) {
-        width: 10em;
-      }
-    }
-    button {
-      margin-top: 2rem;
-      cursor: pointer;
-      background: #000000;
-      border: 0.5px solid #000000;
-      border-radius: 97px;
-      width: 17.8rem;
-      height: 7.2rem;
-      filter: drop-shadow(-4px 4px 9px rgba(0, 0, 0, 0.25))
-        drop-shadow(9px 8px 11px rgba(0, 0, 0, 0.25));
     }
   }
 }

@@ -43,6 +43,7 @@ const Contact = () => {
           ease: [0.6, 0.92, 0.6, 1.01],
         }}
       >
+        <div className="container">
         <div className="contact_description">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
@@ -83,7 +84,7 @@ const Contact = () => {
               </button>
             </form>
           </div>
-        </div>
+        </div></div>
       </motion.div>
     </>
   );

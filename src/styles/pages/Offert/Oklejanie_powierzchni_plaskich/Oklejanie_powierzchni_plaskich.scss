@@ -1,19 +1,33 @@
+@import "../../../abstracts/mixins";
 .container {
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  height: 60em;
   // display: flex;
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: black;
+  }
   .swiper {
+    flex-direction: column;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 70vw;
-    height: 70rem;
-
+    height: 60rem;
     overflow: hidden;
+    overflow-x: hidden;
+    @include respond(tab-land) {
+      width: 100vw;
+    }
   }
 
   .swiper-slide {
-    text-align: center;
+    display: flex; /* Dodaj tę linię */
+    justify-content: center; /* Dodaj tę linię */
+    align-items: center; /* Dodaj tę linię */
+    width: 100%; /* Dodaj tę linię */
+    height: 100%; /* Dodaj tę linię */
   }
 
   .swiper .swiper-slide {
@@ -23,6 +37,9 @@
   .jpg1 {
     height: 45em;
     width: 70em;
+    @include respond(phone) {
+      width: 50em;
+    }
   }
   .jpg2 {
     width: 40em;

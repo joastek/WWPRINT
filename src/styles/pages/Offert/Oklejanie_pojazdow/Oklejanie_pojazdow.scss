@@ -3,17 +3,40 @@
   width: 100vw;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+
   display: flex;
   margin-top: 10rem;
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: black;
+  }
+
   .box {
     align-items: center;
     width: 70%;
     overflow: hidden;
-    overflow-x: scroll;
+    overflow-x: hidden;
     display: inline-flex;
     // margin: 15rem auto;
     margin-bottom: 25rem;
+    @include respond(tab-land) {
+      width: 100%;
+    }
+    .jpg1 {
+      @include respond(phone) {
+        width: 45em;
+        height: 30em;
+      }
+    }
+    .jpg2 {
+      width: 30em;
+      height: 50em;
+      @include respond(phone) {
+        width: 30em;
+        height: 50em;
+      }
+    }
+
     // width: 25rem;
     // height: 25rem;
     // @include respond(tab-port) {

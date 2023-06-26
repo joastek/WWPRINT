@@ -1,6 +1,8 @@
 import "../../styles/components/GalleryNavBar.scss";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 const GalleryNavBar = () => {
+  const path = usePathname();
   return (
     <>
       <div className="GalleryNavBar_container">
@@ -9,19 +11,32 @@ const GalleryNavBar = () => {
           style={{ textDecoration: "none" }}
         >
           {" "}
-          <div className="GalleryNavBar_element">Naklejki i etykiety</div>
+          <div
+            className={
+              path === "/Offert/Naklejki_i_etykiety"
+                ? "active"
+                : "GalleryNavBar_element"
+            }
+          >
+            Naklejki i etykiety
+          </div>
         </Link>
+
         <Link
           href="/Offert/Oklejanie_pojazdow"
           style={{ textDecoration: "none" }}
         >
           {" "}
           <div
-            className="GalleryNavBar_element"
+            className={
+              path === "/Offert/Oklejanie_pojazdow"
+                ? "active"
+                : "GalleryNavBar_element"
+            }
             style={{ textDecoration: "none" }}
           >
             {" "}
-            Oklejanie powierzchni płaskich
+            Oklejanie pojazdów
           </div>
         </Link>
 
@@ -30,7 +45,16 @@ const GalleryNavBar = () => {
           style={{ textDecoration: "none" }}
         >
           {" "}
-          <div className="GalleryNavBar_element2">Oklejanie pojazdów</div>
+          <div
+            className={
+              path === "/Offert/Oklejanie_powierzchni_plaskich"
+                ? "active"
+                : "GalleryNavBar_element"
+            }
+          >
+            {" "}
+            Oklejanie powierzchni płaskich
+          </div>
         </Link>
       </div>
     </>

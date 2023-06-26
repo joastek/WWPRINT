@@ -3,57 +3,77 @@ import GalleryNavBar from "@/components/NavBars/GalleryNavBar";
 import "../../../styles/pages/Offert/Oklejanie_pojazdow/Oklejanie_pojazdow.scss";
 import IMAGES from "@/components/Gallery/IMAGES";
 import Image from "next/image";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
-import { useState } from "react";
-const CarsStickers = () => {
-  const [position, setPosition] = useState(0);
+const FlatSurface = () => {
   return (
     <>
       <GalleryNavBar />
-      <div className="container">
-        <motion.div
-          className="box"
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{
-            rotate: 0,
-            left: `${position * 60 - 30}vw`,
-            scale: 1,
-          }}
-          transition={{ type: "spring", stiffness: 260, damping: 20 }}
-        >
-          <Image
-            src={IMAGES.CARS.image2}
-            alt=""
-            width={370}
-            height={700}
-            className="vertical"
-          />
-        </motion.div>
-        <Image
-          src={IMAGES.CARS.image1}
-          alt=""
-          width={700}
-          height={330}
-          className="level"
-        />
-        <Image
-          src={IMAGES.CARS.image3}
-          alt=""
-          width={700}
-          height={350}
-          className="level"
-        />
+      <motion.div
+        className="Labels_container"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.2,
+          ease: [0.6, 0.92, 0.6, 1.01],
+        }}
+      >
+        <div className="container">
+          <Swiper
+            slidesPerView={1}
+            rewind={true}
+            centeredSlides={true}
+            // slidesPerView={"auto"}
+            autoHeight={true}
+            spaceBetween={40}
+            navigation={true}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Navigation, Pagination]}
+            className="box"
+          >
+            <SwiperSlide>
+              <Image src={IMAGES.CARS.image1} alt="" className="jpg1" />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Image src={IMAGES.CARS.image2} alt="" className="jpg2" />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Image src={IMAGES.CARS.image3} alt="" className="jpg1" />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <Image src={IMAGES.CARS.image4} alt="" className="jpg2" />
+            </SwiperSlide>
+          </Swiper>
+          {/* <div className="box">
+          <Image src={IMAGES.FLATS.image1} alt="" className="jpg" />
 
-        <Image
-          src={IMAGES.CARS.image4}
-          alt=""
-          width={370}
-          height={700}
-          className="vertical_end"
-        />
-      </div>
+          <Image src={IMAGES.FLATS.image2} alt="" className="jpg" />
+
+          <Image src={IMAGES.FLATS.image3} alt="" className="jpg" />
+
+          <Image src={IMAGES.FLATS.image4} alt="" className="jpg" />
+
+          <Image src={IMAGES.FLATS.image5} alt="" className="jpg" />
+
+          <Image src={IMAGES.FLATS.image6} alt="" className="jpg" />
+
+          <Image src={IMAGES.FLATS.image7} alt="" className="jpg" />
+          <Image src={IMAGES.FLATS.image8} alt="" className="jpg" />
+        </div> */}
+        </div>
+      </motion.div>
     </>
   );
 };
 
-export default CarsStickers;
+export default FlatSurface;

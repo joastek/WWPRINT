@@ -2,7 +2,7 @@
 .mainpage_container {
   margin-top: 10rem;
   display: flex;
-  width: 100vw;
+
   @include respond(big-desktop) {
     max-width: 130.5em;
     margin-left: auto;
@@ -130,7 +130,7 @@
       @include respond(big-desktop) {
         width: 35em;
         height: 35em;
-        margin-top: 10em;
+        margin-top: 21em;
         // margin-left: 7em;
       }
     }
