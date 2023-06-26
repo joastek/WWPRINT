@@ -183,10 +183,10 @@ const IMAGES = {
     image4: require("../../../public/gallery_images/Oklejanie_samochodow/pojazd2_2 1.jpg"),
   },
   FLATS: {
-    image1: require("../../../public/gallery_images/Powierzchnie_plaskie/gotowe.jpg"),
+    image1: require("../../../public/gallery_images/Powierzchnie_plaskie/gotowe.png"),
     image2: require("../../../public/gallery_images/Powierzchnie_plaskie/przed1.jpg"),
-    image3: require("../../../public/gallery_images/Powierzchnie_plaskie/po1.jpg"),
-    image4: require("../../../public/gallery_images/Powierzchnie_plaskie/przed2.jpg"),
+    image3: require("../../../public/gallery_images/Powierzchnie_plaskie/po1.png"),
+    image4: require("../../../public/gallery_images/Powierzchnie_plaskie/przed2.png"),
     image5: require("../../../public/gallery_images/Powierzchnie_plaskie/po2.jpg"),
     image6: require("../../../public/gallery_images/Powierzchnie_plaskie/przed3.jpg"),
     image7: require("../../../public/gallery_images/Powierzchnie_plaskie/po3_1.jpg"),

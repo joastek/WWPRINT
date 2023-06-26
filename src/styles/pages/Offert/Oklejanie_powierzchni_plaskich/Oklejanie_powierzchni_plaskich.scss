@@ -1,21 +1,31 @@
 .container {
-  width: 100vw;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  display: flex;
-  margin-top: 10rem;
-  .box {
+  overflow: hidden;
+  // display: flex;
+  .swiper {
+    justify-content: center;
     align-items: center;
-    width: 80%;
-    overflow: hidden;
-    overflow-x: scroll;
-    display: inline-flex;
-    // margin: 15rem auto;
-    margin-bottom: 25rem;
+    width: 70vw;
+    height: 70rem;
 
-    .jpg {
-      padding: 2em;
-    }
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    text-align: center;
+  }
+
+  .swiper .swiper-slide {
+    margin-top: 2rem;
+    height: 80rem;
+  }
+  .jpg1 {
+    height: 45em;
+    width: 70em;
+  }
+  .jpg2 {
+    width: 40em;
+    height: 45em;
   }
 }
