@@ -1,3 +1,4 @@
+"use client";
 import "../../styles/components/GalleryNavBar.scss";
 import { usePathname } from "next/navigation";
 import Link from "next/link";

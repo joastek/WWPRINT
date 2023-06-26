@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+
 import "../styles/components/Offert.scss";
 import Image from "next/image";
 import Tile1 from "../../public/Balkon.webp";
@@ -78,7 +78,7 @@ const Offert = () => {
               <a>
                 <br />
                 Oklejanie <br />
-                <a className="offert_Bluefont">Samochodów</a>
+                Samochodów
               </a>
             </div>{" "}
           </Link>
