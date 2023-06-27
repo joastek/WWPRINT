@@ -165,7 +165,7 @@
     margin-right: auto;
   }
   @include respond(tab-port) {
-    padding: 1em;
+    padding: 5em;
     margin: 0 0;
   }
   h2 {
@@ -192,6 +192,7 @@
       padding: 0.7em;
     }
     @include respond(phone) {
+      font-weight: 500;
       padding: 0;
       margin-top: 2em;
     }

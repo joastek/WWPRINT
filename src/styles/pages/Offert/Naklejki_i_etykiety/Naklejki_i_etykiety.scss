@@ -37,4 +37,8 @@
   background: rgb(0, 0, 0);
   transform-origin: 0%;
   z-index: 999;
+  @include respond(tab-port) {
+    top: 0;
+    height: 1.5rem;
+  }
 }

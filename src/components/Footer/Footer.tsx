@@ -29,7 +29,7 @@ const Footer = () => {
                 className="footer_icon"
               />{" "}
             </div>
-            <a>biurowwprint@gmail.com</a>{" "}
+            <a href="mailto:biurowwprint@gmail.com">biurowwprint@gmail.com</a>{" "}
           </div>
         </div>
         <div className="footer_mediaicons">

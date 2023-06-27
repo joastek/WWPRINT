@@ -1,10 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import Image1 from "../../public/image2.png";
-import Image2 from "../../public/image3.png";
-import Image3 from "../../public/image4.png";
+
 import IMAGES from "@/components/Gallery/IMAGES";
 import "../styles/components/Mainpage.scss";
 import Offert from "@/components/Offert";
