@@ -1,7 +1,6 @@
 @import "../abstracts/mixins";
 .footer_container {
-  left: 0;
-  bottom: 0;
+  position: relative;
   display: flex;
   justify-content: space-between;
   @include respond(phone) {

@@ -7,11 +7,13 @@ import { useState, useEffect } from "react";
 import Check from "../../../public/check.png";
 import Image from "next/image";
 import Footer from "@/components/Footer/Footer";
+import { usePathname } from "next/navigation";
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
   const [showModal, setShowModal] = useState(false);
   const [countdown, setCountdown] = useState(4); // Początkowy czas odliczania
 
+  const path = usePathname();
   useEffect(() => {
     let timer: NodeJS.Timeout;
 
@@ -28,7 +30,7 @@ const Contact = () => {
 
   useEffect(() => {
     if (countdown === 0) {
-      window.location.href = "http://localhost:3000/"; // Przekierowanie po zakończeniu odliczania
+      path === "/"; // Przekierowanie po zakończeniu odliczania
     }
   }, [countdown]);
   const clearFields = () => {
@@ -125,7 +127,7 @@ const Contact = () => {
                 <textarea name="message" style={{ resize: "vertical" }} />{" "}
                 <br />
                 <button type="submit" value="Send">
-                  <div className="contact_button">Wyślij!</div>
+                  <a className="contact_button">Wyślij!</a>
                 </button>
               </form>
             </div>
