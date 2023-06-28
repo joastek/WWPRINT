@@ -1,4 +1,3 @@
-"use client";
 import NavBar from "@/components/NavBars/NavBar";
 import "../styles/globals.scss";
 import Head from "next/head";
