@@ -47,8 +47,8 @@ export default function Home() {
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}
       />
-
-      <div className="mainpage_container" id="MainPage">
+      <div></div>
+      <div className="mainpage_container  dark:bg-zinc-900" id="MainPage">
         <motion.div
           className="mainpage_container"
           initial={{ opacity: 0, scale: 0.5 }}
@@ -102,7 +102,7 @@ export default function Home() {
       </div>
       <Offert />
       <motion.div
-        className="mainpage_about_container"
+        className="mainpage_about_container  dark:bg-zinc-900 "
         id="About"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}

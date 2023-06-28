@@ -1,21 +1,35 @@
 "use client";
-import "../../styles/components/NavBar.scss";
+// import "../../styles/components/NavBar.scss";
 import logo from "../../../public/Logo.png";
+import logowhite from "../../../public/Logowhite.png";
 import Image from "next/image";
 import NavLink from "next/link";
+import sun from "../../../public/sun.png";
+import moon from "../../../public/moon.png";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import PhoneToggle from "./PhoneToggle";
 
+import { useTheme } from "next-themes";
 const NavBar = () => {
   const path = usePathname();
   const [click, setClick] = useState(false);
   const closeMenu = () => setClick(false);
   const [isActive, setIsActive] = useState(false);
   const navBarRef = useRef(null);
+  const [mounted, setMounted] = useState(false);
+  const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === "system" ? systemTheme : theme;
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   const handleToggleClick = () => {
     setIsActive((active) => !active);
@@ -38,9 +52,28 @@ const NavBar = () => {
         }}
         className={`navigationbar_container ${isActive ? "active" : ""}`}
         ref={navBarRef}
+        style={{
+          backgroundColor: theme === "dark" ? "#000" : "#fff",
+        }}
       >
         <NavLink href="/" style={{ textDecoration: "none" }}>
-          <Image className="navigationbar_logo" src={logo} alt="Logo firmy" />
+          {theme === "dark" ? (
+            <Image
+              className="navigationbar_logo"
+              src={logowhite}
+              alt="Logo firmy"
+              width={125}
+            />
+          ) : (
+            <Image className="navigationbar_logo" src={logo} alt="Logo firmy" />
+          )}
+          <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+            {theme === "dark" ? (
+              <Image src={sun} alt="" className="sun" />
+            ) : (
+              <Image src={moon} alt="" className="moon" />
+            )}
+          </div>
         </NavLink>{" "}
         <PhoneToggle
           isActive={isActive}
@@ -49,6 +82,8 @@ const NavBar = () => {
         <motion.div
           className={`navigationbar_content ${isActive ? "active" : ""}`}
         >
+          {/* <button onClick={() => setTheme("light")}>Light Mode</button> */}
+
           <ScrollLink
             activeClass={path === "/" ? "base-scroll" : ""}
             to="MainPage"
@@ -60,17 +95,29 @@ const NavBar = () => {
               style={{ textDecoration: "none" }}
               onClick={handleToggleClick}
             >
-              <motion.p
-                className="base-text"
-                onClick={() => scroll.scrollToTop()}
-              >
-                Strona główna
-              </motion.p>
+              <div className="dark:text-red-900">
+                <motion.p
+                  className="base-text"
+                  onClick={() => scroll.scrollToTop()}
+                  style={{
+                    color:
+                      theme === "dark" || window.innerWidth <= 900
+                        ? "#fff"
+                        : "#000",
+                  }}
+                >
+                  Strona główna
+                </motion.p>
+              </div>
             </NavLink>
           </ScrollLink>
           {/* ///////////////////////////////////////// */}
 
-          <motion.div className="div" whileHover={{ scale: 1.2 }}>
+          <motion.div
+            className="div"
+            whileHover={{ scale: 1.1 }}
+            transition={{ ease: "easeInOut" }}
+          >
             <ScrollLink
               activeClass={path === "/" ? "base-scroll" : ""}
               to="Oferta"
@@ -85,7 +132,12 @@ const NavBar = () => {
               <NavLink href="/#Oferta" style={{ textDecoration: "none" }}>
                 {" "}
                 <p
-                  // whileHover={{ scale: 1.1, fontWeight: 700 }}
+                  style={{
+                    color:
+                      theme === "dark" || window.innerWidth <= 900
+                        ? "#fff"
+                        : "#000",
+                  }}
                   className="base-text"
                 >
                   Oferta
@@ -110,7 +162,17 @@ const NavBar = () => {
               // className={path === "/" ? "base-scroll" : "base-text"}
             >
               {" "}
-              <p className="base-text">O nas</p>{" "}
+              <p
+                className="base-text"
+                style={{
+                  color:
+                    theme === "dark" || window.innerWidth <= 900
+                      ? "#fff"
+                      : "#000",
+                }}
+              >
+                O nas
+              </p>{" "}
             </NavLink>
           </ScrollLink>
           <NavLink
@@ -122,7 +184,17 @@ const NavBar = () => {
             }}
             className={path === "/Contact" ? "base-scroll" : ""}
           >
-            <p className="base-text">Kontakt</p>
+            <p
+              className="base-text"
+              style={{
+                color:
+                  theme === "dark" || window.innerWidth <= 850
+                    ? "#fff"
+                    : "#000",
+              }}
+            >
+              Kontakt
+            </p>
           </NavLink>
           <NavLink
             href="/Offert/Naklejki_i_etykiety"
@@ -139,7 +211,16 @@ const NavBar = () => {
                 : ""
             }
           >
-            <p className="base-text" onClick={() => scroll.scrollToTop()}>
+            <p
+              className="base-text"
+              onClick={() => scroll.scrollToTop()}
+              style={{
+                color:
+                  theme === "dark" || window.innerWidth <= 850
+                    ? "#fff"
+                    : "#000",
+              }}
+            >
               Galeria
             </p>
           </NavLink>

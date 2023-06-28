@@ -1,4 +1,8 @@
 @import "../abstracts/mixins";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
 .offert_container {
   margin-top: 1rem;
   padding-top: 1rem;
@@ -107,9 +111,9 @@
       text-align: center;
       justify-content: center;
       overflow: hidden;
-      height: 52em;
+      height: 56em;
       @include respond(tab-land) {
-        height: 46.5em;
+        height: 50.5em;
         width: 30em;
         justify-self: center; /* Wyśrodkowanie w poziomie */
         align-self: center;

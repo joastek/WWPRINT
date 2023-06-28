@@ -155,8 +155,9 @@
 }
 //////////////////////////////////
 .mainpage_about_container {
-  margin-left: 7rem;
-  margin-right: 7rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
+
   margin-top: 5rem;
   padding-top: 5rem;
   @include respond(big-desktop) {
@@ -229,6 +230,7 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+
     @include respond(tab-land) {
       width: 17em;
     }

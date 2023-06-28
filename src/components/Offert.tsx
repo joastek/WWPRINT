@@ -18,7 +18,7 @@ const Offert = () => {
           delay: 0.2,
           ease: [0.6, 0.92, 0.6, 1.01],
         }}
-        className="offert_container"
+        className="offert_container "
         id="Oferta"
         style={{ marginTop: "250px" }}
       >

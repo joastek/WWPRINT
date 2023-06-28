@@ -1,5 +1,5 @@
 "use client";
-import "../../styles/components/Footer.scss";
+// import "../../styles/components/Footer.scss";
 import Image from "next/image";
 import FacebookIcon from "../../styles/icons/facebook.png";
 import InstagramIcon from "../../styles/icons/instagram.png";
@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 const Footer = () => {
   return (
     <>
-      <div className="footer_container">
+      <div className="footer_container  dark:bg-zinc-900">
         <Image src={Logo} alt="Logo firmy WWPrint" className="footer_logo" />
         <div className="footer_contactbox">
           <div className="footer_icon">

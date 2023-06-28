@@ -105,32 +105,31 @@ const Contact = () => {
             Zadzwoń i umów się na{" "}
             <a className="contact_description_deal_contrast">darmową</a> wycenę!
           </div>
-          <div className="contact_email_position">
-            <div className="contact_email_container">
-              <div className="contact_Htext">
-                Napisz do <a className="contact_Htext_contrast"> nas!</a>
-              </div>
-              <form ref={form} onSubmit={sendEmail}>
-                <label>Imię</label>
-                <br />
-                <input type="text" name="user_name" />
-                <br />
-                <label>Telefon (opcjonalne)</label>
-                <input type="text" name="user_phone" />
-                <br />
-                <label>Email</label>
-                <br />
-                <input type="email" name="user_email" />
-                <br />
-                <label>Wiadomość</label>
-                <br />
-                <textarea name="message" style={{ resize: "vertical" }} />{" "}
-                <br />
-                <button type="submit" value="Send">
-                  <a className="contact_button">Wyślij!</a>
-                </button>
-              </form>
+        </div>{" "}
+        <div className="contact_email_position">
+          <div className="contact_email_container">
+            <div className="contact_Htext">
+              Napisz do <a className="contact_Htext_contrast"> nas!</a>
             </div>
+            <form ref={form} onSubmit={sendEmail}>
+              <label>Imię</label>
+              <br />
+              <input type="text" name="user_name" />
+              <br />
+              <label>Telefon (opcjonalne)</label>
+              <input type="text" name="user_phone" />
+              <br />
+              <label>Email</label>
+              <br />
+              <input type="email" name="user_email" />
+              <br />
+              <label>Wiadomość</label>
+              <br />
+              <textarea name="message" style={{ resize: "vertical" }} /> <br />
+              <button type="submit" value="Send">
+                <a className="contact_button">Wyślij!</a>
+              </button>
+            </form>
           </div>
         </div>
       </motion.div>

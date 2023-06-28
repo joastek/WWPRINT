@@ -1,8 +1,10 @@
+"use client";
 import NavBar from "@/components/NavBars/NavBar";
 import "../styles/globals.scss";
 import Head from "next/head";
 import { Poppins } from "next/font/google";
 import Footer from "@/components/Footer/Footer";
+import Providers from "@/components/DarkMode/provider";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -24,12 +26,14 @@ export default function RootLayout({
     <html lang="pl">
       <Head>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <body className={inter.className}>
-        <NavBar />
-        {children}
-        <Footer />
-      </body>
+      </Head>{" "}
+      <Providers>
+        <body className={inter.className}>
+          <NavBar />
+          {children}
+          <Footer />
+        </body>{" "}
+      </Providers>
     </html>
   );
 }

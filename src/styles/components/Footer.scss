@@ -1,6 +1,5 @@
 @import "../abstracts/mixins";
 .footer_container {
-  position: relative;
   display: flex;
   justify-content: space-between;
   @include respond(phone) {
@@ -14,15 +13,13 @@
 
   .footer_contactbox {
     display: flex;
-    justify-content: center;
-    align-items: center;
+
     @include respond(tab-port) {
       margin-top: 2em;
       margin-right: 4em;
       display: block;
     }
     @include respond(tab-port) {
-      margin-right: 1em;
     }
     @include respond(phone) {
       margin-top: -2em;
@@ -30,7 +27,7 @@
     }
     .footer_icon {
       align-items: center;
-      margin-left: 2em;
+
       justify-content: baseline;
       display: flex;
       @include respond(phone) {

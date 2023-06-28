@@ -2,7 +2,10 @@
 .container {
   justify-content: center;
   align-items: center;
+  place-items: center;
+  place-content: center;
   height: 60em;
+  width: 100vw;
   // display: flex;
   .swiper-button-prev,
   .swiper-button-next {
