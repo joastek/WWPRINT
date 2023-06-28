@@ -4,11 +4,9 @@
 
 @import "tailwindcss/utilities";
 .offert_container {
-  margin-top: 1rem;
-  padding-top: 1rem;
   @include respond(tab-port) {
     position: relative;
-    margin-top: 10em;
+    margin-top: 5em;
     padding-top: 0em;
   }
   h2 {

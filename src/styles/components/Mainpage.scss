@@ -1,6 +1,7 @@
 @import "../abstracts/mixins";
 .mainpage_container {
-  margin-top: 10rem;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
   display: flex;
 
   @include respond(big-desktop) {
