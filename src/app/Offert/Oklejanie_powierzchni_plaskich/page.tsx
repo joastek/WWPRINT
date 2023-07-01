@@ -36,7 +36,6 @@ const FlatSurface = () => {
               clickable: true,
             }}
             modules={[Navigation, Pagination]}
-            className="box"
           >
             <SwiperSlide>
               <Image src={IMAGES.FLATS.image1} alt="" className="jpg1" />

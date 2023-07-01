@@ -59,6 +59,7 @@ const NavBar = () => {
         <NavLink href="/" style={{ textDecoration: "none" }}>
           {theme === "dark" ? (
             <Image
+              onClick={() => scroll.scrollToTop()}
               className="navigationbar_logo"
               src={logowhite}
               alt="Logo firmy"

@@ -1,5 +1,6 @@
 @import "../../../abstracts/mixins";
 .container {
+  justify-content: center;
   width: 100vw;
   justify-content: center;
   align-items: center;
@@ -7,12 +8,15 @@
   place-items: center;
   display: flex;
   margin-top: 10rem;
+  margin: auto;
   .swiper-button-prev,
   .swiper-button-next {
     color: black;
   }
 
   .box {
+    justify-content: center;
+    margin: auto;
     display: flex;
     place-content: center;
     place-items: center;
@@ -27,7 +31,10 @@
       width: 90%;
     }
     .jpg1 {
+      margin: auto;
       display: flex;
+
+      justify-content: center;
       place-content: center;
       place-items: center;
       align-items: center;
@@ -36,11 +43,12 @@
         height: 35em;
       }
       @include respond(phone) {
-        width: 47em;
+        width: 36em;
         height: 20em;
       }
     }
     .jpg2 {
+      justify-content: center;
       display: flex;
       place-content: center;
       place-items: center;

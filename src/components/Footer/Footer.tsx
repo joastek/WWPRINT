@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 const Footer = () => {
   return (
     <>
-      <div className="footer_container  dark:bg-zinc-900">
+      <div className="footer_container ">
         <Image src={Logo} alt="Logo firmy WWPrint" className="footer_logo" />
         <div className="footer_contactbox">
           <div className="footer_icon">

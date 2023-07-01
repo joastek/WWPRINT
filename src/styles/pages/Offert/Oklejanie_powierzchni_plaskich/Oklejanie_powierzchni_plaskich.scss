@@ -28,6 +28,7 @@
     height: 60rem;
     overflow: hidden;
     overflow-x: hidden;
+    margin: auto;
     @include respond(tab-land) {
       width: 96vw;
     }
@@ -42,6 +43,7 @@
     justify-content: center; /* Dodaj tę linię */
     align-items: center; /* Dodaj tę linię */
     place-items: center;
+    margin: auto;
     place-content: center;
     height: 100%; /* Dodaj tę linię */
     @include respond(tab-port) {
@@ -62,6 +64,7 @@
     }
   }
   .jpg2 {
-    width: 55em;
+    width: 50em;
+    height: 50em;
   }
 }

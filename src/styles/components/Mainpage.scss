@@ -153,8 +153,8 @@
       @include respond(big-desktop) {
         width: 35em;
         height: 35em;
-        margin-top: 21em;
-        // margin-left: 7em;
+        margin-top: 12em;
+        margin-left: -7em;
       }
     }
     .mainpage_image3 {
@@ -176,6 +176,7 @@
       @include respond(big-desktop) {
         width: 35em;
         height: 35em;
+        margin-left: -5em;
       }
     }
   }
