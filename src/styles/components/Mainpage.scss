@@ -3,7 +3,9 @@
   padding-top: 10rem;
   padding-bottom: 5rem;
   display: flex;
-
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 110.5em;
   @include respond(big-desktop) {
     max-width: 130.5em;
     margin-left: auto;
@@ -20,8 +22,7 @@
     width: 100%;
   }
   .mainpage_fontcontainer {
-    padding: 5rem;
-    width: 100%;
+    width: 120%;
     @include respond(phone) {
       margin-left: auto;
       margin-right: auto;
@@ -31,7 +32,7 @@
     .mainpage_Aboutfontcontainer {
       font-style: normal;
       font-weight: 700;
-      font-size: 7.2rem;
+      font-size: 5.6rem;
       margin-bottom: 1.5rem;
     }
 
@@ -39,7 +40,7 @@
       width: 90%;
       font-style: normal;
       font-weight: 400;
-      font-size: 2rem;
+      font-size: 1.6rem;
       line-height: 3rem;
     }
     .mainpage_button {
@@ -103,7 +104,7 @@
       z-index: 3;
       // margin-left: 22rem;
       width: 35em;
-      height: 35em;
+      height: 25em;
       /* image 4 */
 
       @include respond(tab-land) {
@@ -120,7 +121,7 @@
     .mainpage_image2 {
       position: absolute;
       width: 35em;
-      height: 35em;
+      height: 25em;
       z-index: 1;
       @include respond(tab-land) {
         width: 30em;
@@ -140,7 +141,7 @@
       position: absolute;
       z-index: 2;
       width: 38em;
-      height: 38em;
+      height: 28em;
       @include respond(tab-land) {
         width: 30em;
         height: 30em;
@@ -156,9 +157,9 @@
 }
 //////////////////////////////////
 .mainpage_about_container {
-  padding-left: 7rem;
-  padding-right: 7rem;
-
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 5rem;
   padding-top: 5rem;
   @include respond(big-desktop) {

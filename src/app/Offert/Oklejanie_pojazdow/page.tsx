@@ -51,7 +51,7 @@ const FlatSurface = () => {
             </SwiperSlide>
             <SwiperSlide>
               {" "}
-              <Image src={IMAGES.CARS.image4} alt="" className="jpg2" />
+              <Image src={IMAGES.CARS.image4} alt="" className="jpg1" />
             </SwiperSlide>
           </Swiper>
           {/* <div className="box">

@@ -20,7 +20,7 @@ const Offert = () => {
         }}
         className="offert_container "
         id="Oferta"
-        style={{ marginTop: "250px" }}
+        style={{ marginTop: "120px" }}
       >
         <h2>Oferta</h2>
 
