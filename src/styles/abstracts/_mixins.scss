@@ -1,4 +1,9 @@
 @mixin respond($breakpoint) {
+  @if $breakpoint ==fold {
+    @media (max-width: 360px) {
+      @content;
+    } //600px
+  }
   @if $breakpoint ==phone {
     @media (max-width: 37.5em) {
       @content;
@@ -13,6 +18,11 @@
     @media (max-width: 85em) {
       @content;
     } //1200px
+  }
+  @if $breakpoint ==smaller-desktop {
+    @media (min-width: 86em) {
+      @content;
+    }
   }
   @if $breakpoint ==desktop {
     @media (min-width: 112.5em) {

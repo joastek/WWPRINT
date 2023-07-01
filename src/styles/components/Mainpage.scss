@@ -23,7 +23,7 @@
   }
   .mainpage_fontcontainer {
     width: 120%;
-    @include respond(phone) {
+    @include respond(tab-port) {
       margin-left: auto;
       margin-right: auto;
       width: 100vw;
@@ -42,6 +42,9 @@
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 3rem;
+      @include respond(tab-port) {
+        width: 100%;
+      }
     }
     .mainpage_button {
       cursor: pointer;
@@ -60,6 +63,13 @@
         text-align: center;
         justify-content: center;
         align-items: center;
+        @include respond(phone) {
+          width: 8em;
+        }
+        @include respond(fold) {
+          font-size: 3.4em;
+          width: 6em;
+        }
       }
     }
     .mainpage_button:hover {
@@ -90,7 +100,7 @@
     width: 100%;
     position: relative;
     @include respond(tab-land) {
-      width: 80%;
+      // width: 80%;
     }
     @include respond(tab-port) {
       display: none;
@@ -108,9 +118,14 @@
       /* image 4 */
 
       @include respond(tab-land) {
+        // width: 30em;
+        // height: 30em;
+        margin-left: -5rem;
+      }
+      @include respond(smaller-desktop) {
         width: 30em;
         height: 30em;
-        margin-left: -3rem;
+        margin-left: -4rem;
       }
       @include respond(big-desktop) {
         width: 35em;
@@ -123,11 +138,17 @@
       width: 35em;
       height: 25em;
       z-index: 1;
+      margin-top: -5em;
       @include respond(tab-land) {
-        width: 30em;
-        height: 30em;
-        // margin-top: 21em;
+        // width: 35em;
+        // height: 25em;
+
         // margin-left: 7em;
+      }
+      @include respond(smaller-desktop) {
+        width: 35em;
+        height: 30em;
+        // margin-bottom: 5rem;
       }
       @include respond(big-desktop) {
         width: 35em;
@@ -143,11 +164,15 @@
       width: 38em;
       height: 28em;
       @include respond(tab-land) {
-        width: 30em;
+        width: 45em;
+        // height: 30em;
+        margin-left: 10rem;
+      }
+      @include respond(smaller-desktop) {
+        width: 35em;
         height: 30em;
         margin-left: 6rem;
       }
-
       @include respond(big-desktop) {
         width: 35em;
         height: 35em;
@@ -170,6 +195,9 @@
   @include respond(tab-port) {
     padding: 5em;
     margin: 0 0;
+  }
+  @include respond(fold) {
+    padding: 1em;
   }
   h2 {
     margin-left: auto;
@@ -213,6 +241,9 @@
       font-size: 5em;
       padding: 0em;
     }
+    @include respond(phone) {
+      font-size: 3.6em;
+    }
   }
 
   .mainpage_button {
@@ -246,6 +277,10 @@
       margin-bottom: 3em;
       // width: 70%;
       font-size: 3em;
+      height: 5em;
+    }
+    @include respond(fold) {
+      font-size: 3.6em;
     }
   }
   .mainpage_button:hover {

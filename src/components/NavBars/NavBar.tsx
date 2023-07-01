@@ -62,18 +62,10 @@ const NavBar = () => {
               className="navigationbar_logo"
               src={logowhite}
               alt="Logo firmy"
-              width={125}
             />
           ) : (
             <Image className="navigationbar_logo" src={logo} alt="Logo firmy" />
           )}
-          <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-            {theme === "dark" ? (
-              <Image src={sun} alt="" className="sun" />
-            ) : (
-              <Image src={moon} alt="" className="moon" />
-            )}
-          </div>
         </NavLink>{" "}
         <PhoneToggle
           isActive={isActive}
@@ -82,8 +74,6 @@ const NavBar = () => {
         <motion.div
           className={`navigationbar_content ${isActive ? "active" : ""}`}
         >
-          {/* <button onClick={() => setTheme("light")}>Light Mode</button> */}
-
           <ScrollLink
             activeClass={path === "/" ? "base-scroll" : ""}
             to="MainPage"
@@ -224,7 +214,14 @@ const NavBar = () => {
               Galeria
             </p>
           </NavLink>
-        </motion.div>
+        </motion.div>{" "}
+        <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+          {theme === "dark" ? (
+            <Image src={sun} alt="" className="sun" />
+          ) : (
+            <Image src={moon} alt="" className="moon" />
+          )}
+        </div>
         <NavLink href="/Contact">
           <button className="navigationbar_button">
             <p>Zamów teraz!</p>

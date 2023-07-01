@@ -26,11 +26,16 @@
     transition: color 0.4s linear;
     @include respond(tab-land) {
       font-size: 1.8rem;
-      width: 20rem;
+      width: 25rem;
+    }
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+      width: 15rem;
     }
     @include respond(phone) {
+      margin: 0.5em;
       font-size: 1.4rem;
-      width: 12rem;
+      width: 10rem;
       height: 7rem;
     }
   }
@@ -51,11 +56,15 @@
     font-size: 2.4rem;
     @include respond(tab-land) {
       font-size: 1.8rem;
-      width: 20rem;
+      width: 24rem;
+    }
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+      width: 15rem;
     }
     @include respond(phone) {
       font-size: 1.4rem;
-      width: 12rem;
+      width: 10rem;
       height: 7rem;
     }
   }

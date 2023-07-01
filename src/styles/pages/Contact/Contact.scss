@@ -115,6 +115,10 @@
       height: 85em;
       margin-bottom: 7em;
     }
+    @include respond(fold) {
+      margin-bottom: 0em;
+      width: 35em;
+    }
     .contact_Htext {
       color: white;
       font-style: normal;
@@ -159,6 +163,9 @@
     @include respond(phone) {
       width: 10em;
     }
+    @include respond(fold) {
+      width: 8em;
+    }
   }
   textarea {
     font-size: 32px;
@@ -172,6 +179,9 @@
     }
     @include respond(phone) {
       width: 10em;
+    }
+    @include respond(fold) {
+      width: 8em;
     }
   }
   button {
