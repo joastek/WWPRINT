@@ -4,24 +4,36 @@
   align-items: center;
   place-items: center;
   place-content: center;
-  height: 60em;
+  height: 80em;
   width: 100vw;
-  // display: flex;
+  display: flex;
+  margin: auto;
+  @include respond(tab-port) {
+    width: 96vw;
+    height: 50em;
+  }
   .swiper-button-prev,
   .swiper-button-next {
     color: black;
   }
   .swiper {
+    margin: auto;
+    place-items: center;
+    place-content: center;
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70vw;
+    width: 80vw;
     height: 60rem;
     overflow: hidden;
     overflow-x: hidden;
     @include respond(tab-land) {
-      width: 100vw;
+      width: 96vw;
+    }
+    @include respond(tab-port) {
+      width: 80vw;
+      height: 40em;
     }
   }
 
@@ -29,8 +41,12 @@
     display: flex; /* Dodaj tę linię */
     justify-content: center; /* Dodaj tę linię */
     align-items: center; /* Dodaj tę linię */
-
+    place-items: center;
+    place-content: center;
     height: 100%; /* Dodaj tę linię */
+    @include respond(tab-port) {
+      height: 15em;
+    }
   }
 
   .swiper .swiper-slide {
@@ -40,8 +56,9 @@
   .jpg1 {
     height: 45em;
     width: 70em;
-    @include respond(phone) {
-      width: 50em;
+    @include respond(tab-port) {
+      width: 40em;
+      height: 30em;
     }
   }
   .jpg2 {

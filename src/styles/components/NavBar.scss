@@ -80,6 +80,17 @@
   @include respond(tab-land) {
     right: 15em;
   }
+  @include respond(tab-land) {
+    right: 22em;
+  }
+  @include respond(tab-port) {
+    top: 4.5em;
+    right: 15em;
+  }
+  @include respond(phone) {
+    top: 4.5em;
+    right: 12em;
+  }
 }
 
 .moon {
