@@ -56,11 +56,11 @@
     height: 80rem;
   }
   .jpg1 {
-    height: 45em;
-    width: 70em;
+    height: 50em;
+    width: 80em;
     @include respond(tab-port) {
+      height: 25em;
       width: 40em;
-      height: 30em;
     }
   }
   .jpg2 {

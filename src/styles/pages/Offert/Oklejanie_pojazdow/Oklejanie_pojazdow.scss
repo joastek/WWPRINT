@@ -38,6 +38,8 @@
       place-content: center;
       place-items: center;
       align-items: center;
+      width: 80em;
+      height: 50;
       @include respond(tab-port) {
         width: 50em;
         height: 35em;
@@ -53,8 +55,8 @@
       place-content: center;
       place-items: center;
       align-items: center;
-      width: 30em;
-      height: 50em;
+      width: 50em;
+      height: 80em;
       @include respond(phone) {
         width: 35em;
         height: 50em;
