@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="footer_icons">
               <Image src={PhoneIcon} alt="Ikona telefonu" />
             </div>
-            <a>+48 517 258 986</a> <br />
+            <a href="tel:517258986">+48 517 258 986</a> <br />
           </div>
 
           <div className="footer_icon">
