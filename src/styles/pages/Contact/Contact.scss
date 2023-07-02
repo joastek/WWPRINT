@@ -171,13 +171,15 @@
     font-size: 32px;
     background: #ffffff;
     border-style: solid;
-
+    height: 15em;
     width: 66.4rem;
     height: 4.4rem;
     @include respond(tab-port) {
       width: 12em;
+      height: 3.5em;
     }
     @include respond(phone) {
+      height: 4em;
       width: 10em;
     }
     @include respond(fold) {

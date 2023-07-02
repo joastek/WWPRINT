@@ -135,7 +135,7 @@ const Contact = () => {
               <br />
               <textarea
                 name="message"
-                style={{ resize: "vertical", height: "180px" }}
+                style={{ resize: "vertical", height: "170px" }}
                 className="dark:text-black"
               />{" "}
               <br />

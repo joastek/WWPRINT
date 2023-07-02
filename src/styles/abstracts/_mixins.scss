@@ -1,6 +1,6 @@
 @mixin respond($breakpoint) {
   @if $breakpoint ==fold {
-    @media (max-width: 360px) {
+    @media (max-width: 300px) {
       @content;
     } //600px
   }
