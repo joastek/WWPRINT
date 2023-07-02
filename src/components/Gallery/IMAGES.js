@@ -190,7 +190,10 @@ const IMAGES = {
     image5: require("../../../public/gallery_images/Powierzchnie_plaskie/po2.jpg"),
     image6: require("../../../public/gallery_images/Powierzchnie_plaskie/przed3.jpg"),
     image7: require("../../../public/gallery_images/Powierzchnie_plaskie/po3_1.jpg"),
-    image8: require("../../../public/gallery_images/Powierzchnie_plaskie/po3_2.jpg"),
+    image8: require("../../../public/gallery_images/Powierzchnie_plaskie/po3.jpg"),
+    image9: require("../../../public/gallery_images/Powierzchnie_plaskie/Toaleta1.jpg"),
+    image10: require("../../../public/gallery_images/Powierzchnie_plaskie/Toaleta2.jpg"),
+    image11: require("../../../public/gallery_images/Powierzchnie_plaskie/Toaleta3.jpg"),
   },
 };
 

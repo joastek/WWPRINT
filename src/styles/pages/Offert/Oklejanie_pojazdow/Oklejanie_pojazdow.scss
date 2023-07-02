@@ -1,110 +1,84 @@
 @import "../../../abstracts/mixins";
-.container {
-  justify-content: center;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  place-content: center;
-  place-items: center;
-  display: flex;
+.car_container {
   margin-top: 10rem;
+  justify-content: center;
+  max-width: 120em;
+  align-items: center;
   margin: auto;
+  padding: 3em;
+  display: block;
+  @include respond(tab-land) {
+  }
   .swiper-button-prev,
   .swiper-button-next {
     color: black;
   }
 
   .box {
-    justify-content: center;
-    margin: auto;
+    max-width: 114em;
     display: flex;
     place-content: center;
-    place-items: center;
-    align-items: center;
-    // width: 70%;
-    overflow: hidden;
-    overflow-x: hidden;
-    display: inline-flex;
-    // margin: 15rem auto;
-    margin-bottom: 25rem;
+  }
+  .level {
+    margin: auto;
+    margin-top: 2.5rem;
+    max-width: 80em;
     @include respond(tab-land) {
-      width: 90%;
+      max-width: 58em;
+      margin-right: 0.2em;
     }
-    .jpg1 {
-      margin: auto;
-      display: flex;
-
-      justify-content: center;
-      place-content: center;
-      place-items: center;
-      align-items: center;
-      width: 80em;
-      height: 50em;
-      @include respond(tab-port) {
-        width: 50em;
-        height: 35em;
-      }
-      @include respond(phone) {
-        width: 36em;
-        height: 20em;
-      }
+    @include respond(tab-port) {
+      max-width: 47em;
     }
-    .jpg2 {
-      width: 30em;
-      margin: auto;
-      // @include respond(phone) {
-      //   width: 30em;
-      //   height: 50em;
-      // }
+    @include respond(phone) {
+      max-width: 27.5em;
     }
-
-    // width: 25rem;
-    // height: 25rem;
-    // @include respond(tab-port) {
-    //   width: 100vw;
-    //   padding: 5em;
-    //   display: grid;
-    //   position: relative;
-    // }
-    // .box1 {
-    //   padding: 2rem;
-    //   width: 100vw;
-    //   justify-content: center;
-    //   align-items: center;
-    //   @include respond(tab-port) {
-    //   }
-    // }
-    //   .vertical {
-    //     border: solid 0.1rem rgb(0, 0, 0);
-    //     @include respond(tab-land) {
-    //       width: 23.1em;
-    //       height: 49em;
-    //     }
-
-    //     @include respond(tab-port) {
-    //       margin-left: 20em;
-    //     }
-    //   }
-    //   .vertical_end {
-    //     border: solid 0.1rem rgb(0, 0, 0);
-    //     @include respond(tab-land) {
-    //       width: 23.1em;
-    //       height: 49em;
-    //     }
-    //     @include respond(tab-port) {
-    //       position: absolute;
-    //       top: 5em;
-    //       right: 20em;
-    //     }
-    //   }
-    //   .level {
-    //     border: solid 0.1rem black;
-    //     @include respond(tab-land) {
-    //       width: 49em;
-    //       height: 23.1em;
-    //     }
-    //     @include respond(tab-port) {
-    //     }
-    //   }
+    @include respond(fold) {
+      max-width: 28.5em;
+    }
+  }
+  .vertical {
+    margin: auto;
+    max-width: 32.8em;
+    margin-top: 2.5rem;
+    max-height: 42.3em;
+    @include respond(tab-land) {
+      max-width: 25.5em;
+      max-height: 30.7em;
+      margin-left: 0.2em;
+    }
+    @include respond(tab-port) {
+      max-width: 17.5em;
+      max-height: 24.9em;
+    }
+    @include respond(phone) {
+      max-width: 9.8em;
+      max-height: 19.9em;
+    }
+    @include respond(fold) {
+      max-width: 14.5em;
+    }
+  }
+  .vertical1 {
+    height: 48.5em;
+    margin: auto;
+    max-width: 32.8em;
+    margin-top: 2.5rem;
+    @include respond(tab-land) {
+      max-width: 25.5em;
+      max-height: 35.2em;
+      margin-left: 0.2em;
+    }
+    @include respond(tab-port) {
+      max-width: 17.5em;
+      max-height: 28.6em;
+    }
+    @include respond(phone) {
+      max-width: 9.8em;
+      max-height: 16.7em;
+    }
+    @include respond(fold) {
+      max-width: 14.5em;
+    }
   }
 }

@@ -114,18 +114,31 @@ const Contact = () => {
             <form ref={form} onSubmit={sendEmail}>
               <label>Imię</label>
               <br />
-              <input type="text" name="user_name" />
+              <input type="text" name="user_name" className="dark:text-black" />
               <br />
               <label>Telefon (opcjonalne)</label>
-              <input type="text" name="user_phone" />
+              <input
+                type="text"
+                name="user_phone"
+                className="dark:text-black"
+              />
               <br />
               <label>Email</label>
               <br />
-              <input type="email" name="user_email" />
+              <input
+                type="email"
+                name="user_email"
+                className="dark:text-black"
+              />
               <br />
               <label>Wiadomość</label>
               <br />
-              <textarea name="message" style={{ resize: "vertical" }} /> <br />
+              <textarea
+                name="message"
+                style={{ resize: "vertical", height: "180px" }}
+                className="dark:text-black"
+              />{" "}
+              <br />
               <button type="submit" value="Send">
                 <a className="contact_button">Wyślij!</a>
               </button>

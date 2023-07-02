@@ -87,7 +87,7 @@ const NavBar = () => {
               onClick={handleToggleClick}
             >
               <div className="dark:text-red-900">
-                <motion.p
+                <motion.div
                   className="base-text"
                   onClick={() => scroll.scrollToTop()}
                   style={{
@@ -98,7 +98,7 @@ const NavBar = () => {
                   }}
                 >
                   Strona główna
-                </motion.p>
+                </motion.div>
               </div>
             </NavLink>
           </ScrollLink>
@@ -122,7 +122,7 @@ const NavBar = () => {
             >
               <NavLink href="/#Oferta" style={{ textDecoration: "none" }}>
                 {" "}
-                <p
+                <div
                   style={{
                     color:
                       theme === "dark" || window.innerWidth <= 900
@@ -132,7 +132,7 @@ const NavBar = () => {
                   className="base-text"
                 >
                   Oferta
-                </p>{" "}
+                </div>{" "}
               </NavLink>
             </ScrollLink>
           </motion.div>
@@ -153,7 +153,7 @@ const NavBar = () => {
               // className={path === "/" ? "base-scroll" : "base-text"}
             >
               {" "}
-              <p
+              <div
                 className="base-text"
                 style={{
                   color:
@@ -163,7 +163,7 @@ const NavBar = () => {
                 }}
               >
                 O nas
-              </p>{" "}
+              </div>{" "}
             </NavLink>
           </ScrollLink>
           <NavLink
@@ -175,7 +175,7 @@ const NavBar = () => {
             }}
             className={path === "/Contact" ? "base-scroll" : ""}
           >
-            <p
+            <div
               className="base-text"
               style={{
                 color:
@@ -185,7 +185,7 @@ const NavBar = () => {
               }}
             >
               Kontakt
-            </p>
+            </div>
           </NavLink>
           <NavLink
             href="/Offert/Naklejki_i_etykiety"
@@ -202,7 +202,7 @@ const NavBar = () => {
                 : ""
             }
           >
-            <p
+            <div
               className="base-text"
               onClick={() => scroll.scrollToTop()}
               style={{
@@ -213,7 +213,7 @@ const NavBar = () => {
               }}
             >
               Galeria
-            </p>
+            </div>
           </NavLink>
         </motion.div>{" "}
         <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
@@ -225,7 +225,7 @@ const NavBar = () => {
         </div>
         <NavLink href="/Contact">
           <button className="navigationbar_button">
-            <p>Zamów teraz!</p>
+            <div>Zamów teraz!</div>
           </button>
         </NavLink>
       </motion.div>

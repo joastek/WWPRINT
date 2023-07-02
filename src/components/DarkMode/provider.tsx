@@ -2,7 +2,10 @@
 import { ThemeProvider } from "next-themes";
 import { useState, useEffect } from "react";
 
-export default function Providers({ children }: any) {
+type DarkProps = {
+  children: boolean;
+};
+export default function Providers({ children }: DarkProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

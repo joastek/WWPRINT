@@ -7,8 +7,7 @@
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
-  @include respond(tab-land) {
-  }
+
   .test {
     margin: auto;
     display: flex;

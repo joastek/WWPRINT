@@ -1,6 +1,11 @@
 import "../../styles/components/NavBar.scss";
 import { motion } from "framer-motion";
-const PhoneToggle = ({ isActive, handleToggleClick }: any) => {
+
+type HamburgerProp = {
+  isActive: boolean;
+  handleToggleClick: () => void;
+};
+const PhoneToggle = ({ isActive, handleToggleClick }: HamburgerProp) => {
   return (
     <>
       <motion.div className={`toggle_button_box`}>
