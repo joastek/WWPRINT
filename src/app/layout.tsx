@@ -29,7 +29,7 @@ export default function RootLayout({
       <Providers>
         <body className={inter.className}>
           <NavBar />
-          {children}
+          <div>{children}</div>
           <Footer />
         </body>{" "}
       </Providers>

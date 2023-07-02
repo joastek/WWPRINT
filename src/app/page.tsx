@@ -61,7 +61,7 @@ export default function Home() {
         >
           <div className="mainpage_fontcontainer">
             <div className="mainpage_Aboutfontcontainer">
-              O naklejkach
+              O foliach
               <br />
               wiemy <a>wszystko.</a>
             </div>

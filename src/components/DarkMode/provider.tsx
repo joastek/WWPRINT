@@ -3,7 +3,7 @@ import { ThemeProvider } from "next-themes";
 import { useState, useEffect } from "react";
 
 type DarkProps = {
-  children: boolean;
+  children: React.ReactNode;
 };
 export default function Providers({ children }: DarkProps) {
   const [mounted, setMounted] = useState(false);
