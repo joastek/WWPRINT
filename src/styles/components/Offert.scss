@@ -13,6 +13,11 @@
     margin-top: 5em;
     padding-top: 0em;
   }
+  @include respond(big-desktop) {
+    position: relative;
+    margin-top: 25em;
+    padding-top: 0em;
+  }
   h2 {
     margin-left: auto;
     margin-right: auto;

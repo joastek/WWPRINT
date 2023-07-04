@@ -145,9 +145,14 @@ const Contact = () => {
                 className="dark:text-black"
               />{" "}
               <br />
-              <button type="submit" value="Send">
+              <motion.button
+                type="submit"
+                value="Send"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
                 <a className="contact_button">Wyślij!</a>
-              </button>
+              </motion.button>
             </form>
           </div>
         </div>

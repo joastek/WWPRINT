@@ -18,6 +18,9 @@
     max-width: 114em;
     display: flex;
     place-content: center;
+    @include respond(tab-port) {
+      display: block;
+    }
   }
   .level {
     margin: auto;
@@ -28,10 +31,13 @@
       margin-right: 0.2em;
     }
     @include respond(tab-port) {
-      max-width: 47em;
+      margin: auto;
+      max-width: 62em;
+      // align-items: center;
+      // place-items: center;
     }
     @include respond(phone) {
-      max-width: 27.5em;
+      max-width: 31.5em;
     }
     @include respond(fold) {
       max-width: 28.5em;
@@ -48,12 +54,16 @@
       margin-left: 0.2em;
     }
     @include respond(tab-port) {
-      max-width: 17.5em;
-      max-height: 24.9em;
+      margin: 2em auto;
+
+      max-width: 30.5em;
+      max-height: 47.9em;
     }
     @include respond(phone) {
-      max-width: 9.8em;
-      max-height: 19.9em;
+      margin: 1em auto;
+
+      max-width: 31.5em;
+      max-height: 57.9em;
     }
     @include respond(fold) {
       max-width: 14.5em;
@@ -70,12 +80,16 @@
       margin-left: 0.2em;
     }
     @include respond(tab-port) {
-      max-width: 17.5em;
-      max-height: 28.6em;
+      margin: 2em auto;
+
+      max-width: 31.5em;
+      max-height: 57.9em;
     }
     @include respond(phone) {
-      max-width: 9.8em;
-      max-height: 16.7em;
+      margin: 1em auto;
+
+      max-width: 31.5em;
+      max-height: 57.9em;
     }
     @include respond(fold) {
       max-width: 14.5em;

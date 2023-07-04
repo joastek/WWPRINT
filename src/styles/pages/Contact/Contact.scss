@@ -73,6 +73,15 @@
       justify-content: center;
       text-align: center;
       align-items: center;
+      @include respond(tab-port) {
+        margin-top: 3em;
+        padding: 2em;
+      }
+      @include respond(tab-port) {
+        font-size: 1.6em;
+        margin-top: 3em;
+        padding: 1em;
+      }
     }
     .contact_description_deal {
       text-align: center;
@@ -99,13 +108,13 @@
   justify-content: center;
   align-items: center;
   @include respond(tab-land) {
-    margin-top: 15em;
+    margin-top: 5em;
   }
   @include respond(tab-land) {
-    margin-top: 18em;
+    margin-top: 5em;
   }
   @include respond(phone) {
-    margin-top: 25em;
+    margin-top: 10em;
   }
   .contact_email_container {
     margin-bottom: 5em;
@@ -117,7 +126,7 @@
     padding: 3rem;
     border-radius: 56px;
     @include respond(tab-land) {
-      height: 70em;
+      height: 75em;
     }
     @include respond(tab-port) {
       width: 55em;
