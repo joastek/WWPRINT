@@ -8,6 +8,8 @@ import Check from "../../../public/check.png";
 import Image from "next/image";
 import Footer from "@/components/Footer/Footer";
 import { usePathname } from "next/navigation";
+import PhoneIcon from "../../styles/icons/phone.png";
+import MailIcon from "../../styles/icons/mail.png";
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
   const [showModal, setShowModal] = useState(false);
@@ -89,21 +91,25 @@ const Contact = () => {
         }}
       >
         <div className="container">
-          <div className="contact_description">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English. Many desktop publishing
-            packages and web page editors now use Lorem Ipsum as their default
-            model text, and a search for 'lorem ipsum' will uncover many web
-            sites still in their infancy. Various versions have evolved over the
-            years, sometimes by accident, sometimes on purpose (injected humour
-            and the like).
-          </div>
           <div className="contact_description_deal">
-            Zadzwoń i umów się na{" "}
-            <a className="contact_description_deal_contrast">darmową</a> wycenę!
+            Masz pytania? Zadzwoń, napisz i umów się na darmową wycenę!{" "}
+          </div>
+          <div className="contact_description">
+            <div className="contact_contact">
+              <Image
+                src={MailIcon}
+                alt="Ikona wiadmości mail"
+                className="icon"
+              />{" "}
+              e-mail:{" "}
+              <a href="mailto:biurowwprint@gmail.com">biurowwprint@gmail.com</a>{" "}
+            </div>
+            <br />
+            <div className="contact_contact">
+              <Image src={PhoneIcon} alt="Ikona telefonu" className="icon" />
+              Telefon: <a href="tel:517258986">+48 517 258 986</a>
+            </div>
+            <br />
           </div>
         </div>{" "}
         <div className="contact_email_position">
@@ -135,7 +141,7 @@ const Contact = () => {
               <br />
               <textarea
                 name="message"
-                style={{ resize: "vertical", height: "170px" }}
+                style={{ resize: "vertical", height: "150px" }}
                 className="dark:text-black"
               />{" "}
               <br />

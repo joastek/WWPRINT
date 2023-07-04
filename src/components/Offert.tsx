@@ -4,7 +4,7 @@ import "../styles/components/Offert.scss";
 import Image from "next/image";
 import Tile1 from "../../public/Balkon.webp";
 import Tile2 from "../../public/image5.png";
-import Tile3 from "../../public/Pojazd.png";
+import Tile3 from "../../public/Pojazd.jpg";
 import Link from "next/link";
 import { motion } from "framer-motion";
 const Offert = () => {

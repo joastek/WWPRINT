@@ -64,13 +64,15 @@
       width: 95vw;
     }
     .contact_description {
-      padding: 5rem;
+      width: 100%;
+      padding: 10rem;
       font-style: normal;
       font-weight: 600;
       font-size: 2.4rem;
       line-height: 3.6rem;
       justify-content: center;
-      text-align: justify;
+      text-align: center;
+      align-items: center;
     }
     .contact_description_deal {
       text-align: center;
@@ -78,7 +80,17 @@
       font-weight: bold;
       font-size: 5.6rem;
       line-height: 8.4rem;
-      margin-bottom: 10rem;
+      margin-top: 15rem;
+    }
+    .contact_contact {
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      .icon {
+        padding: 0.4rem;
+        margin-right: 1rem;
+      }
     }
   }
 }
@@ -98,7 +110,7 @@
   .contact_email_container {
     margin-bottom: 5em;
     width: 80rem;
-    height: 70rem;
+    height: 75rem;
     background: #000000;
     border: 1px solid #5b5b5b;
     justify-content: center;
@@ -171,7 +183,7 @@
     font-size: 32px;
     background: #ffffff;
     border-style: solid;
-    height: 15em;
+
     width: 66.4rem;
     height: 4.4rem;
     @include respond(tab-port) {

@@ -78,23 +78,25 @@
     .offert_tile2 {
       cursor: pointer;
       background: rgba(239, 245, 255, 0.72);
-
+      height: 55.8rem;
       text-align: center;
       justify-content: center;
       overflow: hidden;
       @include respond(tab-land) {
+        height: 50em;
         width: 30em;
         justify-self: center; /* Wyśrodkowanie w poziomie */
         align-self: center;
       }
       .offert_image {
         transition: transform 0.3s ease;
-        width: 35rem;
-        height: 34rem;
+        width: 36.1rem;
+        height: 33rem;
         z-index: -1;
+        scale: 1.1;
         @include respond(tab-land) {
           width: 30em;
-          height: 28.5em;
+          height: 27.5em;
         }
       }
 
@@ -115,7 +117,7 @@
       overflow: hidden;
       height: 56em;
       @include respond(tab-land) {
-        height: 50.5em;
+        height: 50em;
         width: 30em;
         justify-self: center; /* Wyśrodkowanie w poziomie */
         align-self: center;

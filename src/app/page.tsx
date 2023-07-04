@@ -114,15 +114,26 @@ export default function Home() {
       >
         <h2>O nas</h2>
         <div className="mainpage_about_description">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English. Many desktop publishing packages and web
-          page editors now use Lorem Ipsum as their default model text, and a
-          search for 'lorem ipsum' will uncover many web sites still in their
-          infancy. Various versions have evolved over the years, sometimes by
-          accident, sometimes on purpose (injected humour and the like).
+          WWPrint to dynamiczna drukarnia założona przez braci bliźniaków,
+          Piotra i Tomasza. Firma specjalizuje się w kompleksowej obsłudze
+          drukarskiej dla firm, agencji reklamowych oraz klientów
+          indywidualnych. Oferuje szeroki wybór produktów i usług, takich jak
+          ulotki, plakaty, wizytówki, etykiety, naklejki samoprzylepne,
+          oklejanie witryn i pojazdów, oraz wiele innych. Piotr przynosi do
+          firmy swoje doświadczenie w branży reklamowej, co pozwala na
+          świadczenie profesjonalnego doradztwa w zakresie projektowania
+          graficznego i strategii reklamowej. Tomasz natomiast jest ekspertem w
+          dziedzinie druku i produkcji, posiadając głęboką wiedzę techniczną
+          oraz śledząc najnowsze trendy i technologie. WWPrint kładzie nacisk na
+          profesjonalizm, jakość i terminowość zleceń, współpracując jedynie z
+          zaufanymi dostawcami materiałów. Bracia bliźniacy zapewniają
+          indywidualne podejście do klientów i pełne zaangażowanie w realizację
+          zleceń. Firma WWPrint stale doskonali swoje umiejętności, śledząc
+          najnowsze trendy i uczestnicząc w szkoleniach oraz konferencjach.
+          Dzięki temu są w stanie oferować innowacyjne rozwiązania, które
+          spełniają oczekiwania nawet najbardziej wymagających klientów. WWPrint
+          to nie tylko drukarnia, ale również partner biznesowy, który wspiera
+          klientów w promocji marki i osiąganiu sukcesu.
         </div>
         <div className="mainpage_about_Aboutfontcontainer">
           100% gwarantowanej <a>satysfakcji.</a>

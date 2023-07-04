@@ -221,9 +221,10 @@
     line-height: 36px;
     text-align: justify;
     @include respond(tab-land) {
-      padding: 0.7em;
+      padding: 2.7em;
     }
     @include respond(phone) {
+      font-size: 1.8em;
       font-weight: 500;
       padding: 0;
       margin-top: 2em;

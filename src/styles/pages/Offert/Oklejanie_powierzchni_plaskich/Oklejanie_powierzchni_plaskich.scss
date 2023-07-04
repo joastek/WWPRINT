@@ -30,6 +30,7 @@
       max-width: 55em;
     }
     @include respond(phone) {
+      margin-top: 2.5rem;
       max-width: 34.5em;
     }
     @include respond(fold) {
