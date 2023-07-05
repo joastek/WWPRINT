@@ -63,7 +63,7 @@ export default function Home() {
             <div className="mainpage_Aboutfontcontainer">
               O foliach
               <br />
-              wiemy <a>wszystko.</a>
+              wiemy <a>wszystko</a>
             </div>
             <div className="mainpage_Whatfontcontainer">
               Oferujemy profesjonalne naklejki do ścian, okien i mebli, wykonane

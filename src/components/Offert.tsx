@@ -40,7 +40,7 @@ const Offert = () => {
                 Oklejanie <br />
                 powierzchni
                 <br />
-                <a className="offert_Bluefont">płaskich.</a>
+                <a className="offert_Bluefont">płaskich</a>
               </a>{" "}
             </div>{" "}
           </Link>
@@ -56,7 +56,7 @@ const Offert = () => {
               />
               <a>
                 <br />
-                Wykonaywanie <br />
+                Wykonywanie <br />
                 <a className="offert_Bluefont">
                   naklejek i <br />
                   etykiet

@@ -195,8 +195,8 @@
       left: -9%;
     }
     @include respond(smaller-desktop) {
-      top: 102%;
-      left: -3%;
+      top: 110%;
+      left: -7%;
     }
     @include respond(big-desktop) {
       top: 130%;
@@ -239,16 +239,31 @@
   .mainpage_about_description {
     padding: 7rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 24px;
     line-height: 36px;
     text-align: justify;
+    @include respond(smaller-desktop) {
+      font-size: 1.8rem;
+      line-height: 1.8em;
+      padding: 1em;
+      letter-spacing: 0.01px;
+      word-spacing: 0.1px;
+      font-weight: 400;
+    }
     @include respond(tab-land) {
-      padding: 2.7em;
+      font-size: 1.6rem;
+      line-height: 1.6em;
+      word-spacing: 0.1px;
+    }
+    @include respond(tab-port) {
+      padding: 0;
+      margin-top: 1em;
     }
     @include respond(phone) {
+      text-align: left;
       font-size: 1.8em;
-      font-weight: 500;
+      font-weight: 400;
       padding: 0;
       margin-top: 2em;
     }
@@ -288,7 +303,9 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-
+    @include respond(smaller-desktop) {
+      width: 17em;
+    }
     @include respond(tab-land) {
       width: 17em;
     }
@@ -340,6 +357,9 @@
   background: rgb(0, 0, 0);
   transform-origin: 0%;
   z-index: 999;
+  @include respond(tab-land) {
+    top: 9.2em;
+  }
   @include respond(tab-port) {
     top: 0;
     height: 1.5rem;

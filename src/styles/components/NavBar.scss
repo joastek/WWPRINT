@@ -98,7 +98,9 @@
   width: 4em;
   right: 38em;
   top: 3.4em;
-
+  @include respond(smaller-desktop) {
+    right: 35em;
+  }
   @include respond(tab-land) {
     right: 22em;
   }
