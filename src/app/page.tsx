@@ -136,7 +136,7 @@ export default function Home() {
           klientów w promocji marki i osiąganiu sukcesu.
         </div>
         <div className="mainpage_about_Aboutfontcontainer">
-          100% gwarantowanej <a>satysfakcji.</a>
+          100% gwarantowanej <a>satysfakcji</a>
         </div>
         <Link href="/Contact" style={{ textDecoration: "none" }}>
           <button className="mainpage_button">
