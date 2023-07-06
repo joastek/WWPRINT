@@ -1,0 +1,91 @@
+@import "../../abstracts/mixins";
+.plates_position {
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include respond(tab-land) {
+    max-width: 100rem;
+  }
+  @include respond(tab-port) {
+    max-width: 70rem;
+  }
+  @include respond(phone) {
+    max-width: 50rem;
+  }
+  .plates_description {
+    padding: 2em;
+    font-size: 2.6em;
+    ul {
+      padding: 2em;
+      li {
+        list-style: disc;
+      }
+    }
+  }
+  .plates_images_position {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    margin: auto;
+    @include respond(phone) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .plate_image {
+      margin: 1em;
+      max-width: 60rem;
+
+      @include respond(smaller-desktop) {
+        max-width: 55rem;
+      }
+
+      @include respond(tab-land) {
+        max-width: 50rem;
+      }
+      @include respond(tab-port) {
+        max-width: 30rem;
+      }
+      //   @include respond(phone) {
+      //     max-width: 30rem;
+      //   }
+    }
+    .plate_image1 {
+      margin: 1em;
+      height: 50em;
+      width: 55em;
+      @include respond(smaller-desktop) {
+        max-width: 60rem;
+      }
+      @include respond(tab-land) {
+        max-width: 50rem;
+      }
+
+      @include respond(tab-port) {
+        max-width: 30rem;
+        max-height: 30rem;
+      }
+      //   @include respond(phone) {
+      //     max-width: 30rem;
+      //     max-height: 30rem;
+      //   }
+    }
+  }
+  .plate_image2 {
+    margin-right: 1em;
+    margin-left: 1em;
+    margin: auto;
+    max-width: 115em;
+    place-items: center;
+    @include respond(tab-land) {
+      max-width: 102rem;
+    }
+    @include respond(tab-port) {
+      max-width: 65rem;
+    }
+    @include respond(phone) {
+      max-width: 35rem;
+      max-height: 35em;
+      margin-bottom: 2em;
+    }
+  }
+}

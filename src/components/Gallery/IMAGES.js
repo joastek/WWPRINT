@@ -195,6 +195,21 @@ const IMAGES = {
     image10: require("../../../public/gallery_images/Powierzchnie_plaskie/Toaleta2.jpg"),
     image11: require("../../../public/gallery_images/Powierzchnie_plaskie/Toaleta3.jpg"),
   },
+  Poster: {
+    image1: require("../../../public/gallery_images/Plakaty/Image1.jpg"),
+    image2: require("../../../public/gallery_images/Plakaty/Image2.jpg"),
+    image3: require("../../../public/gallery_images/Plakaty/Image3.jpg"),
+    image4: require("../../../public/gallery_images/Plakaty/Image4.jpg"),
+    image5: require("../../../public/gallery_images/Plakaty/Image5.jpg"),
+    image6: require("../../../public/gallery_images/Plakaty/Image6.jpg"),
+  },
+  Plates: {
+    image1: require("../../../public/gallery_images/Tabliczki/image1.jpg"),
+    image2: require("../../../public/gallery_images/Tabliczki/Image2.jpg"),
+    image3: require("../../../public/gallery_images/Tabliczki/Image3.jpg"),
+    image4: require("../../../public/gallery_images/Tabliczki/Image4.jpg"),
+    image5: require("../../../public/gallery_images/Tabliczki/Image5.jpg"),
+  },
 };
 
 export default IMAGES;

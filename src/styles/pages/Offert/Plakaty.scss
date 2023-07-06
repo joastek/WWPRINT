@@ -1,0 +1,30 @@
+@import "../../abstracts/mixins";
+.poster_position {
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+  .poster_container {
+    padding: 1em;
+    font-size: 2.6em;
+    ol {
+      padding: 2em;
+      li {
+        list-style: number;
+      }
+    }
+  }
+  .poster_image_position {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    margin: auto;
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond(phone) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .poster_image {
+    }
+  }
+}
