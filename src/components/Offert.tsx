@@ -5,6 +5,9 @@ import Image from "next/image";
 import Tile1 from "../../public/Balkon.webp";
 import Tile2 from "../../public/image5.png";
 import Tile3 from "../../public/Pojazd.jpg";
+import Tile4 from "../../public/Plakaty.png";
+import Tile5 from "../../public/RollUp.png";
+import Tile6 from "../../public/Tabliczki.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 const Offert = () => {
@@ -28,7 +31,7 @@ const Offert = () => {
             href="/Offert/Oklejanie_powierzchni_plaskich"
             style={{ textDecoration: "none", color: "black" }}
           >
-            <div className="offert_tile1 element">
+            <div className="offert_tile3 element">
               {" "}
               <Image
                 className="offert_image"
@@ -40,7 +43,7 @@ const Offert = () => {
                 Oklejanie <br />
                 powierzchni
                 <br />
-                <a className="offert_Bluefont">płaskich</a>
+                płaskich
               </a>{" "}
             </div>{" "}
           </Link>
@@ -56,11 +59,8 @@ const Offert = () => {
               />
               <a>
                 <br />
-                Wykonywanie <br />
-                <a className="offert_Bluefont">
-                  naklejek i <br />
-                  etykiet
-                </a>
+                Naklejki i <br />
+                etykiet
               </a>
             </div>{" "}
           </Link>
@@ -78,6 +78,59 @@ const Offert = () => {
                 <br />
                 Oklejanie <br />
                 Samochodów
+              </a>
+            </div>{" "}
+          </Link>
+          <Link
+            href="/Offert/Plakaty"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <div className="offert_tile3 element">
+              <Image
+                className="offert_image"
+                src={Tile4}
+                alt="Efekt wykonania plakatu"
+              ></Image>
+              {/* <Image
+                className="hover_image"
+                src={Tile5}
+                alt="Efekt wykonania naklejek i etykiet"
+              /> */}
+              <a>
+                <br />
+                Plakaty
+              </a>
+            </div>{" "}
+          </Link>
+          <Link
+            href="/Offert/Roll_up"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <div className="offert_tile3 element">
+              <Image
+                className="offert_image"
+                src={Tile5}
+                alt="Efekt wykonania roll up"
+              />
+              <a>
+                <br />
+                Roll up
+              </a>
+            </div>{" "}
+          </Link>
+          <Link
+            href="/Offert/Tabliczki"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <div className="offert_tile3 element">
+              <Image
+                className="offert_image"
+                src={Tile6}
+                alt="Efekt wykonania tabliczek"
+              />
+              <a>
+                <br />
+                Tabliczki
               </a>
             </div>{" "}
           </Link>
