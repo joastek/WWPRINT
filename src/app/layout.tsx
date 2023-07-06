@@ -25,6 +25,7 @@ export default function RootLayout({
     <html lang="pl">
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="google-site-verification" content="8BoddxHkbFaMSx9B5PtdLKPhMphQ4FWgMs9Btl3ArcI" />
       </Head>{" "}
       <Providers>
         <body className={inter.className}>
