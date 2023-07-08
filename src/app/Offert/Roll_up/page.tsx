@@ -1,5 +1,7 @@
 import GalleryNavBar from "@/components/NavBars/GalleryNavBar";
 import "@/styles/pages/Offert/Rollup.scss";
+import IMAGES from "@/components/Gallery/IMAGES";
+import Image from "next/image";
 const RollUp = () => {
   return (
     <>
@@ -40,6 +42,11 @@ const RollUp = () => {
           Skontaktuj się z nami, aby zamówić swoją kasę Roll Up o preferowanej
           szerokości i wzmocnić swoją markę.
         </div>
+        <Image
+          src={IMAGES.RollUp.image1}
+          alt="Fotografia RollUp"
+          className="RollUp_image"
+        />
       </div>
     </>
   );

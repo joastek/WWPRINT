@@ -1,6 +1,6 @@
 "use client";
 import GalleryNavBar from "@/components/NavBars/GalleryNavBar";
-import "../../../styles/pages/Offert/Oklejanie_powierzchni_plaskich/Oklejanie_powierzchni_plaskich.scss";
+import "../../../styles/pages/Offert/Oklejanie_powierzchni_plaskich.scss";
 import IMAGES from "@/components/Gallery/IMAGES";
 import Image from "next/image";
 import "swiper/css";

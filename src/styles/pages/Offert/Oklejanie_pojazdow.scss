@@ -1,4 +1,4 @@
-@import "../../../abstracts/mixins";
+@import "../../abstracts/mixins";
 .car_container {
   margin-top: 10rem;
   justify-content: center;
@@ -13,7 +13,33 @@
   .swiper-button-next {
     color: black;
   }
+  .description_container {
+    font-size: 2rem;
+    @include respond(tab-land) {
+      padding: 0;
+      max-width: 100rem;
+    }
+    @include respond(tab-port) {
+      max-width: 70rem;
+    }
+    @include respond(phone) {
+      max-width: 50rem;
+    }
+    .description_space {
+      margin-top: 5rem;
+    }
+    .description_spacebetween {
+      padding: 1rem 0;
+    }
+    ol {
+      padding: 0 3rem;
 
+      li {
+        padding-bottom: 1em;
+        list-style: disc;
+      }
+    }
+  }
   .box {
     max-width: 114em;
     display: flex;

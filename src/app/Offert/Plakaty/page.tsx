@@ -12,7 +12,7 @@ const Poster = () => {
           Jeśli masz swoją ulubioną grafikę, którą chciałbyś zamienić w
           wyjątkowy plakat, jesteśmy gotowi pomóc! Oto jak działa nasza usługa:
           <ol>
-            <li>
+            <li className="poster_count">
               {" "}
               Prześlij swoją grafikę: Wyślij nam plik graficzny z wybraną przez
               Ciebie grafiką. Może to być własnoręcznie stworzony projekt,
@@ -20,7 +20,7 @@ const Poster = () => {
               chciałbyś zamienić w plakat. Akceptujemy pliki w formatach takich
               jak JPG, PNG, PDF itp.
             </li>
-            <li>
+            <li className="poster_count">
               {" "}
               Wybierz preferowane parametry: Określ preferowane rozmiary i
               rodzaj papieru, na którym chciałbyś, aby został wydrukowany Twój
@@ -29,13 +29,13 @@ const Poster = () => {
               rodzaje papieru, takie jak matowy, połyskujący, błyszczący lub
               płótno artystyczne, aby dopasować się do Twojego gustu.
             </li>{" "}
-            <li>
+            <li className="poster_count">
               Wycena i płatność: Na podstawie przesłanej grafiki i wybranych
               parametrów przygotujemy dla Ciebie wycenę. Koszt będzie zależał od
               rozmiaru plakatu, rodzaju papieru i innych dodatkowych opcji. Po
               akceptacji wyceny będziesz mógł dokonać płatności.
             </li>
-            <li>
+            <li className="poster_count">
               {" "}
               Druk i wysyłka: Po otrzymaniu płatności przystąpimy do druku
               Twojego plakatu. Nasz zespół zadba o najwyższą jakość druku, aby

@@ -5,14 +5,15 @@
   margin-right: auto;
   .poster_container {
     padding: 1em;
-    font-size: 2.6em;
+    font-size: 2em;
     ol {
       padding: 2em;
       @include respond(phone) {
         margin: 1em;
         padding: 0.1em;
       }
-      li {
+      .poster_count {
+        padding: 0.5rem 0;
         list-style: number;
       }
     }

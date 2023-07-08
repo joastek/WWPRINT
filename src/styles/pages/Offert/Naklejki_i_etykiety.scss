@@ -1,4 +1,23 @@
-@import "../../../abstracts/mixins";
+@import "../../abstracts/mixins";
+.description_container {
+  max-width: 120rem;
+  margin: 5rem auto;
+  font-size: 2em;
+  @include respond(tab-land) {
+    max-width: 100rem;
+    padding: 2rem;
+  }
+  @include respond(tab-port) {
+    max-width: 70rem;
+  }
+  @include respond(phone) {
+    max-width: 50rem;
+  }
+  .description_space {
+    font-weight: bold;
+    margin: 2rem 2rem;
+  }
+}
 .Labels_container {
   max-width: 120rem;
   margin-left: auto;
@@ -34,13 +53,16 @@
 }
 .progress-bar {
   position: fixed;
-  top: 10rem;
+  top: 11.7rem;
   left: 0;
   right: 0;
   height: 0.5rem;
   background: rgb(0, 0, 0);
   transform-origin: 0%;
   z-index: 999;
+  @include respond(tab-land) {
+    top: 9.2em;
+  }
   @include respond(tab-port) {
     top: 0;
     height: 1.5rem;

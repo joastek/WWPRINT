@@ -4,7 +4,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
-  font-size: 2.6em;
+  font-size: 2em;
   @include respond(tab-land) {
     max-width: 100rem;
   }
@@ -22,6 +22,8 @@
       padding: 1;
     }
     li {
+      font-weight: bold;
+      padding: 0.5rem 0;
       list-style: number;
     }
   }
@@ -35,8 +37,12 @@
         padding: 1;
       }
       li {
+        padding: 0.5rem 0;
         list-style-type: disc;
       }
     }
+  }
+  .RollUp_image {
+    padding: 5rem;
   }
 }

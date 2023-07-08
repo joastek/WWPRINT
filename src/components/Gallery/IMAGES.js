@@ -210,6 +210,9 @@ const IMAGES = {
     image4: require("../../../public/gallery_images/Tabliczki/Image4.jpg"),
     image5: require("../../../public/gallery_images/Tabliczki/Image5.jpg"),
   },
+  RollUp:{
+  image1: require("../../../public/RollUp.png"),
+  }
 };
 
 export default IMAGES;
