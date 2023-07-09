@@ -1,1 +1,1 @@
-test
+Sitemap: http://www.wwprint.pl/static/sitemap.xml
