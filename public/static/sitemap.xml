@@ -1,4 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-  <loc>http://www.wwprint.pl/static/robots.txt</loc>
-  <lastmod>YYYY-MM-DD</lastmod>
+  <loc>https://www.wwprint.pl/</loc>
+  <lastmod>2023-07-09T12:27:37+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
+<url>
+  <loc>https://www.wwprint.pl/Contact</loc>
+  <lastmod>2023-07-09T12:27:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.wwprint.pl/Offert/Oklejanie_powierzchni_plaskich</loc>
+  <lastmod>2023-07-09T12:27:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.wwprint.pl/Offert/Naklejki_i_etykiety</loc>
+  <lastmod>2023-07-09T12:27:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.wwprint.pl/Offert/Oklejanie_pojazdow</loc>
+  <lastmod>2023-07-09T12:27:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.wwprint.pl/Offert/Plakaty</loc>
+  <lastmod>2023-07-09T12:27:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.wwprint.pl/Offert/Roll_up</loc>
+  <lastmod>2023-07-09T12:27:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.wwprint.pl/Offert/Tabliczki</loc>
+  <lastmod>2023-07-09T12:27:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
