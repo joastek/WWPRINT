@@ -23,6 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl">
+      <link rel="robots" href="/robots.txt" />
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta charSet="UTF-8" />
