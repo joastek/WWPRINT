@@ -86,7 +86,14 @@
           height: 16em;
         }
       }
-
+      .offert_image4 {
+        opacity: 0;
+        width: 150rem;
+        transition: opacity 0.3s ease-out;
+      }
+      .offert_image4.visible {
+        opacity: 1;
+      }
       a {
         z-index: 1;
         font-style: normal;

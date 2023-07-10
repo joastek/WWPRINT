@@ -1,5 +1,5 @@
 "use client";
-
+import React, { useState } from "react";
 import "../styles/components/Offert.scss";
 import Image from "next/image";
 import Tile1 from "../../public/Balkon.webp";
@@ -9,8 +9,18 @@ import Tile4 from "../../public/Plakaty.png";
 import Tile5 from "../../public/RollUp.png";
 import Tile6 from "../../public/Tabliczki.png";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 const Offert = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+  const fadeInOutAnimation = {};
   return (
     <>
       <motion.div
@@ -33,11 +43,36 @@ const Offert = () => {
           >
             <div className="offert_tile3 element">
               {" "}
-              <Image
-                className="offert_image"
-                src={Tile1}
-                alt="Efekt wykonania oklejania balkonu"
-              />
+              <motion.div
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                transition={{ duration: 1 }}
+              >
+                <Image
+                  className="offert_image"
+                  src={Tile1}
+                  alt="Efekt wykonania oklejania balkonu"
+                />
+                {isHovered && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1, scale: 1.1 }}
+                    exit={{ x: -300, opacity: 0 }}
+                    transition={{ duration: 2 }}
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                    }}
+                  >
+                    <Image
+                      className="offert_image4"
+                      src={Tile2}
+                      alt="Efekt wykonania oklejania balkonu"
+                    />
+                  </motion.div>
+                )}
+              </motion.div>
               <a>
                 <br />
                 Oklejanie <br />
@@ -91,11 +126,7 @@ const Offert = () => {
                 src={Tile4}
                 alt="Efekt wykonania plakatu"
               ></Image>
-              {/* <Image
-                className="hover_image"
-                src={Tile5}
-                alt="Efekt wykonania naklejek i etykiet"
-              /> */}
+
               <a>
                 <br />
                 Plakaty

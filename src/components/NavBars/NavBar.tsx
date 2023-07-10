@@ -17,12 +17,11 @@ import { useTheme } from "next-themes";
 const NavBar = () => {
   const path = usePathname();
   const [click, setClick] = useState(false);
-  const closeMenu = () => setClick(false);
   const [isActive, setIsActive] = useState(false);
   const navBarRef = useRef(null);
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -86,20 +85,18 @@ const NavBar = () => {
               style={{ textDecoration: "none" }}
               onClick={handleToggleClick}
             >
-              <div className="dark:text-red-900">
-                <motion.div
-                  className="base-text"
-                  onClick={() => scroll.scrollToTop()}
-                  style={{
-                    color:
-                      theme === "dark" || window.innerWidth <= 900
-                        ? "#fff"
-                        : "#000",
-                  }}
-                >
-                  Strona główna
-                </motion.div>
-              </div>
+              <motion.div
+                className="base-text"
+                onClick={() => scroll.scrollToTop()}
+                style={{
+                  color:
+                    theme === "dark" || window.innerWidth <= 900
+                      ? "#fff"
+                      : "#000",
+                }}
+              >
+                Strona główna
+              </motion.div>
             </NavLink>
           </ScrollLink>
           {/* ///////////////////////////////////////// */}
@@ -120,19 +117,18 @@ const NavBar = () => {
                 handleToggleClick();
               }}
             >
-              <NavLink href="/#Oferta" style={{ textDecoration: "none" }}>
-                {" "}
-                <div
-                  style={{
-                    color:
-                      theme === "dark" || window.innerWidth <= 900
-                        ? "#fff"
-                        : "#000",
-                  }}
-                  className="base-text"
-                >
-                  Oferta
-                </div>{" "}
+              <NavLink
+                href="/#Oferta"
+                style={{
+                  color:
+                    theme === "dark" || window.innerWidth <= 900
+                      ? "#fff"
+                      : "#000",
+                  textDecoration: "none",
+                }}
+                className="base-text"
+              >
+                Oferta
               </NavLink>
             </ScrollLink>
           </motion.div>
@@ -149,21 +145,18 @@ const NavBar = () => {
           >
             <NavLink
               href="/#About"
-              style={{ textDecoration: "none" }}
-              // className={path === "/" ? "base-scroll" : "base-text"}
+              // style={{ textDecoration: "none" }}
+              className="base-text"
+              style={{
+                color:
+                  theme === "dark" || window.innerWidth <= 900
+                    ? "#fff"
+                    : "#000",
+                textDecoration: "none",
+              }}
             >
               {" "}
-              <div
-                className="base-text"
-                style={{
-                  color:
-                    theme === "dark" || window.innerWidth <= 900
-                      ? "#fff"
-                      : "#000",
-                }}
-              >
-                O nas
-              </div>{" "}
+              O nas{" "}
             </NavLink>
           </ScrollLink>
           <NavLink

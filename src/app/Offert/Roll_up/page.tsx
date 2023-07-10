@@ -1,6 +1,6 @@
 import GalleryNavBar from "@/components/NavBars/GalleryNavBar";
 import "@/styles/pages/Offert/Rollup.scss";
-import IMAGES from "@/components/Gallery/IMAGES";
+import IMAGES from "@/components/IMAGES";
 import Image from "next/image";
 const RollUp = () => {
   return (

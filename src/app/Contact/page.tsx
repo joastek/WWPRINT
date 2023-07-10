@@ -6,7 +6,7 @@ import emailjs from "@emailjs/browser";
 import { useState, useEffect } from "react";
 import Check from "../../../public/check.png";
 import Image from "next/image";
-import Footer from "@/components/Footer/Footer";
+import Footer from "@/components/Footer";
 import { usePathname } from "next/navigation";
 import PhoneIcon from "../../styles/icons/phone.png";
 import MailIcon from "../../styles/icons/mail.png";

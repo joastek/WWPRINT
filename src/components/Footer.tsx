@@ -1,11 +1,11 @@
 "use client";
 // import "../../styles/components/Footer.scss";
 import Image from "next/image";
-import FacebookIcon from "../../styles/icons/facebook.png";
-import InstagramIcon from "../../styles/icons/instagram.png";
-import PhoneIcon from "../../styles/icons/phone.png";
-import MailIcon from "../../styles/icons/mail.png";
-import Logo from "../../../public/Logo.png";
+import FacebookIcon from "../styles/icons/facebook.png";
+import InstagramIcon from "../styles/icons/instagram.png";
+import PhoneIcon from "../styles/icons/phone.png";
+import MailIcon from "../styles/icons/mail.png";
+import Logo from "../../public/Logo.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 const Footer = () => {

@@ -2,8 +2,8 @@ import NavBar from "@/components/NavBars/NavBar";
 import "../styles/globals.scss";
 import Head from "next/head";
 import { Poppins } from "next/font/google";
-import Footer from "@/components/Footer/Footer";
-import Providers from "@/components/DarkMode/provider";
+import Footer from "@/components/Footer";
+import Providers from "@/components/darkMode";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -23,7 +23,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl">
-      <link rel="robots" href="/robots.txt" />
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta charSet="UTF-8" />
