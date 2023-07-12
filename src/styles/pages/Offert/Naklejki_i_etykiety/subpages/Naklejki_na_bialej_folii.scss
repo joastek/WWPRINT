@@ -1,0 +1,50 @@
+@import "../../../../abstracts/mixins";
+.Labels_container {
+  max-width: 120rem;
+  margin: 15rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+
+  .test {
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    @include respond(tab-land) {
+      // width: 30em;
+      // height: 30em;
+    }
+    @include respond(tab-port) {
+      .test {
+        width: 20em;
+        height: 20em;
+      }
+    }
+  }
+  @include respond(phone) {
+    .test {
+      width: 16em;
+      height: 14em;
+    }
+  }
+}
+.progress-bar {
+  position: fixed;
+  top: 11.7rem;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
+  background: rgb(0, 0, 0);
+  transform-origin: 0%;
+  z-index: 999;
+  @include respond(tab-land) {
+    top: 9.2em;
+  }
+  @include respond(tab-port) {
+    top: 0;
+    height: 1.5rem;
+  }
+}

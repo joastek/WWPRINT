@@ -207,6 +207,16 @@ const IMAGES = {
   RollUp: {
     image1: require("../../public/RollUp.png"),
   },
+  Hologram: {
+    image1: require("../../public/gallery_images/Hologram/KOS.png"),
+    image2: require("../../public/gallery_images/Hologram/mikrob.png"),
+    image3: require("../../public/gallery_images/Hologram/oli_dziara.png"),
+    image4: require("../../public/gallery_images/Hologram/vaper.png"),
+    image5: require("../../public/gallery_images/Hologram/videos/KOS.gif.gif"),
+    image6: require("../../public/gallery_images/Hologram/videos/VAPER.gif"),
+    image7: require("../../public/gallery_images/Hologram/KOS.png"),
+    image8: require("../../public/gallery_images/Hologram/KOS.png"),
+  },
 };
 
 export default IMAGES;

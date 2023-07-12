@@ -1,0 +1,143 @@
+@import "../../../abstracts/mixins";
+.description_container {
+  max-width: 120rem;
+  margin: 5rem auto;
+  font-size: 2em;
+  @include respond(tab-land) {
+    max-width: 100rem;
+    padding: 2rem;
+  }
+  @include respond(tab-port) {
+    max-width: 70rem;
+  }
+  @include respond(phone) {
+    max-width: 50rem;
+  }
+  .description_space {
+    font-weight: bold;
+    margin: 2rem 2rem;
+  }
+}
+
+.naklejki_tiles {
+  display: flex; /* Dodaj tę linię */
+
+  justify-content: center;
+  padding: 8rem;
+  @include respond(tab-land) {
+    display: flex; /* Dodaj tę linię */
+
+    justify-content: center;
+    padding: 8rem;
+  }
+  @include respond(tab-port) {
+    display: grid;
+
+    justify-content: center;
+  }
+
+  .offert_tile2 {
+    align-items: center;
+    cursor: pointer;
+    background: rgba(239, 245, 255, 0.72);
+    height: 52.8rem;
+    width: 30rem;
+    margin: 0 5rem;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+    @include respond(tab-land) {
+      // margin-top: 4em;
+      height: 25em;
+      width: 14em;
+      justify-self: center; /* Wyśrodkowanie w poziomie */
+      align-self: center;
+    }
+    @include respond(tab-port) {
+      // margin-top: 4em;
+      margin: 2rem 2rem;
+      height: 22em;
+      width: 15em;
+    }
+    @include respond(phone) {
+      height: 16em;
+      width: 11em;
+    }
+    .offert_image {
+      transition: transform 0.3s ease;
+      width: 36.1rem;
+      height: 33rem;
+      z-index: -1;
+      scale: 1.1;
+      @include respond(tab-land) {
+        width: 30em;
+        height: 15.5em;
+      }
+      @include respond(tab-port) {
+        width: 16em;
+        height: 13em;
+      }
+      @include respond(phone) {
+        width: 11em;
+        height: 9em;
+      }
+    }
+
+    .whitefoil {
+      z-index: 1;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 2.5rem;
+      line-height: 4.4rem;
+      @include respond(tab-port) {
+        margin-top: 0;
+        font-size: 1em;
+        line-height: 1.4em;
+      }
+      @include respond(phone) {
+        margin-top: 0;
+        font-size: 1em;
+        line-height: 0.5em;
+      }
+    }
+  }
+
+  .element {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+
+    background: #000000;
+
+    filter: drop-shadow(0px 9px 12px rgba(0, 0, 0, 0.61));
+    font-style: normal;
+
+    transition: color 0.4s linear;
+    @include respond(tab-port) {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .element:hover {
+    color: rgb(253, 253, 253);
+  }
+  .element::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: -99;
+    transition: transform 1s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6);
+  }
+  .element::before {
+    transform: scaleY(1);
+  }
+  .element:hover::before {
+    transform: scaleY(0);
+  }
+}
