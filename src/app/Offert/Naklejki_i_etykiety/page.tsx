@@ -65,11 +65,12 @@ const StickersAndLables = () => {
             style={{ textDecoration: "none", color: "black" }}
           >
             <div className="offert_tile2 element">
-              <Image
-                className="offert_image"
-                src={gif}
-                alt="Efekt wykonania naklejek i etykiet"
-              />
+              <div className="video_container">
+                <video autoPlay muted loop className="video">
+                  {" "}
+                  <source src="/Kos.mp4" type="video/mp4" />
+                </video>
+              </div>
               <a className="whitefoil">
                 <br />
                 Naklejki <br />

@@ -101,24 +101,20 @@ const NavBar = () => {
           </ScrollLink>
           {/* ///////////////////////////////////////// */}
 
-          <motion.div
-            className="div"
-            whileHover={{ scale: 1.1 }}
-            transition={{ ease: "easeInOut" }}
+          <ScrollLink
+            activeClass={path === "/" ? "base-scroll" : ""}
+            to="Oferta"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            onClick={() => {
+              handleClick();
+              handleToggleClick();
+            }}
           >
-            <ScrollLink
-              activeClass={path === "/" ? "base-scroll" : ""}
-              to="Oferta"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              onClick={() => {
-                handleClick();
-                handleToggleClick();
-              }}
-            >
-              <NavLink
-                href="/#Oferta"
+            <NavLink href="/#Oferta">
+              <div
+                className="base-text"
                 style={{
                   color:
                     theme === "dark" || window.innerWidth <= 900
@@ -126,12 +122,13 @@ const NavBar = () => {
                       : "#000",
                   textDecoration: "none",
                 }}
-                className="base-text"
               >
+                {" "}
                 Oferta
-              </NavLink>
-            </ScrollLink>
-          </motion.div>
+              </div>
+            </NavLink>
+          </ScrollLink>
+
           <ScrollLink
             activeClass={path === "/" ? "base-scroll" : ""}
             to="About"
@@ -143,21 +140,27 @@ const NavBar = () => {
               handleToggleClick();
             }}
           >
-            <NavLink
-              href="/#About"
-              // style={{ textDecoration: "none" }}
-              className="base-text"
-              style={{
-                color:
-                  theme === "dark" || window.innerWidth <= 900
-                    ? "#fff"
-                    : "#000",
-                textDecoration: "none",
-              }}
-            >
-              {" "}
-              O nas{" "}
-            </NavLink>
+            {" "}
+            <div>
+              <NavLink
+                href="/#About"
+                // style={{ textDecoration: "none" }}
+              >
+                <div
+                  className="base-text"
+                  style={{
+                    color:
+                      theme === "dark" || window.innerWidth <= 900
+                        ? "#fff"
+                        : "#000",
+                    textDecoration: "none",
+                  }}
+                >
+                  {" "}
+                  O nas{" "}
+                </div>
+              </NavLink>
+            </div>
           </ScrollLink>
           <NavLink
             href="/Contact"

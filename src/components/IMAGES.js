@@ -213,7 +213,7 @@ const IMAGES = {
     image3: require("../../public/gallery_images/Hologram/oli_dziara.png"),
     image4: require("../../public/gallery_images/Hologram/vaper.png"),
     image5: require("../../public/gallery_images/Hologram/videos/KOS.gif.gif"),
-    image6: require("../../public/gallery_images/Hologram/videos/VAPER.gif"),
+
     image7: require("../../public/gallery_images/Hologram/KOS.png"),
     image8: require("../../public/gallery_images/Hologram/KOS.png"),
   },
