@@ -23,7 +23,7 @@
   display: flex; /* Dodaj tę linię */
 
   justify-content: center;
-  padding: 8rem;
+
   @include respond(tab-land) {
     display: flex; /* Dodaj tę linię */
 
@@ -60,7 +60,7 @@
       width: 13em;
     }
     @include respond(phone) {
-      height: 25em;
+      height: 23em;
       width: 13em;
     }
     .video_container {

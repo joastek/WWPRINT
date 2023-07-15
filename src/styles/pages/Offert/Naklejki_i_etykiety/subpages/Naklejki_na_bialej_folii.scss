@@ -1,7 +1,31 @@
 @import "../../../../abstracts/mixins";
+.description_text {
+  max-width: 110rem;
+  padding-top: 15rem;
+  margin: auto;
+  font-size: 2em;
+  position: relative;
+
+  @include respond(tab-port) {
+    margin: auto 2rem;
+  }
+  .arrow {
+    width: 5rem;
+    left: -8%;
+    position: absolute;
+    @include respond(tab-land) {
+      left: 0;
+      top: -2%;
+    }
+  }
+  .description_space {
+    font-weight: bold;
+    margin: 2rem 2rem;
+  }
+}
 .Labels_container {
   max-width: 120rem;
-  margin: 15rem auto;
+  margin: 4rem auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;

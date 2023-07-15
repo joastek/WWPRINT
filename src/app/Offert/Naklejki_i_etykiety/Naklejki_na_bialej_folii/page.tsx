@@ -3,6 +3,8 @@ import Image from "next/image";
 import { motion, useScroll } from "framer-motion";
 import IMAGES from "../../../../components/IMAGES";
 import "../../../../styles/pages/Offert/Naklejki_i_etykiety/subpages/Naklejki_na_bialej_folii.scss";
+import Link from "next/link";
+import arrow from "../../../../../public/Arrow.png";
 const whiteFoil = () => {
   const { scrollYProgress } = useScroll();
 
@@ -11,7 +13,25 @@ const whiteFoil = () => {
       <motion.div
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}
-      />
+      />{" "}
+      <div className="description_text">
+        <Link href="/Offert/Naklejki_i_etykiety">
+          {" "}
+          <Image src={arrow} alt="Strzałka powrotu" className="arrow" />
+        </Link>
+        Oferujemy druk naklejek/etykiet samoprzylepnych, które mogą posłużyć
+        jako doskonała reklama Twoich mediów społecznościowych. Nasze naklejki
+        to nie tylko reklama, ale również oryginalny gadżet dla Twoich klientów.
+        Wyobraź sobie, że tworzymy unikalną naklejkę z reklamą Twojego
+        Instagrama, którą Twoi klienci mogą nakleić na takie przedmioty jak
+        laptop, kubek termiczny, tablet, samochód czy inne miejsca widoczne dla
+        innych.To świetny sposób na promocję Ciebie lub Twojego produktu!
+        <div className="description_space">
+          Mamy do wyboru różne rodzaje materiałów: białą matową/błyszczącą
+          folię, holograficzną folię, papier i inne.{" "}
+        </div>{" "}
+        Wspomożemy Cię w dopracowaniu projektu i samej naklejki.
+      </div>
       <motion.div
         className="Labels_container"
         initial={{ opacity: 0, scale: 0.5 }}
@@ -22,23 +42,13 @@ const whiteFoil = () => {
           ease: [0.6, 0.92, 0.6, 1.01],
         }}
       >
-        <motion.div
-        // whileTap={{
-        //   scale: 1.8,
-        //   width: 700,
-        //   height: 700,
-        //   originX: -0.7,
-        //   originY: -0.2,
-        // }}
-        >
-          <Image
-            src={IMAGES.LABELS.image2.src}
-            alt=""
-            className="test"
-            width={400}
-            height={400}
-          />
-        </motion.div>
+        <Image
+          src={IMAGES.LABELS.image2.src}
+          alt=""
+          className="test"
+          width={400}
+          height={400}
+        />
         <motion.div>
           <Image
             src={IMAGES.LABELS.image3.src}

@@ -4,7 +4,7 @@
   padding-bottom: 5rem;
   display: flex;
   margin: 3rem auto;
-  max-width: 110.5em;
+  max-width: 95.5em;
   @include respond(big-desktop) {
     max-width: 130.5em;
     margin-left: auto;
@@ -21,7 +21,7 @@
     width: 100%;
   }
   .mainpage_fontcontainer {
-    width: 120%;
+    width: 150%;
     @include respond(tab-port) {
       margin-left: auto;
       margin-right: auto;
@@ -95,11 +95,12 @@
     }
   }
   .mainpage_imageContainer {
-    padding-left: 35rem;
+    padding-left: 15rem;
     width: 100%;
+    right: -15%;
     position: relative;
-    @include respond(tab-land) {
-      // width: 80%;
+    @include respond(desktop) {
+      padding-left: 10rem;
     }
     @include respond(tab-port) {
       display: none;
@@ -179,33 +180,33 @@
       }
     }
   }
-  .mainpage_imageContainer::before {
-    content: "";
-    position: absolute;
-    background-color: rgba(49, 49, 49, 0.489);
-    width: 75em;
-    height: 8em;
-    top: 95%;
-    right: 25%;
-    // z-index: 1200;
-    border-radius: 50%;
-    transform: perspective(0.8em) rotateX(5deg) scale(0.45, 0.45);
-    @include respond(tab-land) {
-      left: -9%;
-    }
-    @include respond(smaller-desktop) {
-      top: 120%;
-      left: -9%;
-    }
-    @include respond(desktop) {
-      top: 120%;
-      left: 1%;
-    }
-    @include respond(big-desktop) {
-      top: 130%;
-      left: -3%;
-    }
-  }
+  // .mainpage_imageContainer::before {
+  //   content: "";
+  //   position: absolute;
+  //   background-color: rgba(49, 49, 49, 0.489);
+  //   width: 75em;
+  //   height: 8em;
+  //   top: 95%;
+  //   right: 25%;
+  //   // z-index: 1200;
+  //   border-radius: 50%;
+  //   transform: perspective(0.8em) rotateX(5deg) scale(0.45, 0.45);
+  //   @include respond(tab-land) {
+  //     left: -9%;
+  //   }
+  //   @include respond(smaller-desktop) {
+  //     top: 120%;
+  //     left: -9%;
+  //   }
+  //   @include respond(desktop) {
+  //     top: 120%;
+  //     left: 1%;
+  //   }
+  //   @include respond(big-desktop) {
+  //     top: 130%;
+  //     left: -3%;
+  //   }
+  // }
 }
 //////////////////////////////////
 .mainpage_about_container {

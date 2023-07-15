@@ -1,14 +1,29 @@
 import IMAGES from "../../../../components/IMAGES";
 import "../../../../styles/pages/Offert/Naklejki_i_etykiety/subpages/Naklejki_holograficzne.scss";
 import Image from "next/image";
-
-import ReactPlayer from "react-player/lazy";
+import Link from "next/link";
+import arrow from "../../../../../public/Arrow.png";
 
 const holoGraphic = () => {
   return (
     <>
       <div className="hologram_container">
-        {/* <ReactPlayer url="https://www.youtube.com/watch?v=ysz5S6PUM-U" /> */}
+        <Link href="/Offert/Naklejki_i_etykiety">
+          {" "}
+          <Image src={arrow} alt="Strzałka powrotu" className="arrow" />
+        </Link>
+        Oferujemy druk naklejek/etykiet samoprzylepnych, które mogą posłużyć
+        jako doskonała reklama Twoich mediów społecznościowych. Nasze naklejki
+        to nie tylko reklama, ale również oryginalny gadżet dla Twoich klientów.
+        Wyobraź sobie, że tworzymy unikalną naklejkę z reklamą Twojego
+        Instagrama, którą Twoi klienci mogą nakleić na takie przedmioty jak
+        laptop, kubek termiczny, tablet, samochód czy inne miejsca widoczne dla
+        innych.To świetny sposób na promocję Ciebie lub Twojego produktu!
+        <div className="description_space">
+          Mamy do wyboru różne rodzaje materiałów: białą matową/błyszczącą
+          folię, holograficzną folię, papier i inne.{" "}
+        </div>{" "}
+        Wspomożemy Cię w dopracowaniu projektu i samej naklejki.
         <div className="pair">
           <video autoPlay muted loop className="video_hologram">
             {" "}
