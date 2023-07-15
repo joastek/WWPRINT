@@ -83,19 +83,29 @@
           height: 16em;
         }
       }
+      .offert_description {
+        display: grid;
+        place-items: center;
+        height: 15rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
 
-      a {
-        margin-top: 0;
-        z-index: 1;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 2.6rem;
-        // line-height: 4.4rem;
-        margin-bottom: 2em;
-        @include respond(phone) {
+        a {
+          align-items: center;
+          justify-content: center;
           margin-top: 0;
-          font-size: 2em;
-          line-height: 1.4em;
+          z-index: 1;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 2.6rem;
+          // line-height: 4.4rem;
+          margin-bottom: 2em;
+          @include respond(phone) {
+            margin-top: 0;
+            font-size: 2em;
+            line-height: 1.4em;
+          }
         }
       }
     }

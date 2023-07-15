@@ -43,40 +43,17 @@ const Offert = () => {
           >
             <div className="offert_tile3 element">
               {" "}
-              <motion.div
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                transition={{ duration: 1 }}
-              >
-                <Image
-                  className="offert_image"
-                  src={Tile1}
-                  alt="Efekt wykonania oklejania balkonu"
-                />
-                {isHovered && (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1, scale: 1.1 }}
-                    exit={{ x: -300, opacity: 0 }}
-                    transition={{ duration: 2 }}
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                    }}
-                  >
-                    <Image
-                      className="offert_image4"
-                      src={Tile2}
-                      alt="Efekt wykonania oklejania balkonu"
-                    />
-                  </motion.div>
-                )}
-              </motion.div>
-              <a>
-                Oklejanie <br />
-                powierzchni
-              </a>{" "}
+              <Image
+                className="offert_image"
+                src={Tile1}
+                alt="Efekt wykonania oklejania balkonu"
+              />
+              <div className="offert_description">
+                <a>
+                  Oklejanie <br />
+                  powierzchni
+                </a>{" "}
+              </div>
             </div>{" "}
           </Link>
           <Link
@@ -89,10 +66,12 @@ const Offert = () => {
                 src={Tile2}
                 alt="Efekt wykonania naklejek i etykiet"
               />
-              <a>
-                Naklejki i <br />
-                etykiet
-              </a>
+              <div className="offert_description">
+                <a>
+                  Naklejki i <br />
+                  etykiet
+                </a>
+              </div>
             </div>{" "}
           </Link>
           <Link
@@ -104,11 +83,14 @@ const Offert = () => {
                 className="offert_image"
                 src={Tile3}
                 alt="Efekt wykonania naklejek i etykiet"
-              />
-              <a>
-                Oklejanie <br />
-                Samochodów
-              </a>
+              />{" "}
+              <div className="offert_description">
+                {" "}
+                <a>
+                  Oklejanie <br />
+                  Samochodów
+                </a>{" "}
+              </div>
             </div>{" "}
           </Link>
           <Link
@@ -121,8 +103,10 @@ const Offert = () => {
                 src={Tile4}
                 alt="Efekt wykonania plakatu"
               ></Image>
-
-              <a>Plakaty</a>
+              <div className="offert_description">
+                {" "}
+                <a>Plakaty</a>
+              </div>
             </div>{" "}
           </Link>
           <Link
@@ -134,8 +118,11 @@ const Offert = () => {
                 className="offert_image"
                 src={Tile5}
                 alt="Efekt wykonania roll up"
-              />
-              <a>Roll up</a>
+              />{" "}
+              <div className="offert_description">
+                {" "}
+                <a>Roll up</a>{" "}
+              </div>{" "}
             </div>{" "}
           </Link>
           <Link
@@ -147,11 +134,14 @@ const Offert = () => {
                 className="offert_image"
                 src={Tile6}
                 alt="Efekt wykonania tabliczek"
-              />
-              <a>
-                Szyldy <br />
-                reklamowe
-              </a>
+              />{" "}
+              <div className="offert_description">
+                {" "}
+                <a>
+                  Szyldy <br />
+                  reklamowe
+                </a>{" "}
+              </div>{" "}
             </div>{" "}
           </Link>
         </div>
