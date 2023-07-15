@@ -90,7 +90,9 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-
+        @include respond(phone) {
+          height: 10rem;
+        }
         a {
           align-items: center;
           justify-content: center;
@@ -103,8 +105,7 @@
           margin-bottom: 2em;
           @include respond(phone) {
             margin-top: 0;
-            font-size: 2em;
-            line-height: 1.4em;
+            font-size: 1.6em;
           }
         }
       }
