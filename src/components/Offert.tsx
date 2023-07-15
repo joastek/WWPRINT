@@ -74,11 +74,8 @@ const Offert = () => {
                 )}
               </motion.div>
               <a>
-                <br />
                 Oklejanie <br />
                 powierzchni
-                <br />
-                płaskich
               </a>{" "}
             </div>{" "}
           </Link>
@@ -86,14 +83,13 @@ const Offert = () => {
             href="/Offert/Naklejki_i_etykiety"
             style={{ textDecoration: "none", color: "black" }}
           >
-            <div className="offert_tile2 element">
+            <div className="offert_tile3 element">
               <Image
                 className="offert_image"
                 src={Tile2}
                 alt="Efekt wykonania naklejek i etykiet"
               />
               <a>
-                <br />
                 Naklejki i <br />
                 etykiet
               </a>
@@ -110,7 +106,6 @@ const Offert = () => {
                 alt="Efekt wykonania naklejek i etykiet"
               />
               <a>
-                <br />
                 Oklejanie <br />
                 Samochodów
               </a>
@@ -127,10 +122,7 @@ const Offert = () => {
                 alt="Efekt wykonania plakatu"
               ></Image>
 
-              <a>
-                <br />
-                Plakaty
-              </a>
+              <a>Plakaty</a>
             </div>{" "}
           </Link>
           <Link
@@ -143,10 +135,7 @@ const Offert = () => {
                 src={Tile5}
                 alt="Efekt wykonania roll up"
               />
-              <a>
-                <br />
-                Roll up
-              </a>
+              <a>Roll up</a>
             </div>{" "}
           </Link>
           <Link
@@ -160,8 +149,8 @@ const Offert = () => {
                 alt="Efekt wykonania tabliczek"
               />
               <a>
-                <br />
-                Tabliczki
+                Szyldy <br />
+                reklamowe
               </a>
             </div>{" "}
           </Link>

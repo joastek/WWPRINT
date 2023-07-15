@@ -57,8 +57,8 @@
     position: absolute;
     z-index: 999;
     padding: 0.3rem;
-    height: 11.5rem;
-    width: 15.5rem;
+    height: 9.5rem;
+    width: 13.5rem;
     @include respond(tab-land) {
       margin-top: 1em;
       height: 9em;
@@ -75,7 +75,7 @@
   position: absolute;
   position: absolute;
   width: 5em;
-  right: 34em;
+  right: 27em;
   top: 3.4em;
   @include respond(tab-land) {
     right: 15em;
@@ -96,11 +96,11 @@
 .moon {
   position: absolute;
   width: 4em;
-  right: 38em;
+  right: 27em;
   top: 3.4em;
-  @include respond(smaller-desktop) {
-    right: 35em;
-  }
+  // @include respond(smaller-desktop) {
+  //   right: 35em;
+  // }
   @include respond(tab-land) {
     right: 22em;
   }
@@ -152,7 +152,7 @@
     position: relative;
     color: #050505;
     font-style: normal;
-    font-size: 2.4rem;
+    font-size: 2rem;
     margin: 2.5rem;
     cursor: pointer;
     text-decoration: none; /* Usunięcie podkreślenia */
@@ -204,11 +204,11 @@
   margin-top: 2rem;
   margin-right: 5rem;
   padding: 1.2rem;
-  width: 25.4rem;
-  height: 7.2rem;
+  width: 20.4rem;
+  height: 6.2rem;
   font-style: normal;
   font-weight: 600;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   border: 0.5px solid #dadada;
   --border-size: 0.5rem;
   filter: drop-shadow(-4px 4px 9px rgba(0, 0, 0, 0.25))

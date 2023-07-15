@@ -6,6 +6,7 @@
   .poster_container {
     padding: 1em;
     font-size: 2em;
+    font-weight: normal;
     ol {
       padding: 2em;
       @include respond(phone) {

@@ -4,10 +4,10 @@
 
 @import "tailwindcss/utilities";
 .offert_container {
-  margin-top: 5em;
+  margin-top: 15em;
   margin-left: auto;
   margin-right: auto;
-  max-width: 130.5em;
+  max-width: 100.5em;
   @include respond(tab-port) {
     position: relative;
     margin-top: 5em;
@@ -28,17 +28,17 @@
     font-style: normal;
     font-weight: 500;
     font-size: 4.8rem;
-    line-height: 7.2rem;
+
     letter-spacing: 0.15em;
   }
 
   .offert_tiles {
     display: grid; /* Dodaj tę linię */
     grid-template-columns: repeat(3, 1fr);
-    gap: 5rem;
+    gap: 4rem;
     justify-content: center;
     align-items: center;
-    padding: 15em;
+    padding: 12em;
     @include respond(tab-land) {
       grid-gap: 2rem;
       justify-self: center; /* Wyśrodkowanie w poziomie */
@@ -54,91 +54,30 @@
       place-items: center;
     }
 
-    .offert_tile2 {
-      cursor: pointer;
-      background: rgba(239, 245, 255, 0.72);
-      width: 30em;
-      height: 55.8rem;
-      text-align: center;
-      justify-content: center;
-      overflow: hidden;
-      @include respond(tab-land) {
-        margin-top: 4em;
-        height: 50em;
-        width: 30em;
-        justify-self: center; /* Wyśrodkowanie w poziomie */
-        align-self: center;
-      }
-      @include respond(phone) {
-        height: 30em;
-        width: 16em;
-      }
-      .offert_image {
-        transition: transform 0.3s ease;
-        width: 36.1rem;
-        height: 33rem;
-        z-index: -1;
-        scale: 1.1;
-        @include respond(tab-land) {
-          width: 30em;
-          height: 27.5em;
-        }
-        @include respond(phone) {
-          width: 16em;
-          height: 16em;
-        }
-      }
-      .offert_image4 {
-        opacity: 0;
-        width: 150rem;
-        transition: opacity 0.3s ease-out;
-      }
-      .offert_image4.visible {
-        opacity: 1;
-      }
-      a {
-        z-index: 1;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 3.6rem;
-        line-height: 5.4rem;
-        @include respond(phone) {
-          margin-top: 0;
-          font-size: 2em;
-          line-height: 1.4em;
-        }
-      }
-    }
     .offert_tile3 {
       cursor: pointer;
       background: rgba(239, 245, 255, 0.72);
-
+      justify-content: center;
+      align-items: center;
+      place-items: center;
       text-align: center;
-      width: 30em;
+      margin: auto;
+      width: 20em;
       overflow: hidden;
-      height: 56em;
-      @include respond(tab-land) {
-        margin-top: 4em;
-        height: 50em;
-        width: 30em;
-        justify-self: center; /* Wyśrodkowanie w poziomie */
-        align-self: center;
-      }
+      height: 32em;
+
       @include respond(phone) {
-        height: 30em;
+        height: 22em;
         width: 16em;
       }
       .offert_image {
-        width: 35rem;
-        height: 34rem;
+        width: 30rem;
+        height: 22rem;
         z-index: -1;
 
         transition: background-image 0.3s ease;
         background-size: cover;
-        @include respond(tab-land) {
-          width: 230em;
-          height: 28.5em;
-        }
+
         @include respond(phone) {
           width: 16em;
           height: 16em;
@@ -146,11 +85,12 @@
       }
 
       a {
+        margin-top: 0;
         z-index: 1;
         font-style: normal;
         font-weight: 900;
-        font-size: 3.6rem;
-        line-height: 4.4rem;
+        font-size: 2.6rem;
+        // line-height: 4.4rem;
         margin-bottom: 2em;
         @include respond(phone) {
           margin-top: 0;

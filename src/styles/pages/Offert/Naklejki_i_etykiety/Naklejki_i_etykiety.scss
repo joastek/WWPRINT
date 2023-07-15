@@ -1,6 +1,6 @@
 @import "../../../abstracts/mixins";
 .description_container {
-  max-width: 120rem;
+  max-width: 110rem;
   margin: 5rem auto;
   font-size: 2em;
   @include respond(tab-land) {
@@ -40,7 +40,7 @@
     align-items: center;
     cursor: pointer;
     background: rgba(239, 245, 255, 0.72);
-    height: 52.8rem;
+    height: 48.8rem;
     width: 27.5rem;
     margin: 0 5rem;
     text-align: center;
@@ -65,9 +65,6 @@
     }
     .video_container {
       width: 28rem;
-
-      .video {
-      }
     }
     .offert_image {
       transition: transform 0.3s ease;
@@ -93,7 +90,7 @@
       z-index: 1;
       font-style: normal;
       font-weight: 900;
-      font-size: 2.5rem;
+      font-size: 2.4rem;
       line-height: 3.4rem;
       @include respond(tab-port) {
         margin-top: 0;

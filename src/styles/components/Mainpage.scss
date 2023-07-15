@@ -3,8 +3,7 @@
   padding-top: 10rem;
   padding-bottom: 5rem;
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 3rem auto;
   max-width: 110.5em;
   @include respond(big-desktop) {
     max-width: 130.5em;
@@ -32,7 +31,7 @@
     .mainpage_Aboutfontcontainer {
       font-style: normal;
       font-weight: 700;
-      font-size: 5.6rem;
+      font-size: 4.8rem;
       margin-bottom: 1.5rem;
     }
 
@@ -40,7 +39,7 @@
       width: 90%;
       font-style: normal;
       font-weight: 400;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       line-height: 3rem;
       @include respond(tab-port) {
         width: 100%;
@@ -50,14 +49,14 @@
       cursor: pointer;
       color: white;
       margin-top: 7rem;
-      width: 38rem;
-      height: 10rem;
+      width: 32rem;
+      height: 8rem;
       background: #000000;
       border: 0.5rem black solid;
       filter: drop-shadow(0px 9px 12px rgba(0, 0, 0, 0.61));
       font-style: normal;
       font-weight: 700;
-      font-size: 36px;
+      font-size: 3.2rem;
       transition: color 0.4s linear;
       @include respond(tab-port) {
         text-align: center;
@@ -67,7 +66,7 @@
           width: 8em;
         }
         @include respond(fold) {
-          font-size: 3.4em;
+          font-size: 2.4em;
           width: 6em;
         }
       }
@@ -187,7 +186,7 @@
     width: 75em;
     height: 8em;
     top: 95%;
-    left: -2%;
+    right: 25%;
     // z-index: 1200;
     border-radius: 50%;
     transform: perspective(0.8em) rotateX(5deg) scale(0.45, 0.45);
@@ -195,8 +194,12 @@
       left: -9%;
     }
     @include respond(smaller-desktop) {
-      top: 110%;
-      left: -7%;
+      top: 120%;
+      left: -9%;
+    }
+    @include respond(desktop) {
+      top: 120%;
+      left: 1%;
     }
     @include respond(big-desktop) {
       top: 130%;
@@ -237,7 +240,7 @@
     letter-spacing: 0.15em;
   }
   .mainpage_about_description {
-    padding: 7rem;
+    margin-top: 6rem;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -246,7 +249,7 @@
     @include respond(smaller-desktop) {
       font-size: 1.8rem;
       line-height: 1.8em;
-      padding: 1em;
+
       letter-spacing: 0.01px;
       word-spacing: 0.1px;
       font-weight: 400;
@@ -273,7 +276,7 @@
     text-align: center;
     font-style: normal;
     font-weight: 700;
-    font-size: 7.2rem;
+    font-size: 4.8rem;
     margin-bottom: 1.5rem;
     @include respond(tab-port) {
       margin-top: 2em;
@@ -291,14 +294,14 @@
     cursor: pointer;
     color: white;
     margin-top: 7rem;
-    width: 55rem;
-    height: 10rem;
+    width: 48rem;
+    height: 8rem;
     background: #000000;
     border: 0.5rem solid black;
     filter: drop-shadow(0px 9px 12px rgba(0, 0, 0, 0.61));
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 2.4rem;
     justify-content: center;
     align-items: center;
     margin-left: auto;
@@ -350,7 +353,7 @@
 }
 .progress-bar {
   position: fixed;
-  top: 11.7rem;
+  top: 10.5rem;
   left: 0;
   right: 0;
   height: 0.5rem;

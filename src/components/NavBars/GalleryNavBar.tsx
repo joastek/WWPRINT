@@ -74,7 +74,7 @@ const GalleryNavBar = () => {
             }
           >
             {" "}
-            Tabliczki
+            Szyldy reklamowe
           </Link>
         </div>
       </div>

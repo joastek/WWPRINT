@@ -20,9 +20,9 @@
     place-content: center;
   }
   .jpg {
-    margin-top: 2.5rem;
-    max-width: 114em;
-    margin: auto;
+    margin: 2.5rem;
+    max-width: 108em;
+
     @include respond(tab-land) {
       max-width: 85em;
     }
@@ -38,10 +38,8 @@
     }
   }
   .jpg_tiny {
-    margin-right: 1em;
-    margin-left: 1em;
-    max-width: 55.8em;
-    margin-top: 2.5rem;
+    max-width: 57.8em;
+    margin: 2.5rem 1rem;
     @include respond(tab-land) {
       max-width: 41.5em;
     }
@@ -59,7 +57,7 @@
   .jpg_smoth {
     margin-right: 1em;
     margin-left: 1em;
-    max-width: 55.8em;
+    max-width: 57.8em;
     margin-top: 2.5rem;
     @include respond(tab-land) {
       max-width: 41.5em;
