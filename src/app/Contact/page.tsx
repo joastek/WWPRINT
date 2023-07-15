@@ -166,8 +166,7 @@ const Contact = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />{" "}
-              * - Pola wymagane
-              <br />
+              <div className="requiment">* - Pola wymagane</div>
               <motion.button
                 type="submit"
                 value="Send"

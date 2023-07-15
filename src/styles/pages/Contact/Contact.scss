@@ -207,7 +207,7 @@
       width: 8em;
     }
   }
-  button {
+  .contact_button {
     margin-top: 2rem;
     cursor: pointer;
 
@@ -218,11 +218,14 @@
     filter: drop-shadow(-4px 4px 9px rgba(0, 0, 0, 0.25))
       drop-shadow(9px 8px 11px rgba(0, 0, 0, 0.25));
   }
-}
-
-.active_button {
-  background: #ffffff;
-}
-.notactive_button {
-  background-color: gray;
+  .requiment {
+    color: white;
+    font-size: 1.6rem;
+  }
+  .active_button {
+    background: #ffffff;
+  }
+  .notactive_button {
+    background-color: gray;
+  }
 }
