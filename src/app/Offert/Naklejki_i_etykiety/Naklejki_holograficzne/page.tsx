@@ -1,16 +1,24 @@
+"use client";
 import IMAGES from "../../../../components/IMAGES";
 import "../../../../styles/pages/Offert/Naklejki_i_etykiety/subpages/Naklejki_holograficzne.scss";
 import Image from "next/image";
 import Link from "next/link";
 import arrow from "../../../../../public/Arrow.png";
+import whitearrow from "../../../../../public/AroowWhite.png";
+import { useTheme } from "next-themes";
 
 const holoGraphic = () => {
+  const { theme, setTheme } = useTheme();
   return (
     <>
       <div className="hologram_container">
         <Link href="/Offert/Naklejki_i_etykiety">
           {" "}
-          <Image src={arrow} alt="Strzałka powrotu" className="arrow" />
+          <Image
+            src={theme === "dark" ? whitearrow : arrow}
+            alt="Logo firmy"
+            className="arrow"
+          />
         </Link>
         Oferujemy druk naklejek/etykiet samoprzylepnych, które mogą posłużyć
         jako doskonała reklama Twoich mediów społecznościowych. Nasze naklejki

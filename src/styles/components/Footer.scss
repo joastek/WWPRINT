@@ -5,6 +5,8 @@
   @include respond(phone) {
   }
   .footer_logo {
+    width: 11em;
+    height: 10em;
     @include respond(phone) {
       width: 7em;
       height: 5em;

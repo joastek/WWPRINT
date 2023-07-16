@@ -2,21 +2,37 @@
 // import "../../styles/components/Footer.scss";
 import Image from "next/image";
 import FacebookIcon from "../styles/icons/facebook.png";
+import FacebookWhite from "../../public/FbWhite.png";
 import InstagramIcon from "../styles/icons/instagram.png";
+import instagramwhite from "../../public/Insgaramwhite.png";
 import PhoneIcon from "../styles/icons/phone.png";
+import whitePhoneIcon from "../../public/Phonewhite.png";
 import MailIcon from "../styles/icons/mail.png";
-import Logo from "../../public/Logo.png";
+import whiteIcon from "../../public/MessageWhite.png";
+import Logoblack from "../../public/Logo.png";
+import Logowhite from "../../public/Logowhite.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 const Footer = () => {
+  const { theme, setTheme } = useTheme();
   return (
     <>
       <div className="footer_container ">
-        <Image src={Logo} alt="Logo firmy WWPrint" className="footer_logo" />
+        <Image
+          className="footer_logo"
+          src={theme === "dark" ? Logowhite : Logoblack}
+          alt="Logo firmy"
+        />
+
+        {/* // <Image src={Logo} alt="Logo firmy WWPrint" className="footer_logo" /> */}
         <div className="footer_contactbox">
           <div className="footer_icon">
             <div className="footer_icons">
-              <Image src={PhoneIcon} alt="Ikona telefonu" />
+              <Image
+                src={theme === "dark" ? whitePhoneIcon : PhoneIcon}
+                alt="Logo firmy"
+              />
             </div>
             <a href="tel:517258986">+48 517 258 986</a> <br />
           </div>
@@ -24,10 +40,9 @@ const Footer = () => {
           <div className="footer_icon">
             <div className="footer_icons">
               <Image
-                src={MailIcon}
-                alt="Ikona wiadmości mail"
-                className="footer_icon"
-              />{" "}
+                src={theme === "dark" ? whiteIcon : MailIcon}
+                alt="Logo firmy"
+              />
             </div>
             <a href="mailto:biurowwprint@gmail.com">biurowwprint@gmail.com</a>{" "}
           </div>
@@ -39,8 +54,8 @@ const Footer = () => {
               target="_blank"
             >
               <Image
-                src={FacebookIcon}
-                alt="Ikona prowadząca do witryny facebook firmy"
+                src={theme === "dark" ? FacebookWhite : FacebookIcon}
+                alt="Logo firmy"
                 className="footer_mediaicon"
               />
             </Link>{" "}
@@ -49,8 +64,8 @@ const Footer = () => {
             {" "}
             <Link href="https://www.instagram.com/ww.print/" target="_blank">
               <Image
-                src={InstagramIcon}
-                alt="Ikona prowadząca do witryny instagram firmy"
+                src={theme === "dark" ? instagramwhite : InstagramIcon}
+                alt="Logo firmy"
                 className="footer_mediaicon"
               />
             </Link>{" "}

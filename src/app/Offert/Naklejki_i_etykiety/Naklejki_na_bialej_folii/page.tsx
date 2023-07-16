@@ -5,9 +5,13 @@ import IMAGES from "../../../../components/IMAGES";
 import "../../../../styles/pages/Offert/Naklejki_i_etykiety/subpages/Naklejki_na_bialej_folii.scss";
 import Link from "next/link";
 import arrow from "../../../../../public/Arrow.png";
+import { useTheme } from "next-themes";
+import whitearrow from "../../../../../public/AroowWhite.png";
+
 const whiteFoil = () => {
   const { scrollYProgress } = useScroll();
 
+  const { theme, setTheme } = useTheme();
   return (
     <>
       <motion.div
@@ -17,7 +21,11 @@ const whiteFoil = () => {
       <div className="description_text">
         <Link href="/Offert/Naklejki_i_etykiety">
           {" "}
-          <Image src={arrow} alt="Strzałka powrotu" className="arrow" />
+          <Image
+            src={theme === "dark" ? whitearrow : arrow}
+            alt="Logo firmy"
+            className="arrow"
+          />
         </Link>
         Oferujemy druk naklejek/etykiet samoprzylepnych, które mogą posłużyć
         jako doskonała reklama Twoich mediów społecznościowych. Nasze naklejki

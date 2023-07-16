@@ -2,15 +2,18 @@
 import "../../styles/pages/Contact/Contact.scss";
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
+import emailjs from "@emailjs/browser";
 import Check from "../../../public/check.png";
 import Image from "next/image";
-import Footer from "@/components/Footer";
-import { usePathname } from "next/navigation";
+import whitePhone from "../../../public/Phonewhite.png";
+import whiteMessage from "../../../public/MessageWhite.png";
 import PhoneIcon from "../../styles/icons/phone.png";
 import MailIcon from "../../styles/icons/mail.png";
 const Contact = () => {
+  const { theme, setTheme } = useTheme();
   const form = useRef<HTMLFormElement | null>(null);
   const [showModal, setShowModal] = useState(false);
   const [countdown, setCountdown] = useState(4);
@@ -109,17 +112,24 @@ const Contact = () => {
           <div className="contact_description">
             <div className="contact_contact">
               <Image
-                src={MailIcon}
-                alt="Ikona wiadmości mail"
+                src={theme === "dark" ? whiteMessage : MailIcon}
+                alt="Logo firmy"
                 className="icon"
-              />{" "}
+              />
               e-mail:{" "}
-              <a href="mailto:biurowwprint@gmail.com">biurowwprint@gmail.com</a>{" "}
+              <a href="mailto:biurowwprint@gmail.com">
+                {" "}
+                biurowwprint@gmail.com
+              </a>{" "}
             </div>
             <br />
             <div className="contact_contact">
-              <Image src={PhoneIcon} alt="Ikona telefonu" className="icon" />
-              Telefon: <a href="tel:517258986">+48 517 258 986</a>
+              <Image
+                src={theme === "dark" ? whitePhone : PhoneIcon}
+                alt="Logo firmy"
+                className="icon"
+              />
+              Telefon: <a href="tel:517258986"> +48 517 258 986</a>
             </div>
             <br />
           </div>

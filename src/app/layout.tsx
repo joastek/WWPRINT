@@ -11,7 +11,7 @@ const inter = Poppins({
 });
 
 export const metadata = {
-  title: "WWPrint - Producent profesjonalnych naklejek",
+  title: "WWPrint -Drukarnia",
   description:
     "Oferujemy profesjonalne naklejki do ścian, okien i mebli, wykonane z dbałością o detale i estetykę. Dzięki naszym unikalnym wzorom i precyzji wykonania, wnętrza nabiorą stylowego i efektownego charakteru",
 };

@@ -69,7 +69,7 @@ const Offert = () => {
               <div className="offert_description">
                 <a>
                   Naklejki i <br />
-                  etykiet
+                  etykiety
                 </a>
               </div>
             </div>{" "}
@@ -88,7 +88,7 @@ const Offert = () => {
                 {" "}
                 <a>
                   Oklejanie <br />
-                  Samochodów
+                  Pojazdów
                 </a>{" "}
               </div>
             </div>{" "}
