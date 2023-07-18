@@ -12,7 +12,6 @@ import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import PhoneToggle from "./PhoneToggle";
-
 import { useTheme } from "next-themes";
 const NavBar = () => {
   const path = usePathname();
@@ -49,7 +48,9 @@ const NavBar = () => {
           stiffness: 120,
           duration: 4.5,
         }}
-        className={`navigationbar_container ${isActive ? "active" : ""}`}
+        className={`navigationbar_container ${
+          isActive ? "active" : ""
+        } transition-colors duration-500`}
         ref={navBarRef}
         style={{
           backgroundColor: theme === "dark" ? "#000" : "#fff",

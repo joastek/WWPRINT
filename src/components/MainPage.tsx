@@ -3,41 +3,45 @@ import Image from "next/image";
 import Link from "next/link";
 import IMAGES from "@/components/IMAGES";
 const MainPage = () => {
-    const image1 = {
-        y: [0, -20, 0],
-        transition: {
-          y: {
-            duration: 2.5,
-            repeat: Infinity, // Powtarza animację w nieskończoność
-            ease: "easeInOut",
-          },
-        },
-      };
-      const image2 = {
-        y: [250, 220, 250],
-        x: -155,
-        transition: {
-          y: {
-            duration: 2.8,
-            repeat: Infinity, // Powtarza animację w nieskończoność
-            ease: "easeInOut",
-          },
-        },
-      };
-      const image3 = {
-        y: [0, -20, 0],
-        x: -325,
-        transition: {
-          y: {
-            duration: 3.5,
-            repeat: Infinity, // Powtarza animację w nieskończoność
-            ease: "easeInOut",
-          },
-        },
-      };
+  const image1 = {
+    y: [0, -20, 0],
+    transition: {
+      y: {
+        duration: 2.5,
+        repeat: Infinity, // Powtarza animację w nieskończoność
+        ease: "easeInOut",
+      },
+    },
+  };
+  const image2 = {
+    y: [250, 220, 250],
+    x: -155,
+    transition: {
+      y: {
+        duration: 2.8,
+        repeat: Infinity, // Powtarza animację w nieskończoność
+        ease: "easeInOut",
+      },
+    },
+  };
+  const image3 = {
+    y: [0, -20, 0],
+    x: -325,
+    transition: {
+      y: {
+        duration: 3.5,
+        repeat: Infinity, // Powtarza animację w nieskończoność
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <>
-      <div className="mainpage_container " id="MainPage">
+      <div
+        className="mainpage_container dark:transition-colors duration-500 "
+        id="MainPage"
+      >
         <motion.div
           className="mainpage_container "
           initial={{ opacity: 0, scale: 0.5 }}
@@ -48,7 +52,7 @@ const MainPage = () => {
             ease: [0.6, 0.92, 0.6, 1.01],
           }}
         >
-          <div className="mainpage_fontcontainer">
+          <div className="mainpage_fontcontainer ">
             <div className="mainpage_Aboutfontcontainer">
               O foliach
               <br />
@@ -92,4 +96,4 @@ const MainPage = () => {
     </>
   );
 };
-export default MainPage
+export default MainPage;

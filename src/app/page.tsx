@@ -12,11 +12,11 @@ export default function Home() {
   return (
     <>
       <motion.div
-        className="progress-bar"
+        className="progress-bar "
         style={{ scaleX: scrollYProgress }}
       />
       <MainPage />
-   
+
       <Offert />
       <About />
     </>
