@@ -65,6 +65,7 @@ const Offert = () => {
                 className="offert_image"
                 src={Tile2}
                 alt="Efekt wykonania naklejek i etykiet"
+                style={{ scale: 1.15 }}
               />
               <div className="offert_description">
                 <a>
