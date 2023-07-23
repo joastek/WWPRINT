@@ -1,6 +1,10 @@
 import { motion, useScroll } from "framer-motion";
+
 import Link from "next/link";
+
 const About = () => {
+  const apiKey = "TWÓJ_KLUCZ_API";
+  const placeId = "TWÓJ_ID_LOKALIZACJI_GOOGLE";
   return (
     <>
       {" "}
@@ -15,7 +19,7 @@ const About = () => {
           ease: [0.6, 0.92, 0.6, 1.01],
         }}
       >
-        <h2>O nas</h2>
+        <h1>O nas</h1>
         <div className="mainpage_about_description">
           WWPrint to dynamiczna drukarnia założona przez braci bliźniaków,
           Piotra i Tomasza. Firma specjalizuje się w kompleksowej obsłudze

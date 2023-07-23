@@ -34,7 +34,7 @@ const Offert = () => {
         className="offert_container "
         id="Oferta"
       >
-        <h2>Oferta</h2>
+        <h1>Oferta</h1>
 
         <div className="offert_tiles">
           <Link
