@@ -42,12 +42,7 @@ const About = () => {
           to nie tylko drukarnia, ale również partner biznesowy, który wspiera
           klientów w promocji marki i osiąganiu sukcesu.
         </div>
-        <script
-          src="https://static.elfsight.com/platform/platform.js"
-          data-use-service-core
-          defer
-        ></script>
-        <div className="elfsight-app-9c024abd-1c62-4c1f-a223-c4730b1d88a2"></div>
+
         <div className="mainpage_about_Aboutfontcontainer">
           100% gwarantowanej <a>satysfakcji</a>
         </div>
