@@ -3,7 +3,7 @@ import GalleryNavBar from "@/components/NavBars/GalleryNavBar";
 import "../../../styles/pages/Offert/Naklejki_i_etykiety/Naklejki_i_etykiety.scss";
 import Link from "next/link";
 
-import Tile2 from "../../../../public/image5.png";
+import Tile2 from "../../../../public/image5.jpg";
 import Image from "next/image";
 import { motion, useScroll } from "framer-motion";
 const StickersAndLables = () => {
