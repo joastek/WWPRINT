@@ -29,8 +29,9 @@ export default function RootLayout({
         <meta
           name="google-site-verification"
           content="vz7vDaSgtxvNHGqmSQiQiUFn8krabemofn7wov3w_Sg"
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
         />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>{" "}
       <Providers>
         <body className={inter.className}>
