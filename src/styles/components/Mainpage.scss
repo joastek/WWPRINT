@@ -87,6 +87,7 @@
       transform-origin: 0 0;
       transition-timing-function: cubic-bezier(0.5, 1.6);
       @include respond(tab-land) {
+        transition: none;
         display: none;
       }
     }
@@ -347,6 +348,9 @@
     transition: transform 0.5s;
     transform-origin: 0 0;
     transition-timing-function: cubic-bezier(0.5, 1.6);
+    @include respond(tab-land) {
+      transition: none;
+    }
   }
   .mainpage_button::before {
     transform: scaleX(0);
