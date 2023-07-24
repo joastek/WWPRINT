@@ -13,7 +13,7 @@ const inter = Poppins({
 export const metadata = {
   title: "WWPrint - Agencja reklamowa - Drukarnia",
   description:
-    "Profesjonalne naklejki do ścian, okien i mebli, wykonane z dbałością o detale i estetykę. Nasze unikale wzory i precyzja wykonania, wnętrza nabiorą stylowego i efektownego charakteru",
+    "Profesjonalne naklejki do ścian, mebli i okien, wykonane z dbałością o detale i estetykę. Nasze unikale wzory i precyzja wykonania, wnętrza nabiorą stylowego i efektownego charakteru",
 };
 
 export default function RootLayout({
@@ -29,9 +29,8 @@ export default function RootLayout({
         <meta
           name="google-site-verification"
           content="vz7vDaSgtxvNHGqmSQiQiUFn8krabemofn7wov3w_Sg"
-        
         />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>{" "}
       <Providers>
         <body className={inter.className}>
