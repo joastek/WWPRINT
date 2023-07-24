@@ -1,7 +1,7 @@
 import { motion, useScroll } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import IMAGES from "@/components/IMAGES";
+import IMAGES from "@/data/IMAGES";
 const MainPage = () => {
   const image1 = {
     y: [0, -20, 0],

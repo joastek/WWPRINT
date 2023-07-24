@@ -15,7 +15,7 @@
   }
   @include respond(big-desktop) {
     position: relative;
-    margin-top: 25em;
+
     padding-top: 0em;
   }
   h1 {
@@ -121,10 +121,9 @@
       font-style: normal;
 
       transition: color 0.4s linear;
-      @include respond(tab-port) {
-        text-align: center;
-        justify-content: center;
-        align-items: center;
+      @include respond(tab-land) {
+        background-color: #ffffff;
+        color: #000000;
       }
     }
     .element:hover {
@@ -142,6 +141,9 @@
       transition: transform 1s;
       transform-origin: 0 0;
       transition-timing-function: cubic-bezier(0.5, 1.6);
+      @include respond(tab-land) {
+        display: none;
+      }
     }
     .element::before {
       transform: scaleY(1);

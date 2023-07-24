@@ -1,5 +1,5 @@
 import GalleryNavBar from "@/components/NavBars/GalleryNavBar";
-import IMAGES from "@/components/IMAGES";
+import IMAGES from "@/data/IMAGES";
 import Image from "next/image";
 import "@/styles/pages/Offert/Plakaty.scss";
 const Poster = () => {

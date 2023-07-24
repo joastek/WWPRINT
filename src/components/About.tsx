@@ -1,10 +1,26 @@
 import { motion, useScroll } from "framer-motion";
-
+import { useEffect, useState } from "react";
 import Link from "next/link";
-
+import axios from "axios";
 const About = () => {
-  const apiKey = "TWÓJ_KLUCZ_API";
-  const placeId = "TWÓJ_ID_LOKALIZACJI_GOOGLE";
+  const apiKey = "AIzaSyAidhmOphAxgdU2jHbcfeiYSN1gJyFmTy8";
+  const placeId = "ChIJhesbVwWWHygR_4EbBaYCAMQ";
+  const [reviews, setReviews] = useState([]);
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const response = await axios.get(
+          `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&key=${apiKey}`
+        );
+        setReviews(response.data.result.reviews);
+      } catch (error) {
+        console.error("Error fetching reviews:", error);
+      }
+    };
+
+    fetchReviews();
+  }, [apiKey, placeId]);
   return (
     <>
       {" "}
@@ -20,6 +36,14 @@ const About = () => {
         }}
       >
         <h1>O nas</h1>
+        {reviews.map((review) => (
+          <div key={review}>
+            <h3>{review}</h3>
+            <p>Rating: {review}</p>
+            <p>{review}</p>
+            <hr />
+          </div>
+        ))}
         <div className="mainpage_about_description">
           WWPrint to dynamiczna drukarnia założona przez braci bliźniaków,
           Piotra i Tomasza. Firma specjalizuje się w kompleksowej obsłudze

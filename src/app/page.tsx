@@ -6,6 +6,7 @@ import Offert from "@/components/Offert";
 import { motion, useScroll } from "framer-motion";
 import MainPage from "@/components/MainPage";
 import About from "@/components/About";
+import Reviews from "@/components/Reviews";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -16,8 +17,9 @@ export default function Home() {
         style={{ scaleX: scrollYProgress }}
       />
       <MainPage />
-
+      <Reviews />
       <Offert />
+
       <About />
     </>
   );

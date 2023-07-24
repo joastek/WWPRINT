@@ -11,9 +11,9 @@ const inter = Poppins({
 });
 
 export const metadata = {
-  title: "WWPrint -Drukarnia",
+  title: "WWPrint - Agencja reklamowa - Drukarnia",
   description:
-    "Oferujemy profesjonalne naklejki do ścian, okien i mebli, wykonane z dbałością o detale i estetykę. Dzięki naszym unikalnym wzorom i precyzji wykonania, wnętrza nabiorą stylowego i efektownego charakteru",
+    "Profesjonalne naklejki do ścian, okien i mebli, wykonane z dbałością o detale i estetykę. Nasze unikale wzory i precyzja wykonania, wnętrza nabiorą stylowego i efektownego charakteru",
 };
 
 export default function RootLayout({

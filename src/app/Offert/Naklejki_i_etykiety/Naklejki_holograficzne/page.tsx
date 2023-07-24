@@ -1,5 +1,5 @@
 "use client";
-import IMAGES from "../../../../components/IMAGES";
+import IMAGES from "../../../../data/IMAGES";
 import "../../../../styles/pages/Offert/Naklejki_i_etykiety/subpages/Naklejki_holograficzne.scss";
 import Image from "next/image";
 import Link from "next/link";

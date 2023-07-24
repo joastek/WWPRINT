@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion, useScroll } from "framer-motion";
-import IMAGES from "../../../../components/IMAGES";
+import IMAGES from "../../../../data/IMAGES";
 import "../../../../styles/pages/Offert/Naklejki_i_etykiety/subpages/Naklejki_na_bialej_folii.scss";
 import Link from "next/link";
 import arrow from "../../../../../public/Arrow.png";

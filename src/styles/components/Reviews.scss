@@ -1,0 +1,108 @@
+@import "../abstracts/mixins";
+@keyframes slider {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-550%);
+  }
+}
+
+.reviews_slider {
+  /* Set the width of the slider to occupy its parent's width */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-x: hidden;
+  margin: 3rem auto;
+  max-width: 170rem;
+
+  white-space: nowrap;
+  position: relative;
+  @include respond(big-desktop) {
+    margin-top: 35rem;
+  }
+  @include respond(tab-land) {
+    max-width: 80rem;
+  }
+  .header {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    justify-content: center;
+    @include respond(tab-land) {
+      flex-wrap: wrap;
+      white-space: pre;
+    }
+    h2 {
+      max-width: 150rem;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 4.8rem;
+      margin-bottom: 2rem;
+      letter-spacing: 0.15em;
+      @include respond(tab-land) {
+        font-size: 2.8rem;
+      }
+      @include respond(tab-port) {
+        font-size: 2.8rem;
+        white-space: wrap;
+      }
+      @include respond(tab-port) {
+        // font-size: 1.6rem;
+      }
+    }
+
+    .header_star {
+      width: 6rem;
+      height: 6rem;
+      color: gold;
+      @include respond(tab-land) {
+        width: 100vw;
+        width: 3rem;
+        height: 3rem;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .review_container:hover {
+    animation-play-state: paused;
+  }
+  .review_container {
+    animation: 425s slider infinite linear;
+    vertical-align: top;
+
+    .review_item {
+      padding: 3rem;
+      display: inline-block;
+      white-space: wrap; /* Prevent the items from wrapping to the next line */
+      vertical-align: top;
+
+      .review_quote {
+        margin-left: -1%;
+        position: absolute;
+        @include respond(tab-land) {
+          margin-left: -2%;
+        }
+      }
+
+      .review_stars {
+        display: flex;
+        .review_star {
+          width: 1rem;
+          color: gold;
+        }
+      }
+
+      .review {
+        font-size: 1.6rem;
+        max-width: 32rem;
+      }
+
+      .review_author {
+        font-size: 1.6rem;
+        font-style: italic;
+      }
+    }
+  }
+}
