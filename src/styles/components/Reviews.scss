@@ -7,7 +7,50 @@
     transform: translateX(-550%);
   }
 }
+.header {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: wrap;
+  @include respond(tab-land) {
+    flex-wrap: wrap;
+    flex-direction: wrap;
+  }
+  h2 {
+    max-width: 150rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.8rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.15em;
+    flex-direction: wrap;
+    @include respond(tab-land) {
+      font-size: 2.8rem;
+    }
+    @include respond(tab-port) {
+      font-size: 2.8rem;
+      white-space: wrap;
+    }
+    @include respond(tab-port) {
+      // font-size: 1.6rem;
+    }
+  }
 
+  .header_star {
+    width: 6rem;
+    height: 6rem;
+    color: gold;
+    @include respond(tab-land) {
+      width: 100vw;
+      width: 3rem;
+      height: 3rem;
+      flex-wrap: wrap;
+    }
+  }
+}
 .reviews_slider {
   /* Set the width of the slider to occupy its parent's width */
   overflow-x: auto; /* Enable horizontal scrolling */
@@ -22,50 +65,6 @@
   }
   @include respond(tab-land) {
     max-width: 80rem;
-  }
-  .header {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    white-space: pre;
-    @include respond(tab-land) {
-      flex-wrap: wrap;
-      white-space: pre;
-    }
-    h2 {
-      max-width: 150rem;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 4.8rem;
-      margin-bottom: 2rem;
-      letter-spacing: 0.15em;
-      white-space: wrap;
-      @include respond(tab-land) {
-        font-size: 2.8rem;
-      }
-      @include respond(tab-port) {
-        font-size: 2.8rem;
-        white-space: wrap;
-      }
-      @include respond(tab-port) {
-        // font-size: 1.6rem;
-      }
-    }
-
-    .header_star {
-      width: 6rem;
-      height: 6rem;
-      color: gold;
-      @include respond(tab-land) {
-        width: 100vw;
-        width: 3rem;
-        height: 3rem;
-        flex-wrap: wrap;
-      }
-    }
   }
 
   .review_container:hover {

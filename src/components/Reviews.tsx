@@ -6,12 +6,11 @@ import "@/styles/components/Reviews.scss";
 export default function Reviews() {
   return (
     <>
+      <div className="header">
+        <h2> Nasi klienci oceniają nasze usługi na 5/5! </h2>
+        <FaStar className="header_star " />{" "}
+      </div>
       <div className="reviews_slider">
-        <div className="header">
-          <h2> Nasi klienci oceniają nasze usługi na 5/5! </h2>
-          <FaStar className="header_star " />{" "}
-        </div>
-
         <div className="review_container">
           {ReviewItems.map(({ author, review }) => (
             <div className="review_item" key={author}>
