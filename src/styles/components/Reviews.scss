@@ -4,7 +4,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-550%);
+    transform: translateX(-120%);
   }
 }
 .header {
@@ -12,13 +12,13 @@
   margin: auto;
   text-align: center;
   justify-content: center;
-
+  max-width: 90rem;
   h2 {
     position: relative;
-    max-width: 150rem;
+    display: flex;
     font-style: normal;
     font-weight: 500;
-    font-size: 4.8rem;
+    font-size: 3.8rem;
     margin-bottom: 2rem;
     letter-spacing: 0.15em;
 
@@ -39,14 +39,17 @@
     }
   }
 }
+.reviews_slider:hover .slick-slider .slick-list .review {
+  animation-play-state: paused;
+}
 .reviews_slider {
   /* Set the width of the slider to occupy its parent's width */
   overflow-x: auto; /* Enable horizontal scrolling */
   overflow-x: hidden;
   margin: 3rem auto;
   max-width: 170rem;
-
-  white-space: nowrap;
+  cursor: pointer;
+  flex-wrap: wrap;
   position: relative;
   @include respond(big-desktop) {
     margin-top: 35rem;
@@ -55,27 +58,20 @@
     max-width: 80rem;
   }
 
-  .review_container:hover {
-    animation-play-state: paused;
-  }
   .review_container {
-    animation: 425s slider infinite linear;
+    // animation: 25s slider infinite linear;
     vertical-align: top;
 
     .review_item {
       padding: 3rem;
-      display: inline-block;
-      white-space: wrap; /* Prevent the items from wrapping to the next line */
+
       vertical-align: top;
 
       .review_quote {
-        margin-left: -1%;
-        position: absolute;
+        margin-left: -5%;
         @include respond(tab-land) {
-          margin-left: -2%;
         }
         @include respond(tab-port) {
-          margin-left: -4%;
         }
       }
 
@@ -88,8 +84,12 @@
       }
 
       .review {
+        animation-play-state: paused;
         font-size: 1.6rem;
         max-width: 32rem;
+        @include respond(tab-port) {
+          width: 12em;
+        }
       }
 
       .review_author {

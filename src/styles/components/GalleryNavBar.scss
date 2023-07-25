@@ -35,6 +35,10 @@
       transition: color 0.4s linear;
       @include respond(tab-land) {
         filter: none;
+        transition: none;
+
+        background-color: #ffffff;
+        color: black;
         font-size: 2rem;
         width: 25rem;
       }
@@ -95,7 +99,6 @@
       transform-origin: 0 0;
       transition-timing-function: cubic-bezier(0.5, 1.6);
       @include respond(tab-land) {
-        transition: none;
       }
     }
     .GalleryNavBar_element::before {

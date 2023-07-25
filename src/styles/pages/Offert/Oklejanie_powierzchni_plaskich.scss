@@ -20,7 +20,10 @@
     place-content: center;
   }
   .jpg {
-    margin: 2.5rem;
+    place-content: center;
+    place-items: center;
+    justify-content: center;
+    margin: auto;
     max-width: 108em;
 
     @include respond(tab-land) {

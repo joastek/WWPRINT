@@ -45,26 +45,14 @@ const About = () => {
           </div>
         ))}
         <div className="mainpage_about_description">
-          WWPrint to dynamiczna drukarnia założona przez braci bliźniaków,
-          Piotra i Tomasza. Firma specjalizuje się w kompleksowej obsłudze
-          drukarskiej dla firm, agencji reklamowych oraz klientów
-          indywidualnych. Oferuje szeroki wybór produktów i usług, takich jak
-          ulotki, plakaty, wizytówki, etykiety, naklejki samoprzylepne,
-          oklejanie witryn i pojazdów, oraz wiele innych. Piotr przynosi do
-          firmy swoje doświadczenie w branży reklamowej, co pozwala na
-          świadczenie profesjonalnego doradztwa w zakresie projektowania
-          graficznego i strategii reklamowej. Tomasz natomiast jest ekspertem w
-          dziedzinie druku i produkcji, posiadając głęboką wiedzę techniczną
-          oraz śledząc najnowsze trendy i technologie. WWPrint kładzie nacisk na
-          profesjonalizm, jakość i terminowość zleceń, współpracując jedynie z
-          zaufanymi dostawcami materiałów. Bracia bliźniacy zapewniają
-          indywidualne podejście do klientów i pełne zaangażowanie w realizację
-          zleceń. Firma WWPrint stale doskonali swoje umiejętności, śledząc
-          najnowsze trendy i uczestnicząc w szkoleniach oraz konferencjach.
-          Dzięki temu są w stanie oferować innowacyjne rozwiązania, które
-          spełniają oczekiwania nawet najbardziej wymagających klientów. WWPrint
-          to nie tylko drukarnia, ale również partner biznesowy, który wspiera
-          klientów w promocji marki i osiąganiu sukcesu.
+          Piotr i Tomasz, bracia bliźniacy pełni zapału i wizji, postanowili
+          połączyć siły i założyć własną firmę reklamową. Piotr, posiadając
+          cenne doświadczenie zdobyte w hurtowni reklamowej, przyniósł do
+          projektu wiedzę o branży i kreatywność w kreowaniu kampanii. Tomasz
+          zaś, wnosił swoje umiejętności zarządzania i organizacji, dzięki czemu
+          cały proces powstawania firmy był dobrze zorganizowany. Wspólnymi
+          siłami stworzyli dynamiczny i profesjonalny zespół, gotowy sprostać
+          każdemu wyzwaniu.
         </div>
 
         <div className="mainpage_about_Aboutfontcontainer">

@@ -14,8 +14,9 @@
     left: -8%;
     position: absolute;
     @include respond(tab-land) {
+      position: relative;
       left: 0;
-      top: -2%;
+      top: -5%;
     }
   }
   .description_space {

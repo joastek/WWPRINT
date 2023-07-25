@@ -64,15 +64,17 @@
       margin: auto;
       width: 20em;
       overflow: hidden;
-      height: 32em;
-
+      height: 30em;
+      @include respond(tab-land) {
+        border: 0.1rem solid rgb(0, 0, 0);
+      }
       @include respond(phone) {
         height: 22em;
         width: 16em;
       }
       .offert_image {
         width: 30rem;
-        height: 22rem;
+        height: 19.5rem;
         z-index: -1;
 
         transition: background-image 0.3s ease;
@@ -122,6 +124,7 @@
       transition: color 0.4s linear;
       @include respond(tab-land) {
         filter: none;
+
         background-color: #ffffff;
         color: #000000;
       }

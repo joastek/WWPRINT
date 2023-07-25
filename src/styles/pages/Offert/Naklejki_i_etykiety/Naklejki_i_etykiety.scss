@@ -116,9 +116,11 @@
 
     transition: color 0.4s linear;
     @include respond(tab-port) {
-      text-align: center;
-      justify-content: center;
-      align-items: center;
+      border: 0.1rem solid black;
+      background-color: white;
+      color: black;
+      filter: none;
+      transition: none;
     }
   }
   .element:hover {
