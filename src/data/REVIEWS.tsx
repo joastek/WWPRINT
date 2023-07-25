@@ -6,11 +6,6 @@ interface ReviewItem {
 const ReviewItems: ReviewItem[] = [
   {
     review:
-      "Jestem bardzo zadowolona z zakupu, WWPrint od razu wzbudził moje zaufanie. Dostałam wiele propozycji obrysów, cała procedura została mi wyjaśniona i nie musiałam się niczym przejmować. Dostałam zdjęcie dwóch wydrukowanych rozmiarów naklejek (bo nie mogłam się zdecydować), no i zdecydowałam się na oba. Nie było z niczym problemu, wszystko na spokojnie. Jakość naklejek rewelacyjna, tak samo jak cena. Polecam i już niedługo sama zakupię kolejne! ❤️️",
-    author: "~Klaudia",
-  },
-  {
-    review:
       "Fantastyczna jakość wydruku i najważniejsze ogromne zaangażowanie w pomoc klientowi. Czułem się obsłużony :)️",
     author: "~Andrzej",
   },

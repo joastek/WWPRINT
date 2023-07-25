@@ -7,8 +7,11 @@ export default function Reviews() {
   return (
     <>
       <div className="header">
-        <h2> Nasi klienci oceniają nasze usługi na 5/5! </h2>
-        <FaStar className="header_star " />{" "}
+        <h2>
+          {" "}
+          Nasi klienci oceniają nasze usługi na 5/5!{" "}
+          <FaStar className="header_star " />{" "}
+        </h2>
       </div>
       <div className="reviews_slider">
         <div className="review_container">

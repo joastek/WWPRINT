@@ -17,9 +17,9 @@ export default function Home() {
         style={{ scaleX: scrollYProgress }}
       />
       <MainPage />
-      <Reviews />
-      <Offert />
 
+      <Offert />
+      <Reviews />
       <About />
     </>
   );
