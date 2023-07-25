@@ -45,14 +45,12 @@ const About = () => {
           </div>
         ))}
         <div className="mainpage_about_description">
-          Piotr i Tomasz, bracia bliźniacy pełni zapału i wizji, postanowili
-          połączyć siły i założyć własną firmę reklamową. Piotr, posiadając
-          cenne doświadczenie zdobyte w hurtowni reklamowej, przyniósł do
-          projektu wiedzę o branży i kreatywność w kreowaniu kampanii. Tomasz
-          zaś, wnosił swoje umiejętności zarządzania i organizacji, dzięki czemu
-          cały proces powstawania firmy był dobrze zorganizowany. Wspólnymi
-          siłami stworzyli dynamiczny i profesjonalny zespół, gotowy sprostać
-          każdemu wyzwaniu.
+          Firma reklamowa WWPrint to efekt połączenia sił kreatywnych i pełnych
+          zapału braci bliźniaków. Dzięki długoletniemu doświadczeniu w branży
+          reklamowej Piotra, który wniósł do firmy swoja cenną wiedzę i
+          twórczość w kreowaniu projektów reklamowanych, oraz umiejętnościom
+          zarządzania zespołem i dobrej organizacji pracy Tomasza, stworzono
+          dynamiczny i profesjonalny zespół, gotowy sprostać każdemu wyzwaniu.
         </div>
 
         <div className="mainpage_about_Aboutfontcontainer">
