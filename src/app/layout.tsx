@@ -30,19 +30,7 @@ export default function RootLayout({
           name="google-site-verification"
           content="vz7vDaSgtxvNHGqmSQiQiUFn8krabemofn7wov3w_Sg"
         /> */}
-        <script>{`window.dataLayer = window.dataLayer || [];`}</script>
 
-        <script
-          async
-          src={"https://www.googletagmanager.com/gtag/js?id=AW-11277230973"}
-        ></script>
-        <script>
-          {`  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-11277230973')`}
-        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>{" "}
       <Providers>
