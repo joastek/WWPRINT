@@ -19,7 +19,7 @@ export default function Home() {
         onError={(e) => {
           console.error("Script failed to load", e);
         }}
-        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE}`}
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=AW-11277230973`}
         crossOrigin="anonymous"
       />
       <motion.div

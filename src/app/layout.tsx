@@ -26,10 +26,10 @@ export default function RootLayout({
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta charSet="UTF-8" />
-        {/* <meta
+        <meta
           name="google-site-verification"
           content="vz7vDaSgtxvNHGqmSQiQiUFn8krabemofn7wov3w_Sg"
-        /> */}
+        />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>{" "}
