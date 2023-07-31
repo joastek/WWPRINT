@@ -4,6 +4,7 @@ import Head from "next/head";
 import { Poppins } from "next/font/google";
 import Footer from "@/components/Footer";
 import Providers from "@/components/darkMode";
+import GoogleAnalytics from "@/components/GoogleAnalytcis";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>{" "}
+      <GoogleAnalytics GA_MEASUREMENT_ID="G-7NP54G6NG0" />
       <Providers>
         <body className={inter.className}>
           <NavBar />
