@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import Providers from "@/components/darkMode";
 import GoogleAnalytics from "@/components/GoogleAnalytcis";
 import { useState, useEffect } from "react";
-import FacebookMsg from "@/components/FacebookMsg";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -50,7 +49,6 @@ export default function RootLayout({
               {" "}
               <NavBar />
               {children} <Footer />
-              <FacebookMsg/>
             </Providers>
           )}
         </div>
