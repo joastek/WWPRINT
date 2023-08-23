@@ -13,7 +13,7 @@ const inter = Poppins({
   weight: ["400"],
 });
 
-export const metadata = {
+const metadata = {
   title: "WWPrint - Agencja reklamowa - Drukarnia",
   description:
     "Profesjonalne naklejki do ścian, mebli i okien, wykonane z dbałością o detale i estetykę. Nasze unikale wzory i precyzja wykonania, wnętrza nabiorą stylowego i efektownego charakteru",
