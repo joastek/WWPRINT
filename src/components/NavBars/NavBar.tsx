@@ -81,24 +81,25 @@ const NavBar = () => {
             spy={true}
             smooth={true}
           >
-            <NavLink
-              href="/"
-              style={{ textDecoration: "none" }}
-              onClick={handleToggleClick}
+            <motion.div
+              className="base-text"
+              onClick={() => scroll.scrollToTop()}
+              style={{
+                color:
+                  theme === "dark" || window.innerWidth <= 900
+                    ? "#fff"
+                    : "#000",
+              }}
             >
-              <motion.div
-                className="base-text"
-                onClick={() => scroll.scrollToTop()}
-                style={{
-                  color:
-                    theme === "dark" || window.innerWidth <= 900
-                      ? "#fff"
-                      : "#000",
-                }}
+              {" "}
+              <NavLink
+                href="/"
+                style={{ textDecoration: "none" }}
+                onClick={handleToggleClick}
               >
                 Strona główna
-              </motion.div>
-            </NavLink>
+              </NavLink>{" "}
+            </motion.div>
           </ScrollLink>
           {/* ///////////////////////////////////////// */}
 
