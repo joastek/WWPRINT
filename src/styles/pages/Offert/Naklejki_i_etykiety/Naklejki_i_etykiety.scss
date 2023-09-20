@@ -1,7 +1,9 @@
 @import "../../../abstracts/mixins";
 .description_container {
   max-width: 110rem;
-  margin: 5rem auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 22rem;
   font-size: 2em;
   @include respond(tab-land) {
     max-width: 100rem;

@@ -1,14 +1,13 @@
 @import "../../styles/abstracts//mixins";
 .GalleryNavBar_position {
-  margin-top: 5em;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 15rem;
   max-width: 100.5em;
   @include respond(tab-land) {
     max-width: 50em;
   }
   .GalleryNavBar_container {
-    margin-top: 15rem;
     display: grid; /* Dodaj tę linię */
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;

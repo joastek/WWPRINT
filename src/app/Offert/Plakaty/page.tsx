@@ -13,6 +13,7 @@ const Poster = () => {
         style={{
           backgroundColor: theme === "dark" ? "#000" : "#fff",
         }}
+        className="transition-colors duration-500"
       >
         <GalleryNavBar />
         <div className="poster_position">

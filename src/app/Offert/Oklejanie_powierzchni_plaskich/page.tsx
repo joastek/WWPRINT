@@ -9,9 +9,20 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
+
+import { useTheme } from "next-themes";
+
+
 const FlatSurface = () => {
+  const { systemTheme, theme, setTheme } = useTheme();
   return (
     <>
+    <div
+  style={{
+    backgroundColor: theme === "dark" ? "#000" : "#fff",
+  }}
+  className="transition-colors duration-500"
+>
       <GalleryNavBar />
       <motion.div
         className="flat_container"
@@ -44,7 +55,7 @@ const FlatSurface = () => {
           <Image src={IMAGES.FLATS.image10} alt="" className="jpg_threerow" />{" "}
           <Image src={IMAGES.FLATS.image11} alt="" className="jpg_threerow" />{" "}
         </div>
-      </motion.div>
+      </motion.div></div>
     </>
   );
 };

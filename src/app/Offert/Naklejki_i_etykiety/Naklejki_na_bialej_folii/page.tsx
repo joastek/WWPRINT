@@ -8,12 +8,20 @@ import arrow from "../../../../../public/Arrow.png";
 import { useTheme } from "next-themes";
 import whitearrow from "../../../../../public/AroowWhite.png";
 
+
+
 const whiteFoil = () => {
   const { scrollYProgress } = useScroll();
 
   const { theme, setTheme } = useTheme();
   return (
     <>
+    <div
+  style={{
+    backgroundColor: theme === "dark" ? "#000" : "#fff",
+  }}
+  className="transition-colors duration-500"
+>
       <motion.div
         className="progress-bar"
         style={{
@@ -454,7 +462,7 @@ const whiteFoil = () => {
           width={400}
           height={400}
         />
-      </motion.div>
+      </motion.div></div>;
     </>
   );
 };
