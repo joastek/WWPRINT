@@ -29,7 +29,7 @@ export default function Home() {
       setHidden(false);
     }
   });
-  const isSmallScreen = window.innerWidth <= 1400;
+  const isSmallScreen = window.innerWidth <= 1357;
   const animateVariant = isSmallScreen ? "hidden" : "visible";
   return (
     <>
@@ -42,8 +42,8 @@ export default function Home() {
       >
         <motion.div
           variants={{
-            visible: { y: isSmallScreen ? "0rem" : "8rem" },
-            hidden: { y: isSmallScreen ? "0rem" : "-3rem" },
+            visible: { y: isSmallScreen ? "0rem" : "11rem" },
+            hidden: { y: isSmallScreen ? "0rem" : "0rem" },
           }}
           animate={hidden ? "hidden" : "visible"}
           transition={{ duration: 0.35, ease: "easeInOut" }}

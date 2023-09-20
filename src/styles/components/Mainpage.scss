@@ -1,9 +1,9 @@
 @import "../abstracts/mixins";
 .mainpage_container {
   padding-top: 10rem;
-  padding-bottom: 5rem;
+  padding-bottom: 8rem;
   display: flex;
-  margin: 3rem auto;
+  margin: auto;
   max-width: 95.5em;
   @include respond(big-desktop) {
     max-width: 110.5em;
@@ -112,6 +112,9 @@
     @include respond(desktop) {
       padding-left: 10rem;
     }
+    @include respond(tab-land) {
+      padding-left: 10rem;
+    }
     @include respond(tab-port) {
       display: none;
     }
@@ -128,9 +131,9 @@
       /* image 4 */
 
       @include respond(tab-land) {
-        // width: 30em;
-        // height: 30em;
-        margin-left: -5rem;
+        width: 25em;
+        height: 25em;
+        margin-left: -8rem;
       }
       @include respond(smaller-desktop) {
         width: 30em;
@@ -150,10 +153,10 @@
       z-index: 1;
       margin-top: -5em;
       @include respond(tab-land) {
-        // width: 35em;
-        // height: 25em;
+        width: 25em;
+        height: 25em;
 
-        // margin-left: 7em;
+        margin-left: -1em;
       }
       @include respond(smaller-desktop) {
         width: 35em;
@@ -174,9 +177,9 @@
       width: 38em;
       height: 28em;
       @include respond(tab-land) {
-        width: 45em;
-        // height: 30em;
-        margin-left: 10rem;
+        width: 25em;
+        height: 25em;
+        margin-left: 7rem;
       }
       @include respond(smaller-desktop) {
         width: 35em;
@@ -381,9 +384,7 @@
   background: rgb(0, 0, 0);
   transform-origin: 0%;
   z-index: 999;
-  @include respond(tab-land) {
-    top: 9.2em;
-  }
+
   @include respond(tab-port) {
     top: 0;
     height: 1.5rem;

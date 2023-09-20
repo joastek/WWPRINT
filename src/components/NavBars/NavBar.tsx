@@ -71,18 +71,31 @@ const NavBar = () => {
         }}
       >
         {" "}
-        <NavLink href="/" style={{ textDecoration: "none" }}>
-          {theme === "dark" ? (
-            <Image
-              onClick={() => scroll.scrollToTop()}
-              className="navigationbar_logo"
-              src={logowhite}
-              alt="Logo firmy"
-            />
-          ) : (
-            <Image className="navigationbar_logo" src={logo} alt="Logo firmy" />
-          )}
-        </NavLink>{" "}
+        <motion.div
+          variants={{
+            visible: { y: 0 },
+            hidden: { y: "-100%" },
+          }}
+          animate={hidden ? "hidden" : "visible"}
+          transition={{ duration: 0.35, ease: "easeInOut" }}
+        >
+          <NavLink href="/" style={{ textDecoration: "none" }}>
+            {theme === "dark" ? (
+              <Image
+                onClick={() => scroll.scrollToTop()}
+                className="navigationbar_logo"
+                src={logowhite}
+                alt="Logo firmy"
+              />
+            ) : (
+              <Image
+                className="navigationbar_logo"
+                src={logo}
+                alt="Logo firmy"
+              />
+            )}
+          </NavLink>{" "}
+        </motion.div>
         <PhoneToggle
           isActive={isActive}
           handleToggleClick={handleToggleClick}

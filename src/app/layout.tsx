@@ -5,7 +5,7 @@ import Head from "next/head";
 import { Poppins } from "next/font/google";
 import Footer from "@/components/Footer";
 import Providers from "@/components/darkMode";
-import GoogleAnalytics from "@/components/GoogleAnalytcis";
+
 import { useState, useEffect } from "react";
 import FacebookMsg from "@/components/FacebookMsg";
 
@@ -42,7 +42,6 @@ export default function RootLayout({
         <meta name="description" content={metadata.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>{" "}
-      <GoogleAnalytics GA_MEASUREMENT_ID="G-7NP54G6NG0" />
       <body className={inter.className}>
         {" "}
         <div>
