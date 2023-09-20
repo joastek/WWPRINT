@@ -8,19 +8,34 @@ import NavLink from "next/link";
 
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { useState, useRef, useEffect } from "react";
-import { motion } from "framer-motion";
+import {
+  motion,
+  useAnimation,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 import { usePathname } from "next/navigation";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import PhoneToggle from "./PhoneToggle";
 import { useTheme } from "next-themes";
+
 const NavBar = () => {
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
   const path = usePathname();
   const [click, setClick] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const navBarRef = useRef(null);
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
-
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -36,18 +51,17 @@ const NavBar = () => {
   const handleClick = () => {
     setClick(false);
   };
+  ///scroll
 
   return (
     <>
       <motion.div
-        initial={{ y: -250 }}
-        animate={{ y: 0 }}
-        transition={{
-          delay: 1,
-          type: "spring",
-          stiffness: 120,
-          duration: 4.5,
+        variants={{
+          visible: { y: 0 },
+          hidden: { y: "-100%" },
         }}
+        animate={hidden ? "hidden" : "visible"}
+        transition={{ duration: 0.35, ease: "easeInOut" }}
         className={`navigationbar_container ${
           isActive ? "active" : ""
         } transition-colors duration-500`}
@@ -56,6 +70,7 @@ const NavBar = () => {
           backgroundColor: theme === "dark" ? "#000" : "#fff",
         }}
       >
+        {" "}
         <NavLink href="/" style={{ textDecoration: "none" }}>
           {theme === "dark" ? (
             <Image

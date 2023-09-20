@@ -3,15 +3,34 @@ import Link from "next/link";
 
 import "../styles/components/Mainpage.scss";
 import Offert from "@/components/Offert";
-import { motion, useScroll } from "framer-motion";
+import {
+  motion,
+  useAnimation,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
+import { useState, useRef, useEffect } from "react";
 import MainPage from "@/components/MainPage";
 import About from "@/components/About";
 import Reviews from "@/components/Reviews";
 import { useTheme } from "next-themes";
+import Providers from "@/components/darkMode";
 
 export default function Home() {
-  const { scrollYProgress } = useScroll();
-  const { theme, setTheme } = useTheme();
+  const { scrollYProgress, scrollY } = useScroll();
+  const { systemTheme, theme, setTheme } = useTheme();
+
+  const [hidden, setHidden] = useState(false);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
+  const isSmallScreen = window.innerWidth <= 1400;
+  const animateVariant = isSmallScreen ? "hidden" : "visible";
   return (
     <>
       {" "}
@@ -22,6 +41,12 @@ export default function Home() {
         className="transition-colors duration-500"
       >
         <motion.div
+          variants={{
+            visible: { y: isSmallScreen ? "0rem" : "8rem" },
+            hidden: { y: isSmallScreen ? "0rem" : "-3rem" },
+          }}
+          animate={hidden ? "hidden" : "visible"}
+          transition={{ duration: 0.35, ease: "easeInOut" }}
           className="progress-bar "
           style={{
             scaleX: scrollYProgress,

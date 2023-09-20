@@ -1,11 +1,27 @@
 import "../../styles/components/NavBar.scss";
-import { motion } from "framer-motion";
 
+import { useState, useRef, useEffect } from "react";
+import {
+  motion,
+  useAnimation,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 type HamburgerProp = {
   isActive: boolean;
   handleToggleClick: () => void;
 };
 const PhoneToggle = ({ isActive, handleToggleClick }: HamburgerProp) => {
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
   return (
     <>
       <motion.div className={`toggle_button_box`}>
