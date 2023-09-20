@@ -16,7 +16,10 @@ const whiteFoil = () => {
     <>
       <motion.div
         className="progress-bar"
-        style={{ scaleX: scrollYProgress }}
+        style={{
+          scaleX: scrollYProgress,
+          backgroundColor: theme === "dark" ? "#fff" : "#000",
+        }}
       />{" "}
       <div className="description_text">
         <Link href="/Offert/Naklejki_i_etykiety">

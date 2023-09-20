@@ -10,7 +10,10 @@ import Tile5 from "../../public/RollUp.png";
 import Tile6 from "../../public/Tabliczki.png";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "next-themes";
+
 const Offert = () => {
+  const { systemTheme, theme, setTheme } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -34,7 +37,14 @@ const Offert = () => {
         className="offert_container "
         id="Oferta"
       >
-        <h1>Oferta</h1>
+        <h1
+          style={{
+            borderBottom:
+              theme === "dark" ? "3px solid #fff" : "3px solid #000",
+          }}
+        >
+          Oferta
+        </h1>
 
         <div className="offert_tiles">
           <Link

@@ -2,7 +2,10 @@ import { motion, useScroll } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import IMAGES from "@/data/IMAGES";
+import { useTheme } from "next-themes";
+
 const MainPage = () => {
+  const { systemTheme, theme, setTheme } = useTheme();
   const image1 = {
     y: [0, -20, 0],
     transition: {
@@ -38,10 +41,7 @@ const MainPage = () => {
 
   return (
     <>
-      <div
-        className="mainpage_container dark:transition-colors duration-500 "
-        id="MainPage"
-      >
+      <div className="mainpage_container  " id="MainPage">
         <motion.div
           className="mainpage_container "
           initial={{ opacity: 0, scale: 0.5 }}
@@ -65,7 +65,16 @@ const MainPage = () => {
               charakteru.
             </div>
             <Link href="/Contact">
-              <button className="mainpage_button">Skontaktuj się!</button>
+              <button
+                className="mainpage_button"
+                style={{
+                  background: theme === "dark" ? "#fff" : "#000",
+                  // color: theme === "dark" ? "#fff" : "#fff",
+                }}
+                data-theme={theme === "dark" ? "dark" : "light"}
+              >
+                Skontaktuj się!
+              </button>
             </Link>
           </div>
           <div className="mainpage_imageContainer">

@@ -91,6 +91,12 @@
         display: none;
       }
     }
+    .mainpage_button[data-theme="dark"]::before {
+      display: none;
+    }
+    .mainpage_button[data-theme="dark"] {
+      color: black;
+    }
     .mainpage_button::before {
       transform: scaleX(0);
     }
@@ -311,6 +317,7 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2rem;
     @include respond(smaller-desktop) {
       width: 17em;
     }
@@ -352,6 +359,13 @@
       transition: none;
     }
   }
+  .mainpage_button[data-theme="dark"]::before {
+    display: none;
+  }
+  .mainpage_button[data-theme="dark"] {
+    color: black;
+  }
+
   .mainpage_button::before {
     transform: scaleX(0);
   }

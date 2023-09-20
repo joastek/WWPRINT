@@ -2,11 +2,13 @@ import { motion, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import axios from "axios";
+import { useTheme } from "next-themes";
+
 const About = () => {
   const apiKey = "AIzaSyAidhmOphAxgdU2jHbcfeiYSN1gJyFmTy8";
   const placeId = "ChIJhesbVwWWHygR_4EbBaYCAMQ";
   const [reviews, setReviews] = useState([]);
-
+  const { systemTheme, theme, setTheme } = useTheme();
   useEffect(() => {
     const fetchReviews = async () => {
       try {
@@ -35,7 +37,14 @@ const About = () => {
           ease: [0.6, 0.92, 0.6, 1.01],
         }}
       >
-        <h1>O nas</h1>
+        <h1
+          style={{
+            borderBottom:
+              theme === "dark" ? "3px solid #fff" : "3px solid #000",
+          }}
+        >
+          O nas
+        </h1>
         {reviews.map((review) => (
           <div key={review}>
             <h3>{review}</h3>
@@ -57,7 +66,14 @@ const About = () => {
           100% gwarantowanej <a>satysfakcji</a>
         </div>
         <Link href="/Contact" style={{ textDecoration: "none" }}>
-          <button className="mainpage_button">
+          <button
+            className="mainpage_button"
+            style={{
+              background: theme === "dark" ? "#fff" : "#000",
+              // color: theme === "dark" ? "#fff" : "#fff",
+            }}
+            data-theme={theme === "dark" ? "dark" : "light"}
+          >
             Zaplanuj spotkanie już dziś!
           </button>
         </Link>

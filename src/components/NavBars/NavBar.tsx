@@ -1,16 +1,16 @@
 "use client";
-// import "../../styles/components/NavBar.scss";
+import * as React from "react";
+
 import logo from "../../../public/Logo.png";
 import logowhite from "../../../public/Logowhite.png";
 import Image from "next/image";
 import NavLink from "next/link";
-import sun from "../../../public/sun.png";
-import moon from "../../../public/moon.png";
+
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { useRouter } from "next/navigation";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 import PhoneToggle from "./PhoneToggle";
 import { useTheme } from "next-themes";
 const NavBar = () => {
@@ -214,15 +214,20 @@ const NavBar = () => {
             </div>
           </NavLink>
         </motion.div>{" "}
-        <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-          {theme === "dark" ? (
-            <Image src={sun} alt="" className="sun" />
-          ) : (
-            <Image src={moon} alt="" className="moon" />
-          )}
-        </div>
+        <DarkModeSwitch
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          checked={theme === "dark"}
+          size={48}
+          className="sun"
+        />
         <NavLink href="/Contact">
-          <button className="navigationbar_button">
+          <button
+            className="navigationbar_button"
+            style={{
+              background: theme === "dark" ? "#fff" : "#000",
+              color: theme === "dark" ? "#000" : "#fff",
+            }}
+          >
             <div>Zamów teraz!</div>
           </button>
         </NavLink>

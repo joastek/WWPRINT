@@ -23,11 +23,12 @@ const StickersAndLables = () => {
       >
         {" "}
         <div className="naklejki_tiles">
-          <Link
-            href="/Offert/Naklejki_i_etykiety/Naklejki_na_bialej_folii"
-            style={{ textDecoration: "none", color: "black" }}
-          >
-            <div className="offert_tile2 element">
+          {" "}
+          <div className="offert_tile2 ">
+            <Link
+              href="/Offert/Naklejki_i_etykiety/Naklejki_na_bialej_folii"
+              style={{ textDecoration: "none", color: "black" }}
+            >
               <Image
                 className="offert_image"
                 src={Tile2}
@@ -40,13 +41,14 @@ const StickersAndLables = () => {
                 <br />
                 błyszczącej/matowej
               </a>
-            </div>{" "}
-          </Link>
-          <Link
-            href="/Offert/Naklejki_i_etykiety/Naklejki_holograficzne"
-            style={{ textDecoration: "none", color: "black" }}
-          >
-            <div className="offert_tile2 element">
+            </Link>{" "}
+          </div>{" "}
+          <div className="offert_tile2 ">
+            {" "}
+            <Link
+              href="/Offert/Naklejki_i_etykiety/Naklejki_holograficzne"
+              style={{ textDecoration: "none", color: "black" }}
+            >
               <div className="video_container">
                 <video autoPlay muted loop className="video">
                   {" "}
@@ -57,9 +59,9 @@ const StickersAndLables = () => {
                 <br />
                 Naklejki <br />
                 holograficzne
-              </a>
-            </div>{" "}
-          </Link>
+              </a>{" "}
+            </Link>
+          </div>{" "}
         </div>
       </motion.div>
     </>

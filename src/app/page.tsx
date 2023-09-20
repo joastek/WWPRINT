@@ -7,20 +7,33 @@ import { motion, useScroll } from "framer-motion";
 import MainPage from "@/components/MainPage";
 import About from "@/components/About";
 import Reviews from "@/components/Reviews";
+import { useTheme } from "next-themes";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
+  const { theme, setTheme } = useTheme();
   return (
     <>
-      <motion.div
-        className="progress-bar "
-        style={{ scaleX: scrollYProgress }}
-      />
-      <MainPage />
+      {" "}
+      <div
+        style={{
+          backgroundColor: theme === "dark" ? "#000" : "#fff",
+        }}
+        className="transition-colors duration-500"
+      >
+        <motion.div
+          className="progress-bar "
+          style={{
+            scaleX: scrollYProgress,
+            backgroundColor: theme === "dark" ? "#fff" : "#000",
+          }}
+        />
+        <MainPage />
 
-      <Offert />
-      <Reviews />
-      <About />
+        <Offert />
+        <Reviews />
+        <About />
+      </div>
     </>
   );
 }
