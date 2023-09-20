@@ -215,7 +215,7 @@ const NavBar = () => {
           </NavLink>
         </motion.div>{" "}
         <DarkModeSwitch
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
           checked={theme === "dark"}
           size={48}
           className="sun"
