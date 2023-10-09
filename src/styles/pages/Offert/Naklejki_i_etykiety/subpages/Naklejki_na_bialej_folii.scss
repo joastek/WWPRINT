@@ -57,17 +57,15 @@
   }
 }
 .progress-bar {
+  width: 100vw;
+  display: flex;
   position: fixed;
-  top: 10.5rem;
-  left: 0;
-  right: 0;
+
   height: 0.5rem;
   background: rgb(0, 0, 0);
   transform-origin: 0%;
   z-index: 999;
-  @include respond(tab-land) {
-    top: 9.2em;
-  }
+
   @include respond(tab-port) {
     top: 0;
     height: 1.5rem;
