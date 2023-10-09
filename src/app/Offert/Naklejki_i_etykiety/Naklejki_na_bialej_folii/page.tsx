@@ -37,7 +37,7 @@ const whiteFoil = () => {
       >
         <motion.div
           variants={{
-            visible: { y: isSmallScreen ? "0rem" : "11rem" },
+            visible: { y: isSmallScreen ? "0rem" : "12rem" },
             hidden: { y: isSmallScreen ? "0rem" : "0rem" },
           }}
           animate={hidden ? "hidden" : "visible"}
